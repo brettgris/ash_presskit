@@ -1,0 +1,32 @@
+//DOWNLOADS
+div#downloads.downloads.section
+	div.downloads-content
+		//PDFS
+		div.downloads
+			h3 DOWNLOAD PDF FILES
+			ul.downloads-list
+				-for (i in pdfs)
+					li
+						a(href="#{pdfs[i].path}" target="_blank")
+							div.download-name #{pdfs[i].name}
+							div.clickto CLICK HERE TO DOWNLOAD
+		br.clear
+		//MEDIA ROOM
+		div.mediaroom
+			h3 HIGH RESOLUTION IMAGES
+			div.mediaroom-list
+				a(href="http://starz.mediaroom.com/index.php?s=56" target="_blank")
+					span Visit STARZ Media Room to download high resolution images and videos
+		//PRESS CONTACTS
+		div.press-contacts
+			h3 PRESS CONTACTS
+			ul.contacts
+				-for (i in contacts)
+					li
+						a(href="mailto:#{contacts[i].email}?subject=Blunt%20Talk%20Presskit")
+							div.contact-name #{contacts[i].name}
+							div.contact-company #{contacts[i].company}
+							div.contact-phone #{contacts[i].phone}
+							div.contact-email #{contacts[i].email}
+		br.clear
+		br.clear

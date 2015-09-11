@@ -1,0 +1,228 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-family: $font-family;
+	font-size: $font-size;
+	width:100%;
+	height:100%;
+	color:$font-color;
+	background-repeat: no-repeat;
+	background-position: center 30%;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color:$background-color;
+	overflow-x: hidden;
+	
+	@include transition-property(background-color);
+	@include transition-duration(.5s);
+}
+
+a{
+	text-decoration: none;
+	color:$font-color;
+}
+
+li{
+	list-style: none;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.caps {
+    text-transform: uppercase;
+}
+
+.clear{
+	clear: both;
+}
+
+$section-padding:30px;
+/***************
+TEXT
+***************/
+.textblock{
+	font-size: $font-size;
+	line-height: $line-height;
+	text-align: justify;
+	color: $dark-grey;
+	
+	@media screen and (max-width: $break-mobile) {
+		font-size:$mobile-font-size;
+		line-height: $mobile-line-height;
+	}
+}
+/***************
+CLOSE
+***************/
+.closebtn{
+	display: block;
+	text-align: center;
+	width:100%;
+	margin: 5px auto 10px auto;
+	color: $inpagelink-color;
+	font-size: 12px;
+	
+	&:hover{
+		color:$inpagelink-hover;
+	}
+}
+
+$arrow-width: 29px;
+$arrow-height: 50px;
+/***************
+ARROWS
+***************/
+.arrow-container{
+	position:absolute;
+	height:$arrow-height;
+	width:100%;
+	top:0px;
+	z-index: 5;
+	
+	@media screen and (max-width: $break-mobile) {
+		//display:none;	
+	}
+}
+
+.nextbtn{
+	position:absolute;
+	display: block;
+	width:$arrow-width;
+	height:$arrow-height;
+	right:0;
+	top:0;
+	background: url(#{$imgPath}/nextbtn.svg) center center no-repeat;
+}
+
+.prevbtn{
+	position:absolute;
+	display: block;
+	width:$arrow-width;
+	height:$arrow-height;
+	left:0;
+	top:0;
+	background: url(#{$imgPath}/prevbtn.svg) center center no-repeat;
+}
+
+$overlay-background: $overlay-color;
+$overlay-border: 1px solid $border-color;
+/***************
+OVERLAY
+***************/
+.page-overlay{
+	background: $overlay-background;
+	border:$overlay-border;
+}
+
+/***************
+Gallery 
+***************/
+.gallery-title{
+	font-size: 18px;
+	margin-top: 12px;
+	color:$item-title;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.gallery-desc{
+	font-size: 14px;
+	line-height: 16px;
+	margin-top: 5px;
+	color:$item-text;
+}
+
+/***************
+CAST / PROD
+***************/
+.quoteitem{
+	text-transform: uppercase;
+	color:$highlight;
+	font-size: 36px;
+	line-height: 36px;
+	text-align: center;
+	margin: auto;
+	margin-bottom: 15px;
+	font-weight: 300;
+	width:85%;
+				
+	@media screen and (max-width: $break-mobile) {
+		width:65%;
+		font-size: 	18px;
+		line-height: 18px;
+		font-weight: 500;
+	}
+}
+
+.nameitem{
+	width:100%;
+	margin: auto;
+	background-repeat: no-repeat;
+	background-position: center center;
+	text-transform: uppercase;
+	text-align: center;
+	font-size:24px;
+				
+	@media screen and (max-width: $break-mobile) {
+		background-size:contain;
+		font-size:16px;
+		line-height: 12px;
+	}
+}
+
+.titleitem{
+	font-size: 18px;
+	line-height: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	font-style: italic;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	color:$highlight;
+				
+	@media screen and (max-width: $break-mobile) {
+		width:	100%;
+		line-height: 12px;
+		font-size: 12px;
+		margin-bottom: 5px;	
+	}
+}
+
+/***************
+PAGES
+***************/
+.container{
+	width:100%;
+	position: absolute;
+	height:100%;
+	overflow-x:hidden;
+	
+	.content{
+		position:absolute;
+		top: $menu-height;
+		width:100%;
+		
+		@media screen and (max-width: $break-mobile){
+			top:$menu-mobile-height;
+		}
+		
+		.section{
+			display: none;
+			position: relative;
+			padding-top: $section-padding;
+			
+			@media screen and (max-width: $break-mobile){
+				padding-top:0px;
+			}
+			
+			&:first-child{
+				display: block;
+			}
+		}
+	}
+}

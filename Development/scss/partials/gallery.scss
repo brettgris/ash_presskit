@@ -1,0 +1,227 @@
+$gallery-item-width: 180px;
+$gallery-item-height: 130px;
+$gallery-item-spacing: 10px;
+$gallery-item-background: $item-background;
+$gallery-item-border-size: 1px;
+$gallery-item-border:$gallery-item-border-size solid $border-interactive;
+$gallery-item-hover:$gallery-item-border-size solid $dark-blue;
+
+$gallery-view-width:1024px;
+$gallery-view-height:612px;
+
+$gallery-item-padding: 20px;
+$gallery-item-size: $gallery-item-width + 2*$gallery-item-border-size + $gallery-item-spacing;
+$gallery-width6: $gallery-item-size*6;
+$gallery-width5: $gallery-item-size*5;
+$gallery-width4: $gallery-item-size*4;
+$gallery-width3: $gallery-item-size*3;
+$gallery-width2: $gallery-item-size*2;
+
+$gallery-break6: $gallery-width6+40;
+$gallery-break5: $gallery-width5+40;
+$gallery-break4: $gallery-width4+40;
+$gallery-break3: $gallery-width3+40;
+$gallery-break2: $gallery-width2+40;
+
+$image-width5: 900px;
+$image-width4: 694px;
+$image-width3: 512px;
+$image-width2: 320px;
+
+.gallery-container{
+	@extend .page-overlay;
+	width:$gallery-width6 + $gallery-item-padding*2 - $gallery-item-spacing;
+	margin: auto;
+	margin-bottom: 100px;
+	
+	@media screen and (max-width: $gallery-break6) {
+		width: $gallery-width5 + $gallery-item-padding*2 - $gallery-item-spacing;
+	}
+	
+	@media screen and (max-width: $gallery-break5) {
+		width: $gallery-width4 + $gallery-item-padding*2 - $gallery-item-spacing;
+	}
+	
+	@media screen and (max-width: $gallery-break4) {
+		width: $gallery-width3 + $gallery-item-padding*2 - $gallery-item-spacing;
+	}
+	
+	@media screen and (max-width: $gallery-break3) {
+		width: $gallery-width2 + $gallery-item-padding*2 - $gallery-item-spacing;
+	}
+
+	@media screen and (max-width: $gallery-break2) {
+		width: 100%;
+		margin-bottom: 35px;
+		border: 1px solid transparent;
+		//border: none;	
+	}	
+	
+	.gallery-list{
+		width:$gallery-width6;
+		margin: $gallery-item-padding ($gallery-item-padding - $gallery-item-spacing) ($gallery-item-padding - $gallery-item-spacing) $gallery-item-padding;
+		
+		@media screen and (max-width: $gallery-break6) {
+			width:$gallery-width5;
+		}
+		
+		@media screen and (max-width: $gallery-break5) {
+			width:$gallery-width4;
+		}
+		
+		@media screen and (max-width: $gallery-break4) {
+			width:$gallery-width3;
+		}
+		
+		@media screen and (max-width: $gallery-break3) {
+			width:$gallery-width2;
+		}
+		
+		@media screen and (max-width: $gallery-break2) {
+			width: 94%;	
+		}
+		
+		.gallery-item{
+			width: $gallery-item-width;
+			height: $gallery-item-height;
+			margin: 0 $gallery-item-spacing $gallery-item-spacing 0; 
+			background-color:$gallery-item-background;
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			float:left;
+			border:$gallery-item-border;
+			
+			@media screen and (max-width: $gallery-break2) {
+				width: 45%;	
+				margin-right: 4%;
+			}
+			
+			&:hover{
+				border:$gallery-item-hover;
+			}
+		}
+	}
+	
+	.gallery-view{
+		position:relative;
+		width:$gallery-view-width;
+		margin: 20px auto 40px auto;
+		display: none;
+		
+		@media screen and (max-width: $gallery-break6) {
+			width: $image-width5;
+		}
+		
+		@media screen and (max-width: $gallery-break5) {
+			width: $image-width4;
+		}
+		
+		@media screen and (max-width: $gallery-break4) {
+			width: $image-width3;
+		}
+		
+		@media screen and (max-width: $gallery-break3) {
+			width: $image-width2;
+		}
+		
+		@media screen and (max-width: $gallery-break2) {
+			width: 320px;
+			margin-bottom: 80px;	
+		}	
+		
+		.image-view{
+			width:$gallery-view-width;
+			height: $gallery-view-height;
+			background: black;
+			margin: auto;
+			
+			@media screen and (max-width: $gallery-break6) {
+				width: $image-width5;
+				height: ($image-width5/$gallery-view-width)*$gallery-view-height;
+			}
+			
+			@media screen and (max-width: $gallery-break5) {
+				width: $image-width4;
+				height: ($image-width4/$gallery-view-width)*$gallery-view-height;
+			}
+			
+			@media screen and (max-width: $gallery-break4) {
+				width: $image-width3;
+				height: ($image-width3/$gallery-view-width)*$gallery-view-height;
+			}
+			
+			@media screen and (max-width: $gallery-break3) {
+				width: $image-width2;
+				height: ($image-width2/$gallery-view-width)*$gallery-view-height;
+			}
+			
+			img{
+				width:100%;
+				height:100%;
+			}
+		}
+		
+		.image-desc{
+			@extend .gallery-desc;
+		}
+		
+		.g-close{
+			@extend .closebtn;
+		}
+		
+		.g-arrows{
+			@extend .arrow-container;
+			top: $gallery-view-height/2;
+			
+			@media screen and (max-width: $gallery-break6) {
+				top: (($image-width5/$gallery-view-width)*$gallery-view-height)/2;
+			}
+			
+			@media screen and (max-width: $gallery-break5) {
+				top: (($image-width4/$gallery-view-width)*$gallery-view-height)/2;
+			}
+			
+			@media screen and (max-width: $gallery-break4) {
+				top: (($image-width3/$gallery-view-width)*$gallery-view-height)/2;
+			}
+			
+			@media screen and (max-width: $gallery-break3) {
+				top: (($image-width2/$gallery-view-width)*$gallery-view-height)/2;
+			}
+			
+			@media screen and (max-width: $gallery-break2) {
+				top:(($image-width2/$gallery-view-width)*$gallery-view-height) +40;
+			}
+			
+			.g-next{
+				@extend .nextbtn;
+				right:-40px;
+				
+				@media screen and (max-width: $gallery-break2) {
+					right:5px;
+				}
+			}
+			
+			.g-prev{
+				@extend .prevbtn;
+				left:-40px;
+				
+				@media screen and (max-width: $gallery-break2) {
+					left:5px;
+				}
+			}
+		}
+	}
+	
+	.gallerybottom{
+		margin-bottom: 25px;
+		a{
+			color:$inpagelink-color;
+			
+			&:hover{
+				color:$inpagelink-hover;
+			}
+		}
+	}
+}

@@ -1,0 +1,235 @@
+$character-count: 9;
+
+//THUMBS
+$thumb-background:$cast-overlay;
+$thumb-border:1px solid $border-color;
+$thumb-padding: 10px;
+$thumb-zindex: 6;
+$thumb-margin-bottom: 20px;
+
+$thumb-item-width:33px;
+$thumb-item-height:55px;
+$thumb-item-border-size:1px;
+$thumb-item-spacing:10px;
+$thumb-border-color:$border-interactive;
+$thumb-border-hover:$border-hover;
+
+//CHARACTER
+$character-top: $menu-height+20;
+$character-width:526px;
+$character-width-wide: 975px;
+$character-photo-height:300px;
+$character-photo-border-size:1px;
+$character-photo-border-color:$border-color;
+
+$character-name-width:342px;
+$character-name-height:72px;
+
+//ARROWS
+$arrow-width:29px;
+$arrow-height:50px;
+$arrow-spacing:15px;
+$arrow-container-width: $character-width + ($character-photo-border-size*2)+ ($arrow-width*2) + ($arrow-spacing*2);
+$arrow-top: ($character-photo-height - $arrow-height)/2 + $character-top;
+
+//CAST-BREAKS
+$break-tabheight:900px;
+$break-cast-medium: 980px;
+$break-cast-small: $character-width + 10;
+
+//Icons Width
+$cast-icon-width:230px;
+$cast-icon-height:106px;
+
+.cast{
+	padding-top:0px !important;
+	
+	.thumb-container{
+		background: $thumb-background;
+		border-bottom:$thumb-border;
+		height: $thumb-item-height + ($thumb-padding*2);
+		margin-bottom: $thumb-margin-bottom;
+		position: fixed;
+		width:100%;
+		z-index: $thumb-zindex;
+		
+		@media screen and (max-width: $break-cast-small) {
+			display:none;	
+		}
+		
+		.thumb-list{
+			height: $thumb-item-height + $thumb-item-border-size * 2;
+			margin: ($thumb-padding - 1) auto 0 auto;
+			width: ( $thumb-item-width + $thumb-item-border-size*2 )*$character-count + ($thumb-item-spacing * ($character-count - 1));
+			overflow: hidden;
+			
+			.t-cast{
+				width:$thumb-item-width;
+				height:$thumb-item-height;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: cover;
+				display: block;
+				float:left;
+				border:$thumb-item-border-size solid $thumb-border-color;
+				margin-right:$thumb-item-spacing;
+				
+				&:last-child{
+					margin-right:0px;
+				}
+				
+				&:hover, &.selected{
+					border:$thumb-item-border-size solid $thumb-border-hover;
+				}
+			}
+		}
+	}
+	
+	.character{
+		position: absolute;
+		left:50%;
+		width: $character-width;
+		margin-left: -1*($character-width+$character-photo-border-size*2)/2;
+		top: $character-top;
+		display:none;
+		
+		@media screen and (max-height: $break-tabheight) {
+			width: $character-width-wide;
+			margin-left: -1*$character-width-wide/2;
+		}
+		
+		@media screen and (max-width: $break-cast-medium) {
+			width: $character-width;
+			margin-left: -1*($character-width+$character-photo-border-size*2)/2;
+		}
+		
+		@media screen and (max-width: $break-cast-small) {
+			width:90%;
+			margin-left: -45%;
+			top:10px;
+		}
+		
+		&:first-child{
+			display: block;
+		}
+		
+		&-image{
+			width: $character-width;
+			height:$character-photo-height;
+			margin: auto;
+			border:$character-photo-border-size solid $character-photo-border-color;
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			margin-bottom: 20px;
+			background-size: contain;
+			
+			@media screen and (max-height: $break-tabheight) {
+				float:left;
+				width: $character-width*.9;
+				height:$character-photo-height*.9;
+				margin-top: 30px;
+			}
+			
+			@media screen and (max-width: $break-cast-medium) {
+				float:none;
+				width: $character-width;
+				height:$character-photo-height;
+				margin-top: 0px;
+			}
+			
+			@media screen and (max-width: $break-cast-small) {
+				width: 	$character-width*.5;
+				height: $character-photo-height*.5;
+			}	
+		}
+		
+		&-copy{
+			width: $character-width;
+			margin: auto;
+			padding-bottom:100px;
+			
+			@media screen and (max-height: $break-tabheight) {
+				float:right;
+				width: $character-width-wide - ( $character-width*.9 ) - 20;
+			}
+			
+			@media screen and (max-width: $break-cast-medium) {
+				width: $character-width;
+				float:none;
+				padding-bottom: 100px;
+			}
+			
+			@media screen and (max-width: $break-cast-small) {
+				width:100%;	
+			}
+			
+			.character-icon{
+				width:$cast-icon-width;
+				height:$cast-icon-height;
+				background: center center no-repeat;
+				color:red;
+				margin: 0 auto 15px auto;
+				background-size: contain;
+				
+				@media screen and (max-width: $break-cast-small) {
+					width:$cast-icon-width*.65;
+					height:$cast-icon-height*.65;	
+					margin-bottom: 5px;
+				}	
+				
+			}
+			
+			.character-quote{
+				@extend .quoteitem;
+			}
+			
+			.character-name{
+				@extend .nameitem;
+			}
+			
+			.actor-name{
+				@extend .titleitem;
+			}
+			
+			.character-desc{
+				@extend .textblock;
+				margin-top: 10px;
+			}
+		}
+	}
+	
+	.cast-arrows{
+		@extend .arrow-container;
+		left:50%;
+		width: $arrow-container-width;
+		margin-left: -1*$arrow-container-width/2;
+		top:$arrow-top;
+		
+		@media screen and (max-height: $break-tabheight) {
+			width: $character-width-wide - ( $character-width*.9 ) - 20;
+			margin-left: -1*$character-width-wide/2;;
+			top:$character-photo-height*.9 + $menu-height + $thumb-item-height + 10;
+		}
+		
+		@media screen and (max-width: $break-cast-medium) {
+			width: $character-width;
+			margin-left: -1*$character-width/2;
+			top: $character-photo-height + $thumb-item-height + $character-name-height;
+		}
+		
+		@media screen and (max-width: $break-cast-small) {
+			width:90%;
+			margin-left:-45%;
+			top: $character-photo-height*.5 + $thumb-item-height;
+				
+		}
+
+		.cast-prev{
+			@extend .prevbtn;
+		}
+		
+		.cast-next{
+			@extend .nextbtn;
+		}
+	}
+}

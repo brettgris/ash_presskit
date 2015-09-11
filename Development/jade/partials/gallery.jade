@@ -1,0 +1,20 @@
+//GALLERY
+div#gallery.gallery.section
+	div.gallery-container
+		//GALLERY VIEW
+		div.gallery-view
+			a.g-close(href="javascript:void(0);") CLICK TO CLOSE IMAGE
+			div.image-view
+				img
+			div.image-desc
+			div.g-arrows
+				a.g-next(href="javascript:void(0);")
+				a.g-prev(href="javascript:void(0);")
+		//GALLERY LIST
+		div.gallery-list
+			- for (i in photos)
+				a.gallery-item(href="#" style="background-image:url(images/gallery/t/#{photos[i].path}" caption="#{photos[i].caption}" path="images/gallery/f/#{photos[i].path}" n="#{i}")
+			div.clear
+		//VIEW ALL
+		p.centerText.caps.gallerybottom
+			a(href="http://starz.mediaroom.com/index.php" target= "_blank") Visit Starz Media Room to Download High Resolution Images		

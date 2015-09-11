@@ -1,0 +1,211 @@
+$downloads-width: 1100px;
+
+$downloads-item-background: transparent;
+$downloads-item-hover: $light-grey;
+$downloads-item-border: 2px solid $light-grey;
+$downloads-item-height: 75px;
+$downloads-item-spacing: 10px;
+
+$downloads-pdf-indent:65px;
+
+$downloads-break1: 1150px;
+$downloads-break2: 950px;
+$downloads-break3: 600px;
+
+.downloads-content{
+	@extend .page-overlay;
+	width: $downloads-width;
+	margin: 0 auto 100px auto;
+	
+	@media screen and (max-width: $downloads-break1) {
+		width:90%;	
+	}
+	
+	@media screen and (max-width: $break-mobile) {
+		width:100%;
+		margin-bottom: 35px;
+		border:1px solid transparent;
+	}
+			
+	
+	h3{
+		margin-top: 20px;
+		margin-left: 25px;
+	}
+	
+	.downloads-section{
+		width:95%;
+		margin: 10px auto 0 auto;
+	}
+	
+	.downloads-item{
+		background-color: $downloads-item-background;
+		border:$downloads-item-border;
+		height:$downloads-item-height;
+		
+		&:hover{
+			background-color: $downloads-item-hover;
+		}
+	}
+	
+	.downloadslink{
+		width:100%;
+		height:100%;
+		display: block;
+	}
+	
+	.downloads-largefont{
+		font-size:16px;
+		
+	}
+	
+	.downloads-list{
+		@extend .downloads-section;
+		
+		li{
+			@extend .downloads-item;
+			width:30%;
+			float:left;
+			margin-right: 2%;
+			margin-bottom: $downloads-item-spacing;
+			background-image: url(#{$imgPath}pdf_icon.png);
+			background-repeat: no-repeat;
+			background-position: 22px 17px;
+			
+			@media screen and (max-width: $downloads-break2) {
+				width:46%;
+				margin-right:3%;	
+			}
+			
+			@media screen and (max-width: $downloads-break3) {
+				width:99%;
+				margin-right: 0;	
+			}
+			
+			a{
+				@extend .downloadslink;
+				
+				.download-name{
+					@extend .downloads-largefont;
+					margin-left: $downloads-pdf-indent;
+					padding-top: 16px;
+					color:$item-title;
+					text-transform: uppercase;
+					font-weight: 700;
+				}
+				
+				.clickto{
+					margin-left:$downloads-pdf-indent;
+					font-size: 12px;
+					text-transform: uppercase;
+					color:$inpagelink-color;
+					margin-top: 3px;
+				}
+				
+				&:hover .clickto{
+					color:$inpagelink-hover;
+				}
+			}
+		}
+	}
+	
+	.mediaroom{
+		.mediaroom-list{
+			@extend .downloads-section;
+			
+			a{
+				@extend .downloads-largefont;
+				@extend .downloads-item;
+				width:63%;
+				display: block;
+				text-transform: uppercase;
+				background-image: url(#{$imgPath}pictureicon.png);
+				background-repeat: no-repeat;
+				background-position: 22px 24px;
+				color:$inpagelink-color;
+				
+				&:hover{
+					color:$inpagelink-hover;
+				}
+				
+				@media screen and (max-width: $downloads-break2) {
+					width:95%;
+				}
+				
+				@media screen and (max-width: $downloads-break3) {
+					width:99%;
+					margin-right: 0;	
+				}
+				
+				span{
+					display: block;
+					margin-left: 70px;
+					padding-top: 18px;
+					width:80%;
+					
+					@media screen and (max-width: $break-mobile) {
+						padding-top:14px;
+						font-size: 13px;
+					}
+				}
+			}
+		}
+	}
+	
+	.contacts{
+		@extend .downloads-section;
+		
+		li{
+			@extend .downloads-item;
+			width:30%;
+			float:left;
+			margin-right: 2%;
+			margin-bottom: 10px;
+			background-image: url(#{$imgPath}email_icon.png);
+			background-repeat: no-repeat;
+			background-position: 22px 24px;
+			
+			@media screen and (max-width: $downloads-break2) {
+				width:46%;
+				margin-right:3%;	
+			}
+			
+			@media screen and (max-width: $downloads-break3) {
+				width:99%;	
+				margin-right: 0;
+			}
+			
+			a{
+				@extend .downloadslink;
+				
+				div{
+					margin-left: 70px;
+					
+					&.contact-name{
+						padding-top: 5px;
+						margin-bottom: 2px;
+						color:$item-title;
+						text-transform: uppercase;
+						font-weight: 700;
+					}
+					
+					&.contact-company, &.contact-phone{
+						font-size: 12px;
+						color:$item-text;
+						line-height: 12px;
+						margin-bottom: 3px;
+					}
+					
+					&.contact-email{
+						@extend .contact-company;
+						color: $inpagelink-color;	
+					}
+				}
+			}
+			
+			&:hover .contact-email{
+				color:$inpagelink-hover;
+			}
+		}
+	}
+}

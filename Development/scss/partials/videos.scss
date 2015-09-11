@@ -1,0 +1,136 @@
+$video-width:640px;
+$video-ratio:percentage( 360/640 );
+$video-padding:20px;
+
+
+
+$video-item-background: transparent;
+$video-item-hover: $light-grey;
+$video-item-border: 2px solid $light-grey;
+$video-item-height: 118px;
+$video-item-spacing: 15px;
+
+$video-break1: $video-width + 2*$video-padding+20;
+
+.video-list{
+	@extend .page-overlay;
+	width: $video-width + 2*$video-padding;
+	margin:0px auto 80px auto;
+	padding: 20px 0;
+	
+	@media screen and (max-width: $video-break1) {
+		width:90%;
+	}
+	
+	@media screen and (max-width: $break-mobile) {
+		width:100%;
+		margin-bottom: 35px;
+		border:1px solid transparent;
+	}
+	
+	.video-container{
+		display:none;
+		width: $video-width;
+		height:auto;
+		margin: auto;
+		
+		@media screen and (max-width: $video-break1) {
+			width:94%;	
+		}	
+		
+		.closevideo{
+			@extend .closebtn;
+		}
+		
+		.videoplayer{
+			width:100%;
+			margin: auto;
+			background: black;
+			
+			&-content{
+				width:100%;
+				padding-top:$video-ratio;
+				margin: auto;
+				position:relative;
+				
+				iframe{
+					position:absolute;
+					top:0;
+					left:0;
+				}
+			}
+		}
+		
+		.player-copy{
+			margin: 15px auto;
+			
+			.video-name{
+				@extend .gallery-title;
+			}
+			
+			.video-desc{
+				@extend .gallery-desc;
+			}
+		}
+	}
+	
+	.video-items{
+		width: $video-width;
+		margin: auto;
+		
+		@media screen and (max-width: $video-break1) {
+			width:94%;	
+		}
+		
+		.video-item{
+			width: 100%;
+			background: url(#{$imgPath}video/video.jpg) $video-item-background 10px 10px no-repeat;
+			border: $video-item-border;
+			display: block;
+			margin: 0 auto $video-item-spacing auto;
+			min-height: $video-item-height;
+			
+			@media screen and (max-width: $break-mobile) {
+				background-size:92px 65px;
+			}
+			
+			&:hover{
+				background-color: $video-item-hover;
+			}
+			
+			&:last-child{
+				margin: 0 auto 0 auto;
+			}
+			
+			.video-copy{
+				margin-top: 10px;
+				margin-left: 170px;
+				margin-right: 10px;
+				
+				@media screen and (max-width: $break-mobile) {
+					margin-left: 110px;
+				}
+				
+				.video-name{
+					@extend .gallery-title;
+				}
+				
+				.video-desc{
+					@extend .gallery-desc;
+				}
+				
+				.clickheretoplay{
+					text-transform: uppercase;
+					color: $inpagelink-color;
+					margin-top: 5px;
+					font-size: 12px;
+					margin-bottom: 10px;
+				}
+			}
+			
+			&:hover .clickheretoplay{
+				color:$inpagelink-hover;
+			}
+		}
+	}
+}

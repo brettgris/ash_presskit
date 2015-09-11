@@ -1,0 +1,215 @@
+$prod-container-width: 1100px;
+$prod-width:$prod-container-width*.62;
+//$prod-image-width:526px;
+$prod-image-width:216px;
+$prod-image-height: 300px;
+$prod-image-border: 1px solid $border-color;
+$prod-image-position: 35% center;
+
+$prod-list-width:235px;
+$prod-zindex:5;
+
+$prod-background:$cast-overlay;
+$prod-border:1px solid transparent;
+$prod-border-light:1px solid transparent;
+
+$prod-thumb-height:32px;
+$prod-thumb-spacing:20px;
+$prod-thumb-background: transparent;
+$prod-thumb-hover: $cast-overlay;
+
+$prod-arrows-width:$prod-image-width+$arrow-width*2+100;
+$prod-arrows-top:70px;
+$prod-arrows-top2:150px;
+
+$prod-name-width: 342px;
+$prod-name-height: 72px;
+
+$prod-left:$prod-list-width + ($prod-container-width - ($prod-list-width + $prod-width))/2;
+
+$prod-offcenter: 64%;
+
+$prod-image-break: $prod-image-width+50;
+//$prod-image-break: 875px;
+$prod-arrow-break: 745px;
+
+.production{
+	padding-top:0px !important;
+	
+	.prod-container{
+		width:$prod-container-width;
+		position:absolute;
+		left: 50%;
+		margin-left: -1*$prod-container-width/2;
+		
+		@media screen and (max-width: $prod-container-width) {
+			position:static;
+			margin-left: 0;
+			left:0;
+			width:100%;	
+		}
+		
+		.prod{
+			display: none;
+			padding-bottom:100px;
+			position: absolute;
+			width:$prod-width;
+			left: $prod-left;
+			top:30px;
+			
+			@media screen and (max-width: $prod-container-width) {
+				width: 68%;	
+				left:$prod-offcenter;
+				margin-left: -34%;
+			}
+			
+			@media screen and (max-width: $prod-arrow-break) {
+				width:90%;
+				left:50%;
+				margin-left: -45%;
+			}
+			
+			@media screen and (max-width: $break-mobile) {
+				top:10px;
+			}
+			
+			&:first-child{
+				display:block;
+			}
+			
+			&-image{
+				width: $prod-image-width;
+				height:$prod-image-height;
+				margin: auto;
+				border:$prod-image-border;
+				background-position: $prod-image-position;
+				background-repeat: no-repeat;
+				margin-bottom: 20px;
+				background-size: cover;
+				
+				@media screen and (max-width: $prod-image-break) {
+					width:100%;
+				}
+				
+				@media screen and (max-width: $prod-arrow-break) {
+					width: $prod-image-width*.5;
+					height:$prod-image-height*.5;
+				}
+			}
+			
+			&-copy{
+				width:100%;
+				margin: auto;
+			}
+			
+			&-name{
+				@extend .nameitem;
+				color:$highlight;
+				margin-top: 40px;
+			}
+			
+			&-position{
+				@extend .titleitem;
+				width:50%;
+				margin-left: auto;
+				margin-right: auto;
+				color:$black;
+				margin-top: 10px;
+				
+				@media screen and (max-width: $break-mobile) {
+					width:80%;
+				}
+			}
+			
+			.prod-copy p{
+				@extend .textblock;
+				margin-top: 10px;
+			}
+		}
+		
+		.prod-list{
+			background: $prod-background;
+			border-right:$prod-border;
+			border-left:$prod-border;
+			width:$prod-list-width;
+			height:100%;
+			top:$menu-height;
+			position: fixed;
+			z-index: $prod-zindex;
+			//margin-top: 10px;
+			
+			@media screen and (max-width: $prod-container-width) {
+				border-left: 1px solid transparent;
+				width: 28%;	
+			}
+			
+			@media screen and (max-width: $prod-arrow-break) {
+				display:none;
+			}
+			
+			.t-prod{
+				display: block;
+				height:$prod-thumb-height;
+				padding-left: $prod-thumb-spacing;
+				line-height: $prod-thumb-height;
+				border-bottom:$prod-border-light;
+				background: $prod-thumb-background;
+				//text-align: center;
+				border-top:1px solid transparent;
+				border-bottom:1px solid transparent;
+				margin-bottom: 1px;
+				color: rgba(115,139,156,1);
+				
+				&:first-child{
+					margin-top: 10px;
+				}
+				
+				&:hover, &.selected{
+					background: $prod-thumb-hover;
+					border-top:1px solid rgba(115,139,156,.4);
+					border-bottom:1px solid rgba(115,139,156,.4);
+					color:white;
+				}
+			}
+		}
+		
+		.prod-arrows{
+			@extend .arrow-container;
+			width:$prod-arrows-width;
+			z-index: $prod-zindex;
+			left:$prod-left + ($prod-width - $prod-arrows-width)/2;
+			top:$prod-arrows-top;
+			
+			@media screen and (max-width: $prod-container-width) {
+				left:$prod-offcenter;
+				margin-left: -1*$prod-arrows-width/2;	
+			}
+			
+			@media screen and (max-width: $prod-arrow-break) {
+				width:90%;
+				left:50%;
+				margin-left: -45%;
+				top:30px
+			}
+			
+			&.withimage{
+				top: $prod-arrows-top2;	
+				
+				@media screen and (max-width: $prod-arrow-break) {
+					//top:$prod-arrows-top2*.5;
+					top:60px;
+				}
+			}
+			
+			.prod-prev{
+				@extend .prevbtn;
+			}
+			
+			.prod-next{
+				@extend .nextbtn;
+			}
+			
+		}
+	}
+	
+}

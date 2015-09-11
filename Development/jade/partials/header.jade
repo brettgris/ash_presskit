@@ -1,0 +1,31 @@
+//HEADER
+div.header
+	div.header-container
+		//LOGO
+		a.logo(path="keyart" href="javascript:void(0);")
+
+		//MENU
+		div.menu
+			- for (i in links)
+				if links[i].external
+					a.mlink.mhighlight(href="#{links[i].path}" target="_blank") #{links[i].name}
+				else
+
+					a.mlink.plink(class="l#{links[i].path}" href="javascript:void(0);" path="#{links[i].path}" bg="#{links[i].background}") #{links[i].name}
+
+		//HEADER LOGO
+		a.headerlogo(href="http://www.starz.com/originals/blunttalk" target="_blank")
+
+		//MOBILE LINK
+		a.mobile-link(href="javascript:void(0);")
+			- for (i=0;i<3;i++)
+				span
+
+//MOBILE MENU
+div.mobile-menu
+	ul.menu-list
+		- for (i in links)
+			if links[i].external
+				a.mmlink.mhighlight(href="#{links[i].path}" target="_blank") #{links[i].name}
+			else
+				a.mmlink.mplink(href="javascript:void(0);" path="#{links[i].path}" bg="#{links[i].background}") #{links[i].name}

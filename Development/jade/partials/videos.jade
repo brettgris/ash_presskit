@@ -1,0 +1,19 @@
+//VIDEOS
+div#video.videos.section
+	div.video-list
+		//VIDEO CONTAINER
+		div.video-container
+			a.closevideo(href="javascript:void(0);") CLICK TO CLOSE VIDEO
+			div.videoplayer
+				div.videoplayer-content
+			div.player-copy
+				div.video-name
+				div.video-desc
+		//VIDEO ITEMS
+		div.video-items
+			- for (i in videos)
+				a.video-item(href="javascipt:void(0);" style="background-image:url(images/video/#{videos[i].thumb}" path="#{videos[i].path}" n="#{i}" name="#{videos[i].name}" desc="#{videos[i].desc}")
+					div.video-copy
+						div.video-name #{videos[i].name}
+						div.video-desc #{videos[i].desc}
+						div.clickheretoplay Click here to play

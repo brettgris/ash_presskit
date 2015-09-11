@@ -1,0 +1,23 @@
+//CAST
+div#cast.cast.section
+	//THUMBS
+	div.thumb-container
+		div.thumb-list
+			- for (i in cast)
+				a.t-cast(href="javascript:void(0);" style="background-image:url(images/cast/#{cast[i].safename}_t.jpg" n="#{i}")
+	//ARROWS
+	div.cast-arrows
+		a.cast-next(href="javascript:void(0);")
+		a.cast-prev(href="javascript:void(0);")
+	//CHARACTER BIOS
+	div.character-content
+		- for (i in cast)
+			div.character(id="#{cast[i].safename}")
+				div.character-image(style="background-image:url(images/cast/#{cast[i].safename}_l.jpg")
+				div.character-copy
+					div.character-icon(style="background-image:url(images/cast/#{cast[i].icon}")
+					div.character-quote &#8220;#{cast[i].quote}&#8221;
+					div.character-name #{cast[i].name}
+					div.actor-name #{cast[i].actor}
+					div.character-desc !{cast[i].desc}
+

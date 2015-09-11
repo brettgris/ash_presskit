@@ -1,0 +1,22 @@
+//PRODUCTION
+div#production.production.section
+	div.prod-container
+		//LIST
+		div.prod-list
+			- for (i in prod)
+				a.t-prod(href="javascript:void" n="#{i}") !{prod[i].name}
+		//ARROWS
+		div.prod-arrows
+			a.prod-next(href="javascript:void(0);")
+			a.prod-prev(href="javascript:void(0);")
+		//PROD BIOS
+		div.prod-content
+			- for (i in prod)
+				div.prod(id="#{prod[i].safename}" image="#{prod[i].image}")
+					if (prod[i].image)
+						div.prod-image(style="background-image:url(/images/prod/#{prod[i].safename}_l_bw.jpg)")
+					div.prod-copy
+						div.prod-name !{prod[i].name}
+						div.prod-position #{prod[i].role}
+						- for (p in prod[i].desc)
+							p !{prod[i].desc[p]}
