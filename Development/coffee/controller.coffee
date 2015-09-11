@@ -1,8 +1,8 @@
 $ ->
-
 	init = ->
 		$(window).resize(resize)
 		resize()
+		startAnimator()
 		$.PageSwitcher({
 			links: '.plink'
 			mobile: '.mplink'
@@ -15,10 +15,20 @@ $ ->
 			mobilecontainer: '.mobile-menu'
 			logo: '.logo'
 			backgrounds: true
-			current: 'keyart'
+			current: 'intro'
+			onChange: (t) ->
+				if t=="intro"
+					$('.intro').data('AshAnimator').startAnimate()
+				else
+					$('.intro').data('AshAnimator').stopAnimate()
 		})
 		loadSlideShows()
 		loadGalleries()
+
+	startAnimator = ->
+		$('.intro').AshAnimator({
+
+		})
 
 	loadSlideShows = ->		
 		$('.cast').PressKitSlideShow({

@@ -1,8 +1,9 @@
 $(function() {
-  var init, loadGalleries, loadSlideShows, resize;
+  var init, loadGalleries, loadSlideShows, resize, startAnimator;
   init = function() {
     $(window).resize(resize);
     resize();
+    startAnimator();
     $.PageSwitcher({
       links: '.plink',
       mobile: '.mplink',
@@ -15,10 +16,20 @@ $(function() {
       mobilecontainer: '.mobile-menu',
       logo: '.logo',
       backgrounds: true,
-      current: 'keyart'
+      current: 'intro',
+      onChange: function(t) {
+        if (t === "intro") {
+          return $('.intro').data('AshAnimator').startAnimate();
+        } else {
+          return $('.intro').data('AshAnimator').stopAnimate();
+        }
+      }
     });
     loadSlideShows();
     return loadGalleries();
+  };
+  startAnimator = function() {
+    return $('.intro').AshAnimator({});
   };
   loadSlideShows = function() {
     $('.cast').PressKitSlideShow({

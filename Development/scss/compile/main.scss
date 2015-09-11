@@ -63,11 +63,14 @@ $break-mobile:500px;
 //IMAGE PATH
 $imgPath:"../images/";
 
-/************************  MENU  ************************/
-@import '../partials/menu.scss';
+/************************  HEADER  ************************/
+@import '../partials/header.scss';
 
 /***********************  GLOBALS  **********************/
 @import '../partials/globals.scss';
+
+/***********************  INTRO  *************************/
+@import '../partials/intro.scss';
 
 /***********************  KEYART  *************************/
 @import '../partials/keyart.scss';
