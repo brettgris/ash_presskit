@@ -6,6 +6,18 @@ div#intro.intro.section
 			- var sh = intro[i].height
 			div.intro-item(class="intro#{i}" n="#{i}" w="#{intro[i].width}" h="#{intro[i].height}")
 				-for (a in intro[i].items)
-					- var iw = intro[i].items[a].width
-					- var ih = intro[i].items[a].width
-					div.intro-animate(style="width:#{iw/sw*100}%;height:#{ih/sh*100}%;margin-left:#{iw/sw*-50}%;" animate="#{intro[i].items[a].animate}")
+					- var iw = intro[i].items[a].width/sw*100
+					- var ih = intro[i].items[a].height/sh*100
+					- var il = intro[i].items[a].left/sw*100
+					- var it = intro[i].items[a].top/sh*100
+					- var ia = JSON.stringify(intro[i].items[a].animate)
+					- var td = (intro[i].items[a].threedimensional ? 'threedimensional' : 'twodimensional' )
+					
+					div.intro-animate(style="width:#{iw}%;height:#{ih}%;left:#{il}%;top:#{it}%;" speed="#{intro[i].items[a].speed}" delay="#{intro[i].items[a].delay}" animate="#{ia}" class="#{td}")
+						- if (intro[i].items[a].threedimensional)
+							div
+
+		div.intro-arrows
+			a.next(href="javascript:void(0);")
+			a.prev(href="javascript:void(0);")
+		

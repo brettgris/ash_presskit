@@ -29,7 +29,12 @@ $(function() {
     return loadGalleries();
   };
   startAnimator = function() {
-    return $('.intro').AshAnimator({});
+    return $('.intro').AshAnimator({
+      perspective: 900,
+      delay: 7000,
+      ease: Back.easeOut.config(1.2),
+      current: 0
+    });
   };
   loadSlideShows = function() {
     $('.cast').PressKitSlideShow({

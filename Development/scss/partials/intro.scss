@@ -1,3 +1,7 @@
+$intro-width: 1000;
+$intro-arrow-space: 20px;
+$intro-arrow-width: $intro-width + $intro-arrow-space*2 + $arrow-width*2;
+
 #intro{
 	background: yellow;
 	width: 100%;
@@ -7,24 +11,57 @@
 	padding-top: 0px !important;
 
 	.intro-container{
+
+
 		.intro-item{
-			background: pink;
 			position: absolute;
-			bottom:0;
+			top:0;
 			left:50%;
 			display: none;
-			border:1px solid white;
 
 			&:first-child{
 				display: block;
 			}
 
 			.intro-animate{
-				background: cyan;
 				position: absolute;
-				bottom:0;
-				left:50%;
+				top:0;
+				left:0;
+
+				&.twodimensional {
+					background: cyan;
+					border:1px solid white;
+				}
+
+				&.threedimensional{
+					div{
+						background: cyan;
+						border:1px solid white;
+						position: absolute;
+						top:0;
+						left:0;
+						width: 100%;
+						height: 100%;
+					}
+				}
 			}
+		}
+
+		.intro-arrows{
+			@extend .arrow-container;
+			width: $intro-arrow-width;
+			left:50%;
+			margin-left: $intro-arrow-width/-2;
+			top:325px;
+
+			.next{
+				@extend .nextbtn;
+			}
+
+			.prev{
+				@extend .prevbtn;
+			}
+			
 		}
 	}
 }
