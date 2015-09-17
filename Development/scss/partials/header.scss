@@ -6,7 +6,7 @@ $menu-border:1px solid $border-color;
 
 //SHOW TA
 $logo-width:267px;
-$logo-height:42px;
+$logo-height:60px;
 $logo-space:10px;
 
 //STARZ LOGO
@@ -58,7 +58,7 @@ $mm-link-mobile-size: 30px;
 		
 		.logo{
 			position: absolute;
-			background: url(#{$imgPath}ta.svg) no-repeat center center;
+			background: url(#{$imgPath}ta.png) no-repeat center center;
 			width:$logo-width;
 			height:$logo-height;
 			top: ($menu-height - $logo-height)/2;
@@ -175,7 +175,7 @@ $mm-link-mobile-size: 30px;
 
 $mm-width: 300px;
 $mm-background: $cast-overlay;
-$mm-hover-background: $dark-blue;
+$mm-hover-background: $black;
 $mm-item-height: 45px;
 $mm-item-background: $cast-overlay;
 $mm-item-border: rgba(115,139,156,.4);

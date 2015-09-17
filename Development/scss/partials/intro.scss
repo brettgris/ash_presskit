@@ -3,16 +3,16 @@ $intro-arrow-space: 20px;
 $intro-arrow-width: $intro-width + $intro-arrow-space*2 + $arrow-width*2;
 
 #intro{
-	background: yellow;
+	background: url(#{$imgPath}intro/key_bg.jpg) center center no-repeat;
+	background-color: #020000;
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	z-index: 5;
 	padding-top: 0px !important;
+	background-size:contain;
 
 	.intro-container{
-
-
 		.intro-item{
 			position: absolute;
 			top:0;
@@ -28,20 +28,14 @@ $intro-arrow-width: $intro-width + $intro-arrow-space*2 + $arrow-width*2;
 				top:0;
 				left:0;
 
-				&.twodimensional {
-					background: cyan;
-					border:1px solid white;
-				}
-
 				&.threedimensional{
 					div{
-						background: cyan;
-						border:1px solid white;
 						position: absolute;
 						top:0;
 						left:0;
 						width: 100%;
 						height: 100%;
+						background-size: cover;
 					}
 				}
 			}

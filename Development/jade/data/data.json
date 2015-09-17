@@ -45,59 +45,63 @@
   ],
   "intro": [
     {
-      "width": 1000,
-      "height": 700,
+      "width": 1500,
+      "height": 1007,
       "items": [
         {
-          "name": "Test",
-          "image": "test.png",
-          "width": 900,
-          "height": 600,
-          "left": 50,
-          "top": 100,
-          "threedimensional": true,
+          "name": "Kelly",
+          "background": "url(images/intro/key_kelly.png)",
+          "width": 191,
+          "height": 275,
+          "left": 439,
+          "top": 411,
           "animate": {
-          	"rotationX":90,
-          	"transformOrigin":"50% bottom"          	
+            "rotationX":90,
+            "transformOrigin":"50% bottom"            
           },
-          "delay": 1,
-          "speed": 1.5
+          "delay": 1.3,
+          "speed": 0.8
         },{
-          "name": "Test",
-          "image": "test.png",
-          "width": 600,
-          "height": 300,
-          "left": 200,
+          "name": "Pablo",
+          "background": "url(images/intro/key_pablo.png)",
+          "width": 127,
+          "height": 291,
+          "left": 341,
           "top": 400,
-          "threedimensional": false,
           "animate": {
-          	 "scaleX": ".85",
-          	 "scaleY": ".85",
-          	 "top":"50%",
-          	 "transformOrigin": "50% top"     	
+            "rotationX":90,
+            "transformOrigin":"50% bottom"            
           },
-          "delay": 1,
-          "speed": 1
-        }
-      ]
-    },{
-      "width": 1000,
-      "height": 700,
-      "items": [
-        {
-          "name": "Test",
-          "image": "test.png",
-          "width": 600,
-          "height": 500,
-          "left": 200,
-          "top": 200,
-          "threedimensional": true,
+          "delay": 1.2,
+          "speed": 0.8
+        },{
+          "name": "Car",
+          "background": "url(images/intro/key_car.png)",
+          "width": 1500,
+          "height": 521,
+          "left": 0,
+          "top": 486,
           "animate": {
-          	"rotationX":90,
+          	
+            "left": "+75",
+            "top": "-30",
           	"transformOrigin":"50% bottom"          	
           },
           "delay": 1,
           "speed": 1
+        },{
+          "name": "Ash",
+          "background": "url(images/intro/key_ash.png)",
+          "width": 462,
+          "height": 835,
+          "left": 928,
+          "top": 172,
+          "animate": {
+            "rotationX":90,
+            "transformOrigin":"50% bottom"            
+          },
+          "delay": 1.8,
+          "speed": 0.8
         }
       ]
     }

@@ -11,11 +11,10 @@ div#intro.intro.section
 					- var il = intro[i].items[a].left/sw*100
 					- var it = intro[i].items[a].top/sh*100
 					- var ia = JSON.stringify(intro[i].items[a].animate)
-					- var td = (intro[i].items[a].threedimensional ? 'threedimensional' : 'twodimensional' )
+					- var td = 'threedimensional'
 					
 					div.intro-animate(style="width:#{iw}%;height:#{ih}%;left:#{il}%;top:#{it}%;" speed="#{intro[i].items[a].speed}" delay="#{intro[i].items[a].delay}" animate="#{ia}" class="#{td}")
-						- if (intro[i].items[a].threedimensional)
-							div
+						div(style="background:#{intro[i].items[a].background};background-size:cover;")
 
 		div.intro-arrows
 			a.next(href="javascript:void(0);")

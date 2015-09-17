@@ -4,46 +4,46 @@
 
 /************************  SHOW COLORS  ************************/
 
-//BT TALK COLORS
-$dark-blue:#002a48;
-$light-blue:#0f85ba;
+//ASH COLORS
 $white:#fff;
 $black:#000;
 $red:#ed1e2e;
+$orange: #df946b;
+$light-orange: #efd4d1;
 $light-grey: #ddd;
 $med-grey: #666;
 $dark-grey:#404040;
 /**********************  END SHOW COLORS  **********************/
 
 /**********************  END COLOR ELEMENTS **********************/
-$background-color: $dark-blue;
+$background-color: $black;
 $font-color: $black;
 
-$border-color: rgba(15,133,186,.75);
-$border-interactive:rgba(15,133,186,.75);
+$border-color: rgba(239,212,209,.3);
+$border-interactive:rgba(239,212,209,.75);
 $border-hover:$white;
 
-$menu-color: $red;
-$footer-background: $red;
-$footer-color: $black;
+$menu-color: $black;
+$footer-background: $black;
+$footer-color: $med-grey;
 
 $overlay-color: rgba(256,256,256,.9);
-$cast-overlay: rgba(0,42,72,.9);
+$cast-overlay: rgba(0,0,0,.9);
 
-$btn-color:rgba(0,42,72,.85);;
-$btn-hover:rgba(0,42,72,1);;
+$btn-color:yellow;
+$btn-hover:#000000;
 
 $item-background: $black;
-$item-title: $light-blue;
+$item-title: $orange;
 $item-text: $dark-grey;
 
 $link-color:$light-grey;
 $link-hover:$white;
 
 $inpagelink-color: $dark-grey;
-$inpagelink-hover: $light-blue;
-$link-highlight:$dark-blue;
-$highlight: $light-blue;
+$inpagelink-hover: $light-orange;
+$link-highlight:$orange;
+$highlight: $orange;
 /**********************  END COLOR ELEMENTS **********************/
 
 //FONTS

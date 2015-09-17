@@ -77,6 +77,10 @@ $social-padding:5px;
 			&.instagram{
 				background-image: url(#{$imgPath}logo_instagram.png);
 			}
+
+			&.tumblr{
+				background-image: url(#{$imgPath}logo_tumblr.png);
+			}
 		}
 	}
 }
