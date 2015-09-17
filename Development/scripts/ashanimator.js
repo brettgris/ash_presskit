@@ -1,6 +1,6 @@
 var bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
-(function($, TweenMax, window, document) {
+(function($, TweenMax, Modernizr, window, document) {
   var AshAnimator;
   AshAnimator = (function() {
     AshAnimator.prototype.defaults = {
@@ -31,11 +31,12 @@ var bind = function(fn, me){ return function(){ return fn.apply(me, arguments); 
       this.startAnimate = bind(this.startAnimate, this);
       this.options = $.extend({}, this.defaults, options);
       this.$el = $(el);
-      this.timeout = setTimeout(1);
+      this.timeout;
       this.items = this.$el.find(this.options.item);
       this.current = this.options.current;
       this.visible = false;
       this.isAnimating = false;
+      this.threed = Modernizr.csstransforms3d;
       this.resize();
       $(window).resize((function(_this) {
         return function() {
@@ -95,23 +96,25 @@ var bind = function(fn, me){ return function(){ return fn.apply(me, arguments); 
       this.isAnimating = true;
       return this.items.eq(this.current).find(this.options.animate).each((function(_this) {
         return function(i, v) {
-          var ani, t, target, td, tl;
+          var ani, t, target, tl;
           t = $(v).hide();
-          td = t.hasClass(_this.options.threedimensionalclass);
           ani = JSON.parse(t.attr(_this.options.animateattr));
           ani.ease = _this.options.ease;
+          if (!_this.threed) {
+            ani = {
+              opacity: 0
+            };
+          }
           ani.onComplete = _this.itemDone;
           tl = new TimelineLite({
             delay: t.attr(_this.options.delayattr)
           });
-          if (td) {
+          if (_this.threed) {
             TweenMax.set(t, {
               perspective: _this.options.perspective
             });
-            target = t.find('div');
-          } else {
-            target = t;
           }
+          target = t.find('div');
           return tl.call(function() {
             t.show();
             ani.onCompleteParams = [t.parent()];
@@ -204,4 +207,4 @@ var bind = function(fn, me){ return function(){ return fn.apply(me, arguments); 
       });
     }
   });
-})(jQuery, TweenMax, window, document);
+})(jQuery, TweenMax, Modernizr, window, document);

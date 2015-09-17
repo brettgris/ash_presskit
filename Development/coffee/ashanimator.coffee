@@ -1,4 +1,4 @@
-(($,TweenMax, window,document) ->
+(($,TweenMax, Modernizr, window,document) ->
 	class AshAnimator
 		defaults:
 			current: 0,
@@ -19,11 +19,13 @@
 			#vars
 			@options = $.extend({},@defaults,options)
 			@$el = $(el)
-			@timeout = setTimeout(1)
+			@timeout
 			@items = @$el.find(@options.item)
 			@current = @options.current
 			@visible = false
-			@isAnimating = false;
+			@isAnimating = false
+			@threed = Modernizr.csstransforms3d
+			
 			#methods
 			@resize()
 			$(window).resize =>
@@ -66,17 +68,14 @@
 			@isAnimating = true;
 			@items.eq(@current).find(@options.animate).each (i,v) =>
 				t = $(v).hide()
-				td = t.hasClass(@options.threedimensionalclass)
 				ani = JSON.parse(t.attr(@options.animateattr))
 				ani.ease = @options.ease
+				if !@threed then ani = {opacity:0}
 				ani.onComplete = @itemDone
-					
+				
 				tl = new TimelineLite({delay:t.attr(@options.delayattr)})
-				if td 
-					TweenMax.set(t,{perspective:@options.perspective})
-					target = t.find('div')
-				else 
-					target = t
+				if @threed then TweenMax.set(t,{perspective:@options.perspective})
+				target = t.find('div')
 				tl.call =>
 					t.show()
 					ani.onCompleteParams = [t.parent()]
@@ -98,6 +97,7 @@
 					,@options.delay)
 
 		resize: =>
+
 			@$el.height($(window).height()-$('.footer').height()-$('.header').height())
 			@items.each (i,v) =>
 				t = $(v)
@@ -147,4 +147,4 @@
 		@each ->
 			$(this).data('AshAnimator', new AshAnimator(@,options)) 
 
-) jQuery, TweenMax, window, document
+) jQuery, TweenMax, Modernizr, window, document

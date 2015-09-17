@@ -14,7 +14,7 @@ div#intro.intro.section
 					- var td = 'threedimensional'
 					
 					div.intro-animate(style="width:#{iw}%;height:#{ih}%;left:#{il}%;top:#{it}%;" speed="#{intro[i].items[a].speed}" delay="#{intro[i].items[a].delay}" animate="#{ia}" class="#{td}")
-						div(style="background:#{intro[i].items[a].background};background-size:cover;")
+						div(style="background:url(#{intro[i].items[a].background});background-size:cover;")
 
 		div.intro-arrows
 			a.next(href="javascript:void(0);")

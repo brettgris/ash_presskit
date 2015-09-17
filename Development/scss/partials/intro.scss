@@ -2,22 +2,26 @@ $intro-width: 1000;
 $intro-arrow-space: 20px;
 $intro-arrow-width: $intro-width + $intro-arrow-space*2 + $arrow-width*2;
 
-#intro{
+.intro{
 	background: url(#{$imgPath}intro/key_bg.jpg) center center no-repeat;
 	background-color: #020000;
 	width: 100%;
-	height: 100%;
-	position: absolute;
 	z-index: 5;
 	padding-top: 0px !important;
 	background-size:contain;
+	height:10000px;
 
 	.intro-container{
+		height: 500px;
+
 		.intro-item{
+			width:100%;
+			height: 500px;
 			position: absolute;
 			top:0;
 			left:50%;
 			display: none;
+			margin-left: -50%;
 
 			&:first-child{
 				display: block;
@@ -35,7 +39,6 @@ $intro-arrow-width: $intro-width + $intro-arrow-space*2 + $arrow-width*2;
 						left:0;
 						width: 100%;
 						height: 100%;
-						background-size: cover;
 					}
 				}
 			}
