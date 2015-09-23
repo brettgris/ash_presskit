@@ -4,18 +4,20 @@ div#intro.intro.section
 		- for (i in intro)
 			- var sw = intro[i].width
 			- var sh = intro[i].height
-			div.intro-item(class="intro#{i}" n="#{i}" w="#{intro[i].width}" h="#{intro[i].height}")
+			div.intro-item(class="intro#{i}" n="#{i}" w="#{intro[i].width}" h="#{intro[i].height}" bg="#{intro[i].background}")
 				-for (a in intro[i].items)
 					- var iw = intro[i].items[a].width/sw*100
 					- var ih = intro[i].items[a].height/sh*100
 					- var il = intro[i].items[a].left/sw*100
 					- var it = intro[i].items[a].top/sh*100
 					- var ia = JSON.stringify(intro[i].items[a].animate)
-					- var td = 'threedimensional'
-					
-					div.intro-animate(style="width:#{iw}%;height:#{ih}%;left:#{il}%;top:#{it}%;" speed="#{intro[i].items[a].speed}" delay="#{intro[i].items[a].delay}" animate="#{ia}" class="#{td}")
-						div(style="background:url(#{intro[i].items[a].background});background-size:cover;")
-
+					- var is = JSON.stringify(intro[i].items[a].set)
+					div.intro-animate(style="width:#{iw}%;height:#{ih}%;left:#{il}%;top:#{it}%;" set="#{is}" animate="#{ia}" delay="#{intro[i].items[a].delay}")
+						- for (b in intro[i].items[a].divs)
+							- var s = ""
+							- for (c in intro[i].items[a].divs[b])
+								- s += c+":"+intro[i].items[a].divs[b][c]+";"
+							div(style="#{s}")
 		div.intro-arrows
 			a.next(href="javascript:void(0);")
 			a.prev(href="javascript:void(0);")

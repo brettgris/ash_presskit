@@ -9,13 +9,14 @@ var bind = function(fn, me){ return function(){ return fn.apply(me, arguments); 
       item: '.intro-item',
       animate: '.intro-animate',
       animateattr: 'animate',
+      setattr: 'set',
       initattr: 'init',
-      speedattr: 'speed',
       delayattr: 'delay',
+      backgroundattr: 'bg',
       threedimensionalclass: 'threedimensional',
       idattr: 'n',
-      perspective: 900,
-      ease: Back.easeOut.config(1.2),
+      perspective: 1000,
+      ease: Back.easeOut.config(1),
       delay: 5000
     };
 
@@ -23,6 +24,7 @@ var bind = function(fn, me){ return function(){ return fn.apply(me, arguments); 
       this.resize = bind(this.resize, this);
       this.itemDone = bind(this.itemDone, this);
       this.changeTo = bind(this.changeTo, this);
+      this.animateEachItem = bind(this.animateEachItem, this);
       this.animate = bind(this.animate, this);
       this.prevItem = bind(this.prevItem, this);
       this.nextItem = bind(this.nextItem, this);
@@ -91,41 +93,97 @@ var bind = function(fn, me){ return function(){ return fn.apply(me, arguments); 
     };
 
     AshAnimator.prototype.animate = function() {
+      this.$el.css({
+        'background': this.items.eq(this.current).attr(this.options.backgroundattr),
+        'background-size': 'contain'
+      });
       this.count = 0;
       this.length = this.items.eq(this.current).find(this.options.animate).length;
       this.isAnimating = true;
-      return this.items.eq(this.current).find(this.options.animate).each((function(_this) {
-        return function(i, v) {
-          var ani, t, target, tl;
-          t = $(v).hide();
-          ani = JSON.parse(t.attr(_this.options.animateattr));
-          ani.ease = _this.options.ease;
-          if (!_this.threed) {
-            ani = {
-              opacity: 0
+      return this.items.eq(this.current).find(this.options.animate).each(this.animateEachItem);
+    };
+
+    AshAnimator.prototype.animateEachItem = function(i, v) {
+      var animateArr, e, j, len, obj, s, setObj, t, target, tl;
+      t = $(v).hide();
+      target = t.find('div');
+      animateArr = JSON.parse(t.attr(this.options.animateattr));
+      setObj = JSON.parse(t.attr(this.options.setattr));
+      TweenMax.set(t, {
+        perspective: this.options.perspective,
+        transformStyle: "preserve-3d"
+      });
+      tl = new TimelineLite({
+        delay: t.attr(this.options.delayattr)
+      });
+      tl.set(target, setObj);
+      tl.call((function(_this) {
+        return function() {
+          return t.show();
+        };
+      })(this));
+      for (j = 0, len = animateArr.length; j < len; j++) {
+        obj = animateArr[j];
+        s = obj['speed'];
+        delete obj['speed'];
+        e = obj['ease'];
+        if (e === "Rough") {
+          obj.ease = RoughEase.ease.config({
+            template: Power0.easeNone,
+            strength: 0.7,
+            points: 10,
+            taper: "none",
+            randomize: true,
+            clamp: true
+          });
+        } else {
+          obj.ease = this.options.ease;
+        }
+        if (obj['hide'] !== void 0) {
+          target.eq(0).hide();
+          target.eq(1).show();
+          obj.onUpdate = (function(_this) {
+            return function(t, d) {
+              var y;
+              y = t.target.eq(0).prop('_gsTransform').rotationY;
+              if (y <= -90 && target.eq(0).css('display') === "none") {
+                target.eq(0).show();
+                return target.eq(1).hide();
+              }
             };
-          }
-          ani.onComplete = _this.itemDone;
-          tl = new TimelineLite({
-            delay: t.attr(_this.options.delayattr)
-          });
-          if (_this.threed) {
-            TweenMax.set(t, {
-              perspective: _this.options.perspective
-            });
-          }
-          target = t.find('div');
-          return tl.call(function() {
-            t.show();
-            ani.onCompleteParams = [t.parent()];
-            return TweenMax.from(target, t.attr(_this.options.speedattr), ani);
-          });
+          })(this);
+          obj.onUpdateParams = ["{self}", target];
+          delete obj['hide'];
+        }
+        if (obj['zIndex']) {
+          obj.onStart = (function(_this) {
+            return function(t, z) {
+              return TweenMax.set(t, {
+                "zIndex": z
+              });
+            };
+          })(this);
+          obj.onStartParams = [t, obj['zIndex']];
+          delete obj['zIndex'];
+        }
+        tl.to(target, s, obj);
+      }
+      return tl.call((function(_this) {
+        return function() {
+          return _this.itemDone(t.parent());
         };
       })(this));
     };
 
     AshAnimator.prototype.changeTo = function(next) {
       this.items.eq(this.current).hide();
+      this.items.eq(this.current).find(this.options.animate).each((function(_this) {
+        return function(i, v) {
+          return TweenMax.set($(v), {
+            'zIndex': 0
+          });
+        };
+      })(this));
       this.current = next;
       this.items.eq(this.current).show();
       return this.animate();
@@ -153,7 +211,7 @@ var bind = function(fn, me){ return function(){ return fn.apply(me, arguments); 
           t = $(v);
           w = Number(t.attr('w'));
           h = Number(t.attr('h'));
-          ww = _this.$el.width() - 78;
+          ww = _this.$el.width() - 100;
           wh = _this.$el.height();
           ir = w / h;
           wr = ww / wh;
@@ -187,7 +245,7 @@ var bind = function(fn, me){ return function(){ return fn.apply(me, arguments); 
             'top': et + 'px'
           });
           a = $(_this.options.arrows);
-          aw = ew + 68;
+          aw = ew + 90;
           return a.css({
             'width': aw + 'px',
             'margin-left': aw / -2 + 'px',

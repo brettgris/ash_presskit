@@ -6,13 +6,14 @@
 			item: '.intro-item'
 			animate: '.intro-animate'
 			animateattr: 'animate'
+			setattr: 'set'
 			initattr: 'init'
-			speedattr: 'speed'
 			delayattr: 'delay'
+			backgroundattr: 'bg'
 			threedimensionalclass: 'threedimensional'
 			idattr: 'n'
-			perspective: 900
-			ease: Back.easeOut.config(1.2)
+			perspective: 1000
+			ease: Back.easeOut.config(1)
 			delay: 5000
 
 		constructor: (el, options) ->
@@ -63,26 +64,60 @@
 			@changeTo(next)
 
 		animate: =>
+			@$el.css(
+				'background': @items.eq(@current).attr(@options.backgroundattr)
+				'background-size': 'contain'
+			)
 			@count = 0
 			@length = @items.eq(@current).find(@options.animate).length
 			@isAnimating = true;
-			@items.eq(@current).find(@options.animate).each (i,v) =>
-				t = $(v).hide()
-				ani = JSON.parse(t.attr(@options.animateattr))
-				ani.ease = @options.ease
-				if !@threed then ani = {opacity:0}
-				ani.onComplete = @itemDone
-				
-				tl = new TimelineLite({delay:t.attr(@options.delayattr)})
-				if @threed then TweenMax.set(t,{perspective:@options.perspective})
-				target = t.find('div')
-				tl.call =>
-					t.show()
-					ani.onCompleteParams = [t.parent()]
-					TweenMax.from(target,t.attr(@options.speedattr),ani)
+			@items.eq(@current).find(@options.animate).each @animateEachItem
+
+		animateEachItem: (i,v) =>
+			t = $(v).hide()
+			target = t.find('div')
+			animateArr = JSON.parse(t.attr(@options.animateattr))
+			setObj = JSON.parse(t.attr(@options.setattr))
+
+			TweenMax.set(t,{perspective:@options.perspective, transformStyle:"preserve-3d"})
+			tl = new TimelineLite({delay:t.attr(@options.delayattr)})
+			tl.set(target, setObj)
+
+			tl.call( =>
+				t.show()
+			)
+			for obj in animateArr
+				s = obj['speed']
+				delete obj['speed']
+				e = obj['ease']
+				if e=="Rough"
+					obj.ease = RoughEase.ease.config({ template: Power0.easeNone, strength: 0.7, points: 10, taper: "none", randomize: true, clamp: true})
+				else
+					obj.ease = @options.ease
+				if obj['hide'] != undefined
+					target.eq(0).hide()
+					target.eq(1).show()
+					obj.onUpdate = (t,d) =>
+						y = t.target.eq(0).prop('_gsTransform').rotationY
+						if y <= -90 && target.eq(0).css('display')=="none"
+							target.eq(0).show()
+							target.eq(1).hide()
+					obj.onUpdateParams = ["{self}",target]
+					delete obj['hide']
+				if obj['zIndex']
+					obj.onStart = (t,z) =>
+						TweenMax.set(t,{"zIndex":z})
+					obj.onStartParams = [t,obj['zIndex']]
+					delete obj['zIndex']
+				tl.to(target,s,obj)
+			tl.call( =>
+				@itemDone( t.parent() )
+			)
 
 		changeTo: (next) =>
 			@items.eq(@current).hide()
+			@items.eq(@current).find(@options.animate).each (i,v) =>
+				TweenMax.set( $(v), {'zIndex':0} )
 			@current = next
 			@items.eq(@current).show()
 			@animate()
@@ -97,13 +132,12 @@
 					,@options.delay)
 
 		resize: =>
-
 			@$el.height($(window).height()-$('.footer').height()-$('.header').height())
 			@items.each (i,v) =>
 				t = $(v)
 				w = Number(t.attr('w'))
 				h = Number(t.attr('h'))
-				ww = @$el.width()-78
+				ww = @$el.width()-100
 				wh = @$el.height()
 				ir = w/h
 				wr = ww/wh
@@ -135,7 +169,7 @@
 					'top': et+'px'
 				)
 				a = $(@options.arrows);
-				aw = ew+68;
+				aw = ew+90;
 				a.css(
 					'width': aw+'px'
 					'margin-left': aw/-2+'px'

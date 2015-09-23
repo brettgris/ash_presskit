@@ -31,8 +31,8 @@ $(function() {
   startAnimator = function() {
     return $('.intro').AshAnimator({
       perspective: 900,
-      delay: 7000,
-      ease: Back.easeOut.config(1.2),
+      delay: 5000,
+      ease: Power2.easeOut,
       current: 0
     });
   };

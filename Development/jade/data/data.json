@@ -1,551 +1,848 @@
 {
-  "links": [
-    {
-      "name": "Synopsis",
-      "path": "keyart",
-      "external": false,
-      "background": "black no-repeat center top"
-    },
-    {
-      "name": "Cast",
-      "path": "cast",
-      "external": false,
-      "background": "white no-repeat center top "
-    },
-    {
-      "name": "Production Bios",
-      "path": "production",
-      "external": false,
-      "background": "white no-repeat center top"
-    },
-    {
-      "name": "Gallery",
-      "path": "gallery",
-      "external": false,
-      "background": "url(images/bg/car.jpg)  #002a48 no-repeat center top"
-    },
-    {
-      "name": "Videos",
-      "path": "videos",
-      "external": false,
-      "background": "url(images/bg/desk.jpg) #002a48  no-repeat center top"
-    },
-    {
-      "name": "Screening Room",
-      "path": "https://microsites.starz.com/ScreeningRoom/Account/Login",
-      "external": true,
-      "background": ""
-    },
-    {
-      "name": "Press Materials",
-      "path": "downloads",
-      "external": false,
-      "background": "url(images/bg/sign.jpg) #002a48 no-repeat center top"
-    }
-  ],
-  "intro": [
-    {
-      "width": 1500,
-      "height": 1007,
-      "items": [
-        {
-          "name": "Kelly",
-          "background": "images/intro/key_kelly.png",
-          "width": 191,
-          "height": 275,
-          "left": 439,
-          "top": 411,
-          "animate": {
-            "rotationX":90,
-            "transformOrigin":"50% bottom"            
-          },
-          "delay": 0.8,
-          "speed": 0.8
+    "links": [{
+        "name": "Synopsis",
+        "path": "keyart",
+        "external": false,
+        "background": "black no-repeat center top"
+    }, {
+        "name": "Cast",
+        "path": "cast",
+        "external": false,
+        "background": "white no-repeat center top "
+    }, {
+        "name": "Production Bios",
+        "path": "production",
+        "external": false,
+        "background": "white no-repeat center top"
+    }, {
+        "name": "Gallery",
+        "path": "gallery",
+        "external": false,
+        "background": "url(images/bg/car.jpg)  #002a48 no-repeat center top"
+    }, {
+        "name": "Videos",
+        "path": "videos",
+        "external": false,
+        "background": "url(images/bg/desk.jpg) #002a48  no-repeat center top"
+    }, {
+        "name": "Screening Room",
+        "path": "https://microsites.starz.com/ScreeningRoom/Account/Login",
+        "external": true,
+        "background": ""
+    }, {
+        "name": "Press Materials",
+        "path": "downloads",
+        "external": false,
+        "background": "url(images/bg/sign.jpg) #002a48 no-repeat center top"
+    }],
+    "intro": [{
+        "width": 1500,
+        "height": 1000,
+        "background": "url(images/intro/intro1_bg.jpg) #000 no-repeat center center",
+        "items": [{
+            "name": "Quote",
+            "width": 602,
+            "height": 421,
+            "left": 50,
+            "top": 232,
+            "delay": 0.5,
+            "divs": [{
+                "background-image": "url(images/intro/intro1_quote.png)",
+                "background-size": "cover"
+            }],
+            "set": {
+              "opacity": 0,
+              "top": "+50"
+            },
+            "animate": [{
+              "opacity": 1,
+              "top": "0",
+              "speed":1.5
+            }]
+        }, {
+            "name": "Page 11",
+            "width": 414,
+            "height": 535,
+            "left": 1086,
+            "top": 238,
+            "delay": 4.25,
+            "divs": [{
+                "background-image": "url(images/intro/intro1_page11.jpg)",
+                "background-size": "cover"
+            }],
+            "set": {
+                "rotationY": 0,
+                "transformOrigin": "left bottom"
+            },
+            "animate": []
+        }, {
+            "name": "Page 9-10",
+            "width": 414,
+            "height": 535,
+            "left": 1086,
+            "top": 238,
+            "delay": 4,
+            "divs": [{
+                "background-image": "url(images/intro/intro1_page10.jpg)",
+                "background-size": "cover"
+            }, {
+                "background-image": "url(images/intro/intro1_page9.jpg)",
+                "background-size": "cover"
+            }],
+            "set": {
+                "rotationY": 0,
+                "transformOrigin": "left bottom"
+            },
+            "animate": [{
+                "rotationY": "-180",
+                "speed": 0.5,
+                "delay": 0.25,
+                "zIndex": "+5",
+                "hide": 1
+            }]
+        }, {
+            "name": "Page 7-8",
+            "width": 414,
+            "height": 535,
+            "left": 1086,
+            "top": 238,
+            "delay": 3.75,
+            "divs": [{
+                "background-image": "url(images/intro/intro1_page8.jpg)",
+                "background-size": "cover"
+            }, {
+                "background-image": "url(images/intro/intro1_page7.jpg)",
+                "background-size": "cover"
+            }],
+            "set": {
+                "rotationY": 0,
+                "transformOrigin": "left bottom"
+            },
+            "animate": [{
+                "rotationY": "-180",
+                "speed": 0.5,
+                "delay": 0.25,
+                "zIndex": "+4",
+                "hide": 1
+            }]
+        }, {
+            "name": "Page 5-6",
+            "width": 414,
+            "height": 535,
+            "left": 1086,
+            "top": 238,
+            "delay": 3.5,
+            "divs": [{
+                "background-image": "url(images/intro/intro1_page6.jpg)",
+                "background-size": "cover"
+            }, {
+                "background-image": "url(images/intro/intro1_page5.jpg)",
+                "background-size": "cover"
+            }],
+            "set": {
+                "rotationY": 0,
+                "transformOrigin": "left bottom"
+            },
+            "animate": [{
+                "rotationY": "-180",
+                "speed": 0.5,
+                "delay": 0.25,
+                "zIndex": "+3",
+                "hide": 1
+            }]
+        }, {
+            "name": "Page 3-4",
+            "width": 414,
+            "height": 535,
+            "left": 1086,
+            "top": 238,
+            "delay": 3.25,
+            "divs": [{
+                "background-image": "url(images/intro/intro1_page4.jpg)",
+                "background-size": "cover"
+            }, {
+                "background-image": "url(images/intro/intro1_page3.jpg)",
+                "background-size": "cover"
+            }],
+            "set": {
+                "rotationY": 0,
+                "transformOrigin": "left bottom"
+            },
+            "animate": [{
+                "rotationY": "-180",
+                "speed": 0.5,
+                "delay": 0.25,
+                "zIndex": "+2",
+                "hide": 1
+            }]
+        }, {
+            "name": "Page 1-2",
+            "width": 414,
+            "height": 535,
+            "left": 1086,
+            "top": 238,
+            "delay": 3,
+            "divs": [{
+                "background-image": "url(images/intro/intro1_page2.jpg)",
+                "background-size": "cover"
+            }, {
+                "background-image": "url(images/intro/intro1_page1.jpg)",
+                "background-size": "cover"
+            }],
+            "set": {
+                "rotationY": 0,
+                "transformOrigin": "left bottom"
+            },
+            "animate": [{
+                "rotationY": "-180",
+                "speed": 0.5,
+                "delay": 0.25,
+                "zIndex": "+1",
+                "hide": 1
+            }]
+        }, {
+            "name": "Book Cover",
+            "width": 414,
+            "height": 535,
+            "left": 1086,
+            "top": 238,
+            "delay": 1.5,
+            "divs": [{
+                "background-image": "url(images/intro/intro1_page0.jpg)",
+                "background-size": "cover"
+            }, {
+                "background-image": "url(images/intro/intro1_cover.jpg)",
+                "background-size": "cover"
+            }],
+            "set": {
+                "rotationX": -90,
+                "rotationY": 0,
+                "transformOrigin": "left top"
+            },
+            "animate": [{
+                "rotationX": 0,
+                "speed": 0.5
+            }, {
+                "rotationY": "-180",
+                "speed": 0.5,
+                "delay": 1,
+                "hide": 1
+            }]
+        }]
+    },{
+        "width": 1500,
+        "height": 1000,
+        "background": "url(images/intro/intro2_bg.jpg) no-repeat center center",
+        "items": [{
+            "name": "Tree",
+            "width": 518,
+            "height": 516,
+            "left": 528,
+            "top": 0,
+            "delay": 0.5,
+            "divs": [{
+                "background-image": "url(images/intro/intro2_tree.png)",
+                "background-size": "cover"
+            }],
+            "set": {
+                "top":"-20%",
+                "scaleX":0.9,
+                "scaleY":0.9,
+                "rotationX":20,
+                "transformOrigin": "bottom center"
+            },
+            "animate": [{
+                "top": "-25%",
+                "speed": 1.5,
+                "scaleX":1,
+                "scaleY":1,
+                "rotationX":0
+            }]
         },{
-          "name": "Pablo",
-          "background": "images/intro/key_pablo.png",
-          "width": 127,
-          "height": 291,
-          "left": 341,
-          "top": 400,
-          "animate": {
-            "rotationX":90,
-            "transformOrigin":"50% bottom"            
-          },
-          "delay": 0.7,
-          "speed": 0.8
+            "name": "Store",
+            "width": 1020,
+            "height": 344,
+            "left": 259,
+            "top": 118,
+            "delay": 0.5,
+            "divs": [{
+                "background-image": "url(images/intro/intro2_store.png)",
+                "background-size": "cover"
+            }],
+            "set": {
+                "top": "+2%",
+                "rotationX":75,
+                "transformOrigin": "bottom center"
+            },
+            "animate": [{
+                "top": "0",
+                "speed": 1,
+                "rotationX":0
+            }]
         },{
-          "name": "Car",
-          "background": "images/intro/key_car.png",
-          "width": 1500,
-          "height": 521,
-          "left": 0,
-          "top": 486,
-          "animate": {
-          	
-            "left": "+75",
-            "top": "-30",
-          	"transformOrigin":"50% bottom"          	
-          },
-          "delay": 0.5,
-          "speed": 1
+            "name": "Copy 1",
+            "width": 291,
+            "height": 196,
+            "left": 152,
+            "top": 490,
+            "delay": 2,
+            "divs": [{
+                "background-image": "url(images/intro/intro2_copy1.png)",
+                "background-size": "cover"
+            }],
+            "set": {
+                "top": "+30%",
+                "opacity": 0
+            },
+            "animate": [{
+                "top": "0",
+                "opacity": 1,
+                "speed": 0.5
+            }]
         },{
-          "name": "Ash",
-          "background": "images/intro/key_ash.png",
-          "width": 462,
-          "height": 835,
-          "left": 928,
-          "top": 172,
-          "animate": {
-            "rotationX":90,
-            "transformOrigin":"50% bottom"            
-          },
-          "delay": 1.3,
-          "speed": 0.8
-        }
-      ]
-    }
-  ],
-  "cast": [
-    {
-      "safename": "walter",
-      "name": "WALTER BLUNT",
-      "actor": "Patrick Stewart",
-      "icon": "camera.png",
-      "quote": "a fool's mission is still a mission.",
-      "desc": "Walter is a British ex-pat and Falklands War veteran, who currently finds himself riding the tumultuous waves of American cable news. Through his show &#8220;Blunt Talk,&#8221; he delivers hard-hitting truths to his American audience, while often struggling with his life behind the scenes."
-    },
-    {
-      "safename": "harry",
-      "name": "HARRY CHANDLER",
-      "actor": "Adrian Scarborough",
-      "icon": "sword.png",
-      "quote": "i don't hate myself but i don't like myself. i hover somewhere in the middle.",
-      "desc": "Harry is Walter's manservant, confidant, brother-in-arms, and best friend. He loves drinking and gambling, but neither of these match his unflinching loyalty to Walter."
-    },
-    {
-      "safename": "rosalie",
-      "name": "ROSALIE WINTER",
-      "actor": "JACKI WEAVER",
-      "icon": "onair.png",
-      "quote": "i'm sorry to be the only sane person here, but this has fuck-up written all over it.",
-      "desc": "Rosalie is Walter's executive producer. She oversees Walter and his eccentric staff with a mix of ferocity and tenderness. On the surface she is a bastion of strength, but underneath she's a vulnerable romantic who is becoming increasingly alarmed by the rapid changes in her home life."
-    },
-    {
-      "safename": "celia",
-      "name": "Celia Havemeyer",
-      "actor": "Dolly Wells",
-      "icon": "bra.png",
-      "quote": "I have sex too easily and I always go for the ones who disappear. Also alcoholics. That's my other specialty.",
-      "desc": "Celia is a senior producer of &#8220;Blunt Talk&#8221; keen on impressing Walter, whom she has admired for many years. However, to the detriment of her career, her impulsive spirit comes with a chaotic personal life."
-    },
-    {
-      "safename": "jim",
-      "name": "JIM STONE",
-      "actor": "TIMM SHARP",
-      "icon": "container.png",
-      "quote": "i was wildly addicted. but i'm better now. sort of.",
-      "desc": "Jim is a senior producer of &#8220;Blunt Talk.&#8221; He is an intellectual who does great work behind the camera, while hoping one day to be in front of it. As his dreams and desires emerge, so do a laundry list of neuroses that he must struggle to overcome."
-    },
-    {
-      "safename": "martin",
-      "name": "MARTIN BASSI",
-      "actor": "KARAN SONI",
-      "icon": "pills.png",
-      "quote": "i like pointy boobs. you know, the ones that look like MAGICAL elf shoes.",
-      "desc": "Martin, the runt of the litter, is a segment producer still struggling to fit in. As the daunting age of 28 looms over him, he seeks solace in the motherly embraces of Rosalie."
-    },
-    {
-      "safename": "shelly",
-      "name": "SHELLY FORBES",
-      "actor": "Mary Holland",
-      "icon": "shoe.png",
-      "quote": "we all have bathroom issues.",
-      "desc": "Despite only being a segment producer, Shelly is an eager firecracker, hell-bent on making her mark in the news world. She is aggressive in her professional life, constantly angling for an opportunity to move up the ladder, and equally aggressive in her sexually adventurous private life."
-    },
-    {
-      "safename": "weiss",
-      "name": "Dr. Weiss",
-      "actor": "RICHARD LEWIS",
-      "icon": "books.png",
-      "quote": "Would you like to talk? Or do a line?",
-      "desc": "Dr. Weiss is a therapist who purports to be a Freudian. He delves deep into the psyches of &#8220;Blunt Talk's&#8221; staff and is less than discreet with his findings."
-    },
-    {
-      "safename": "bob",
-      "name": "Bob Gardner",
-      "actor": "Romany malco",
-      "icon": "money.png",
-      "quote": "BOB GIVETH, BOB TAKETH.",
-      "desc": "Bob Gardner is Walter's boss and the current President of UBS Network. Although he's supportive of Walter, the only thing that matters to Gardner is ratings."
-    }
-  ],
-  "prod": [
-    {
-      "safename": "jonathanames",
-      "name": "JONATHAN AMES",
-      "role": "Creator, Showrunner, Writer, Executive Producer",
-      "desc": [
-        "Ames is a novelist, essayist, and television show runner. He created the HBO original series &#8220;Bored to Death,&#8221; was a columnist for the NY Press, and is the author of nine works of fiction and non- fiction: &#8220;I Pass Like Night,&#8221; &#8220;The Extra Man,&#8221; &#8220;What&#8217;s Not to Love?,&#8221; &#8220;My Less Than Secret Life,&#8221; &#8220;Wake Up, Sir!&#8221; &#8220;I Love You More Than You Know,&#8221; &#8220;The Alcoholic&#8221; (a graphic-novel illustrated by Dean Haspiel), &#8220;The Double Life Is Twice as Good,&#8221; and &#8220;You Were Never Really Here.&#8221; His novel &#8220;The Extra Man&#8221; was adapted into a film starring Kevin Kline and Paul Dano and was released in 2010. His novella &#8220;You Were Never Really Here&#8221; is currently in development as a film. He adapted his memoir &#8220;What&#8217;s Not to Love?&#8221; into a television special for the Showtime network and played himself. His books have been widely translated and he is the winner of a Guggenheim Fellowship.",
-        "Ames also had a long career as a monologist, having staged a one- man show &#8220;Oedipussy&#8221; and performing frequently with the Moth. He has also acted in several films and television shows, including &#8220;Curb Your Enthusiasm&#8221; and &#8220;Bored to Death,&#8221; and was the lead in the IFC film &#8220;The Girl Beneath the Waves.&#8221; In addition to his involvement in the arts, he was in two boxing matches fighting as &#8216;The Herring Wonder.&#8221;"
-      ],
-      "image": true
-    },
-    {
-      "safename": "sethmacfarlane",
-      "name": "SETH MACFARLANE",
-      "role": "Executive Producer",
-      "desc": [
-        "MacFarlane is a true Renaissance man, possessing talents that encompass every aspect of the entertainment industry. He has created some of the most popular content on television and film today, while also expanding his career in the worlds of music, literature and philanthropy.",
-        "At 25, MacFarlane became the youngest showrunner in television history when his animated series &#8220;Family Guy&#8221; aired on FOX. Now in its 13th season, &#8220;Family Guy&#8221; has garnered MacFarlane Emmy Awards for Outstanding Voice-Over Performance and Outstanding Music and Lyrics. In addition to &#8220;Family Guy,&#8221; MacFarlane serves as co-creator, executive producer and voice actor on &#8220;American Dad!&#8221; He also executive produced the 21st century version of &#8220;Cosmos: A Spacetime Odyssey&#8221; that premiered last March on ten U.S. networks simultaneously across FOX and National Geographic latforms, making it the largest television premiere event of all time. The series has gone on to receive two Critics&#8217; Choice Television Awards, nominations for a Television Critics Association Award and 13 Primetime Emmy Awards, including Outstanding Documentary Or Nonfiction Series.",
-        "MacFarlane made his feature film directorial debut in 2012 with the highest-grossing R-rated film of all time, &#8220;Ted.&#8221; This buddy comedy starred Mark Wahlberg and MacFarlane as the voice of the lovable, foul-mouthed teddy bear, Ted. The film made over $545 million worldwide and was also co-written and produced by MacFarlane. Fresh off the success of &#8220;Ted,&#8221; MacFarlane hosted the 85th Academy Awards in 2013 and was nominated for the film that same year. He was nominated for Best Achievement in Music Written for Motion Pictures and Original Song for &#8220;Everybody Needs a Best Friend.&#8221; The sequel is currently in post-production and is set for release on June 26, 2015. In May 2014, Universal released MacFarlane&#8217;s western comedy, &#8220;A Million Ways to Die in the West.&#8221; The film, which MacFarlane wrote, produced, directed, and starred in, featured an ensemble cast that included Charlize Theron, Liam Neeson, Amanda Seyfried, and Neil Patrick Harris, among others.",
-        "MacFarlane&#8217;s debut album &#8220;Music is Better Than Words,&#8221; debuted at No. 1 on the iTunes jazz charts in 2011 and went on to receive two Grammy nominations, including Best Traditional Pop Vocal Album. Released by Universal Republic, the album celebrates the classic, sophisticated sound of the lush swing orchestras of the &#8216;40s and &#8216;50s with MacFarlane singing some of the hidden gems of that era. Norah Jones and Sara Bareilles collaborated with MacFarlane on two duets on the album. In 2014, MacFarlane released his first-ever Christmas album, &#8220;Holiday for Swing,&#8221; that debuted No. 1 on the iTunes holiday album charts. The album features timeless holiday songs accompanied by a 52-piece orchestra.",
-        "In August of 2014, MacFarlane performed with the world- renowned John Williams and the Los Angeles Philharmonic Orchestra at the Hollywood Bowl, lending his baritone voice to renditions of &#8220;Luck Be a Lady&#8221; and &#8220;You&#8217;re Sensational&#8221; to rave reviews. This past New Year&#8217;s Eve MacFarlane also paired with the San Francisco Symphony, led by conductor Edwin Outwater."
-      ],
-      "image": true
-    },
-    {
-      "safename": "stephainedavis",
-      "name": "STEPHANIE DAVIS",
-      "role": "Executive Producer",
-      "desc": [
-        "After graduation from New York University&#8217;s Tisch School of the Arts and going on to complete Cardoza School of Law, Davis was admitted to both the New York and California Bar Associations. She began her career working in the William Morris mailroom. She went on to work at Industry Entertainment (formerly Addis- Wechsler & Associates), Artist Management Group, 3 Arts Entertainment, and now runs her own management/production company called Wetdog Entertainment. Film and TV credits include: &#8220;The Extra Man&#8221; starring Kevin Kline, USA&#8217;s &#8221;The Starter Wife,&#8221; Lifetime&#8217;s &#8220;Maneater,&#8221; and three seasons of HBO&#8217;s &#8220;Bored to Death.&#8221; She lives in Los Angeles with her two children."
-      ],
-      "image": false
-    },
-    {
-      "safename": "tristramshapeero",
-      "name": "TRISTRAM SHAPEERO",
-      "role": "Director, Executive Producer",
-      "desc": [
-        "Shapeero was born in Bath, Somerset, England and in 1988 moved to London to pursue a career in television. He began his career at the British comedy production company Hat Trick Productions, which created several shows including &#8220;Whose Line Is It Anyway?&#8221; Shapeero left Hat Trick in 1992 to become an assistant director on &#8220;Men Behaving Badly,&#8221; &#8220;The Vicar of Dibley,&#8221; and &#8220;Thin Blue Line.&#8221; In 2000, he made his directorial debut on the BAFTA-nominated sketch comedy show &#8220;Smack the Pony,&#8221; and went on to direct an additional six episodes. With this momentum he went on to direct several innovative British comedies including &#8220;Peep Show,&#8221; &#8220;Green Wing,&#8221; &#8220;Pulling,&#8221; &#8220;I&#8217;m Alan Partridge,&#8221; &#8220;Absolute Power,&#8221; and &#8220;Brass Eye,&#8221; resulting in eight BAFTA nominations, three Royal Television Society nominations and a Rose d&#8217;Or nomination.",
-        "In 2009, Shapeero moved to the United States where he directed multiple episodes of several popular comedy series including &#8220;Workaholics,&#8221; &#8220;Veep,&#8221; &#8220;Parks and Recreation,&#8221; &#8220;New Girl,&#8221; &#8220;Brooklyn Nine-Nine,&#8221; and 24 episodes of &#8220;Community&#8221;. After directing three episodes of &#8220;Bored to Death,&#8221; he will continue his working relationship with Jonathan Ames as the executive producer and director of &#8220;Blunt Talk.&#8221;"
-      ],
-      "image": false
-    },
-    {
-      "safename": "duncanbirmingham",
-      "name": "DUNCAN BIRMINGHAM",
-      "role": "Co-Executive Producer",
-      "desc": [
-        "Birmingham is a writer/producer in film and television. He previously developed and executive produced the IFC half hour comedy &#8220;Maron&#8221; and remains a writer and consultant on the show. He has written projects for ABC, Sony, Universal and his script &#8220;Swingles&#8221; is currently in development at Paramount. He is the author of the humor book series, &#8220;Pets Who Want to Kill Themselves.&#8221; Birmingham has also had short films he&#8217;s written, directed or acted that have played at the Sundance Film Festival, AFI, SXSW, Gen Art and the New York TV Festival.",
-        "He recently wrote on David Fincher&#8217;s HBO project &#8220;Living on Video&#8221; and is currently developing a half hour project at AMC with producer Michael London."
-      ],
-      "image": false
-    },
-    {
-      "safename": "reedagnew",
-      "name": "REED AGNEW",
-      "role": "Co-Executive Producer",
-      "desc": [
-        "Hailing from Pittsburgh, Pa., Agnew most recently served as executive producer, co-showrunner and writer on FX&#8217;s &#8220;Wilfred.&#8221; A self-proclaimed &#8220;Monty Python&#8221; and &#8220;The Wire&#8221; fan, Agnew&#8216;s additional TV credits include serving as a writer on &#8220;The Andy Milonakis Show,&#8221; &#8220;Crank Yankers&#8221; and &#8220;Drawn Together.&#8221; An amateur ornithologist, Reed also enjoys playing basketball, drawing and loitering."
-      ],
-      "image": false
-    },
-    {
-      "safename": "elijorne",
-      "name": "ELI JORN&Eacute;",
-      "role": "Co-Executive Producer",
-      "desc": [
-        "Jorn&eacute; is a screenwriter who has been working in both film and television for the past nine years. Prior to &#8220;Blunt Talk,&#8221; he was the co-showrunner for the FX series &#8220;Wilfred,&#8221; and has developed many projects, both in film and television, for major studios and networks.",
-        "Jorn&eacute; grew up in Birmingham, Mich. and attended Dartmouth College. After obtaining his MS in Applied Physics from the California Institute of Technology (with a concentration in Plasma Physics), he shifted his focus to screenwriting and earned an MFA from the American Film Institute. His favorite pastimes include bridge and squash."
-      ],
-      "image": false
-    },
-    {
-      "safename": "leannemoore",
-      "name": "LEANNE MOORE",
-      "role": "Producer",
-      "desc": [
-        "Leanne Moore began her career as an accountant on feature films including &#8220;Children of a Lesser God&#8221; and the &#8220;Back to the Future&#8221; trilogy after graduating from the University of Texas at Austin. She then moved into production for Steven Spielberg&#8217;s company, Amblin Entertainment, and Turner Network Television, where she produced six television movies written by playwrights such as Horton Foote and Arthur Miller. While at TNT, Leanne also produced &#8220;The Heidi Chronicles&#8221; (starring Jamie Lee Curtis) and &#8220;Pirates of Silicon Valley&#8221; (starring Noah Wyle), both of which were nominated for Emmys. Most recently, she moved in to series production and co-produced &#8220;Side Order of Life&#8221; for Lifetime, &#8220;Zoey 101&#8221; for Nickelodeon, &#8220;Matador&#8221; for the El Rey Network, and produced the pilot of Aaron Sorkin&#8217;s &#8220;The Newsroom&#8221; for HBO."
-      ],
-      "image": false
-    },
-    {
-      "safename": "samsklaver",
-      "name": "SAM SKLAVER",
-      "role": "Producer",
-      "desc": [
-        "Sklaver is a television writer and producer. He previously worked with Jonathan Ames as a writer on the HBO series &#8220;Bored to Death.&#8221; He also served as writer and producer for FOX&#8217;s &#8220;Ben and Kate&#8221; and FX&#8217;s &#8220;Married.&#8221; Additional TV credits include &#8220;Children&#8217;s Hospital&#8221; and NBC&#8217;s &#8220;Whitney,&#8221; among others."
-      ],
-      "image": false
-    },
-    {
-      "safename": "jimmargolis",
-      "name": "JIM MARGOLIS",
-      "role": "Consulting Producer",
-      "desc": [
-        "Margolis won six Primetime Emmys as a Co-Executive Producer and Supervising Producer of &#8220;The Daily Show,&#8221; where he worked from 2001 until 2012. While at &#8220;The Daily Show&#8221; Margolis wrote, directed and produced some of the show&#8217;s most memorable segments with correspondents Steve Carell, Stephen Colbert, Rob Corddry, Ed Helms, Samantha Bee, and John Oliver among others.",
-        "Margolis left &#8220;The Daily Show&#8221; to join Rob Corddry in developing &#8220;Newsreaders,&#8221; a scripted comedy on Adult Swim. Margolis serves as Showrunner of &#8220;Newsreaders,&#8221; now in its second season.",
-        "Before working at &#8220;The Daily Show,&#8221; Margolis was a producer at CBS News&#8217; &#8220;60 Minutes,&#8221; working for correspondent Lesley Stahl. Prior to that, he worked as a documentary producer for PBS&#8217; &#8220;Frontiline&#8221; and the BBC among others. Margolis has also written pilots for ABC, Warner Brothers Television and BBC America . He grew up in Cleveland, Ohio and graduated from Wesleyan University."
-      ],
-      "image": false
-    },
-    {
-      "safename": "josephegallagher",
-      "name": "JOSEPH E. GALLAGHER",
-      "role": "Director of Photography",
-      "desc": [
-        "Gallagher was born in Greenwich Village and raised in Stuyvesant Town in the Lower East Side of New York City. After graduating from SUNY Cortland, his older brother hired him to work on a film as a PA, but he gravitated to the camera department instead. As a focus puller and camera operator, he learned from some of the all- time great cinematographers including Michael Chapman, Bruce Surtees, Ralf Bode, Caleb Deschanel, and James Glennon.",
-        "As a Director of Photography, Gallagher has collaborated with many of television&#8217;s top directors and designers to create the look, styles and sets of high-end marquis single-camera shows for network and cable, especially period dramas like &#8220;Playboy Club,&#8221; &#8220;Vegas,&#8221; and &#8220;Deadwood.&#8221; In 2007, Joseph was nominated for a Primetime Emmy for Outstanding Cinematography for a Single-Camera Series for his work on &#8220;Deadwood&#8221; and received the Kodak Vision Award. In 2013 he photographed the film &#8220;Ring of Fire&#8221; for director Alison Anders, who received an Emmy nomination for Outstanding Directing for a Miniseries, Movie or Dramatic Special.",
-        "Recently, Gallagher teamed up with writer/director Robert Rodriguez on the original series &#8220;Matador&#8221; for his new network, El Rey. After shooting the pilot with Rodriguez, Gallagher stayed on board as the Director of Photography as well as directing subsequent episodes."
-      ],
-      "image": false
-    },
-    {
-      "safename": "julewalker",
-      "name": "JULIE WALKER",
-      "role": "Production Designer",
-      "desc": [
-        "Growing up in Atlanta, Walker began her career in the entertainment industry working with such giants as TNT, TBS and CNN. While organizing events for the Goodwill Games, NBA and MLB All-Star Games, and the PGA Grand Slam, she discovered her passion for design and moved to New York to study interior design.",
-        "Eight years ago, Walker moved to Los Angeles to begin her career in design. She recently finished designing her first feature film, &#8220;Havenhurst.&#8221;",
-        "After 160 episodes of network television and 2,400 sets later, her experience includes art directing pilots for ABC, CBS and Warner Bros. She has designed numerous commercials, music videos and, most recently, served as the art director on Showtime&#8217;s &#8220;House of Lies&#8221; and the CBS show &#8220;The Mentalist.&#8221;"
-      ],
-      "image": false
-    },
-    {
-      "safename": "jeannemccarthy",
-      "name": "JEANNE MCCARTHY",
-      "role": "Casting Director",
-      "desc": [
-        "Jeanne McCarthy has been working in film and television for over 20 years. Since the mid-90&#8217;s she has been responsible for casting many notable series and features such as &#8220;The League,&#8221; &#8220;The Mindy Project,&#8221; &#8220;Eternal Sunshine of the Spotless Mind,&#8221; &#8220;Zoolander,&#8221; &#8220;Anchorman,&#8221; &#8220;Friends with Money,&#8221; &#8220;The Savages,&#8221; &#8220;Forgetting Sarah Marshall&#8221; and &#8220;21 Jump Street.&#8221; McCarthy received an Emmy nomination for the TNT movie &#8220;Door to Door,&#8221; a Gotham and Independent Spirit (The Robert Altman) Award for &#8220;Synecdoche, New York,&#8221; and again won The Robert Altman award in 2011 for &#8220;Please Give.&#8221; Most recently, her work can be seen in &#8220;22 Jump Street,&#8221; &#8220;Enough Said,&#8221; &#8220;Begin Again,&#8221; &#8220;Big Eyes,&#8221; &#8220;The Last Man on Earth,&#8221; &#8220;Togetherness,&#8221; and the Golden Globe nominated &#8220;Foxcatcher.&#8221;"
-      ],
-      "image": false
-    },
-    {
-      "safename": "nicoleabellera",
-      "name": "NICOLE ABELLERA",
-      "role": "Casting Director",
-      "desc": [
-        "Nicole Abellera has established herself as one of the premiere casting directors in Hollywood, mastering a wide range of genres in both film and TV. She has cast popular comedies such as &#8220;21 Jump Street,&#8221; &#8220;22 Jump Street,&#8221; &#8220;The League,&#8221; &#8220; The Mindy Project,&#8221; &#8220;Last Man On Earth,&#8221; and &#8220;Silicon Valley.&#8221; She has also made a name for herself with the Ed Harris western &#8220;Appaloosa&#8221; and the critically acclaimed indie &#8220;Big Eyes.&#8221; Her first solo casting project, &#8220;Johnny Flynton,&#8221; was nominated for an Academy Award®. Abellera has worked alongside directors like Ryan Murphy, Charlie Kaufman, Jay Roach, Nick Stoller, Miranda July and Ruben Fleischer. Additional credits include: &#8220;Bad Words,&#8221; &#8220;The Accountant,&#8221; &#8220;The Last Samurai,&#8221; &#8220;Ali&#8221; and &#8220;Friends with Money.&#8221;"
-      ],
-      "image": false
-    },
-    {
-      "safename": "kirstenkearse",
-      "name": "KIRSTEN KEARSE",
-      "role": "Staff Writer",
-      "desc": [
-        "Kirsten Kearse recently made the leap to staff writer following a reputable career as a script supervisor, most notably on Jonathan Ames&#8217; HBO series &#8220;Bored To Death.&#8221; She is also a MacDowell Colony Fellow and the director of the festival favorite &#8220;The Horsefingers Trilogy.&#8221;"
-      ],
-      "image": false
-    },
-    {
-      "safename": "chrisikarvonides",
-      "name": "CHRISI KARVONIDES",
-      "role": "Costume Designer",
-      "desc": [
-        "Karvonides-Dushenko has more than 25 years of experience as a professional costume designer in theater, film and television.",
-        "In 2003, she received an Emmy for her costume design work on NBC&#8217;s &#8220;American Dreams.&#8221; She also received Emmy nominations for FX&#8217;s &#8220;American Horror Story,&#8221; HBO&#8217;s &#8220;From the Earth to the Moon&#8221; (produced by Tom Hanks) and &#8220;Carnivàle.&#8221; She was nominated for four Costume Designers Guild Awards during five seasons of HBO&#8217;s &#8220;Big Love.&#8221; In addition, &#8220;Carnivàle,&#8221; &#8220;From the Earth to the Moon&#8221; and the pilot for ABC&#8217;s &#8220;Pan Am&#8221; were also nominated for CDG awards. Karvonides-Dushenko&#8217;s feature films include &#8220;The Glass House,&#8221; &#8220;Beautiful,&#8221; and &#8220;The Loss of a Teardrop Diamond,&#8221; which was based on an unproduced 1957 screenplay by Tennessee Williams. Last year she designed hundreds of ancient Egyptian costumes for the Fox pilot &#8220;Hieroglyph,&#8221; which filmed in New Mexico and Morocco.",
-        "Her theatrical designs have been featured in productions at the Old Globe Theater, Geffen Playhouse, South Coast Repertory, Seattle Repertory, Guthrie Theater, and the Kennedy Center. On Broadway, she designed the costumes for August Wilson&#8217;s production &#8220;Two Trains Running.&#8221; Last year she designed the costumes for Frank Zappa&#8217;s &#8220;200 Motels,&#8221; featuring the Los Angeles Philharmonic performed at the Walt Disney Concert Hall.",
-        "In addition, Karvonides-Dushenko is also the head professor of the M.F.A program for Costume Design at UCLA&#8221;s School of Theater, Film and Television. She also presents lectures and workshops on the art and craft of costume design as a designer at several international conferences on costume design processes around the world, and will be at the International Quadrennial Conference on Design for Theater, Film and TV in Prague this summer.",
-        "Professor Karvonides-Dushenko received her M.F.A. in Theater Design from the Yale School of Drama, has a B.F.A. from Emerson College and also attended the Fashion Institute of Technology in New York."
-      ],
-      "image": false
-    },
-    {
-      "safename": "triciasawyer",
-      "name": "TRICIA SAWYER",
-      "role": "Dept. Head Make-Up",
-      "desc": [
-        "Sawyer has been a makeup artist in the film and print industry for over 20 years and has worked extensively in the motion picture industry as a personal artist to Sharon Stone, Jessica Alba, Robin Wright, Kevin Spacey, Sylvester Stallone, Kate Beckinsale, and Scarlett Johansson. She has served on several films and television shows as department head, along with countless print campaigns, media, and award shows. Additional television credits include &#8220;House of Cards&#8221; (seasons 1-3) and &#8220;Mad Men,&#8221; among others. Feature film credits include &#8220;The Hunger Games,&#8221; &#8220;Casino,&#8221; &#8220;Little Fockers,&#8221; &#8220;Love Guru,&#8221; &#8220;Just Married,&#8221; &#8220;Get Carter,&#8221; &#8220;Clerks 2,&#8221; &#8220;The Long Kiss Goodnight&#8221; and &#8220;Don&#8217;t Say a Word.&#8221;",
-        "Sawyer became the spokesperson for Prescriptives Cosmetics in 1995, where she was responsible for the re-design of the existing color line up along with design of new products. After her four-year spokesperson run, she stayed on with Estee Lauder Companies as an independent development consultant.",
-        "She is a California native and currently resides in Los Angeles."
-      ],
-      "image": false
-    },
-    {
-      "safename": "jamesdunham",
-      "name": "JAMES DUNHAM",
-      "role": "Dept. Head Hair",
-      "desc": [
-        "Dunham started in the hair industry in 1994 as general manager and art director at Oxenrose Hair Salon in downtown San Francisco, overseeing 20 stylists and up to 35 staff members. In 2003, he joined the hair and makeup union, local 706, and worked on the TV show &#8220;Desperate Housewives&#8221; until its end in 2012. Since then, he has served as department head and worked on numerous shows including &#8220;Suburgatory,&#8221; &#8220;Guys with Kids,&#8221; &#8220;Matador,&#8221; &#8220;Scorpion,&#8221; &#8220;The Voice,&#8221; &#8220;The Brink&#8221; and &#8220;Shameless.&#8221; In 2013, Dunham served as department head on the feature film &#8220;Rudderless.&#8221;",
-        "Dunham has worked as a personal artist to Selena Gomez, Marcia Cross, Felicity Huffman, Vanessa Williams, William H. Macy, Laurence Fishburne, Kyle MacLachlan, Bob Newhart, and Larry Hagman among others."
-      ],
-      "image": false
-    },
-    {
-      "safename": "jillbrown",
-      "name": "JILL BROWN",
-      "role": "Stunt Coordinator",
-      "desc": [
-        "Born in Baltimore, Brown performed her first stunt when she climbed the ladder of the three-meter high dive (orange arm floaties and all) and jumped into the deep end when she was just two years old. She claimed she was bored in the shallow end.",
-        "Later in life, being an exceptional, competitive athlete, it seemed fitting that in 1993 Jill&#8217;s physical therapist would introduce her to his friend, local stuntman George Aguilar, urging her to strive for a career that could utilize her expansive, athletic skill set. Impressed by her athleticism and tenacity, Aguilar and his stunt team took Jill under their wing and trained her in all facets of stunt performance and eventually stunt coordinating.",
-        "Brown has worked on over 100 feature films and television programs. She has won two World Stunt Awards; one for her high work doubling Jennifer Lopez on &#8220;The Cell&#8221; and a few years later for her wire work on &#8220;Taxi.&#8221; She was also nominated for four Screen Actors Guild Awards in a stunt ensemble. In 1998, Brown performed the highest recorded wire descender drop out of a helicopter (250 feet) as well as a 450-foot drop off the roof of the PPG building in Pittsburgh for &#8220;Inspector Gadget.&#8221;",
-        "Due to her comedic sensibilities and knack for physical comedy, Tina Fey approached Brown while shooting an episode of &#8220;30 Rock.&#8221; Fey promoted her to stunt coordinate the remaining six seasons. Brown went on to coordinate Fey&#8217;s most recent show &#8220;Unbreakable Kimmy Schmidt.&#8221; Continuing in the comedy field, she also coordinates &#8220;Grace and Frankie&#8221; for Netflix and MTV&#8217;s &#8220;Faking It.&#8221; She has also coordinated &#8220;Confessions of a Shopaholic,&#8221; as well as the 2nd Unit (action unit) for &#8220;Zombieland&#8221; and &#8220;Premium Rush,&#8221; making her one of the only female stunt coordinators in the country."
-      ],
-      "image": false
-    },
-    {
-      "safename": "erikgrasteit",
-      "name": "ERIK GRASTEIT",
-      "role": "Property Master",
-      "desc": [
-        "Grasteit is an accomplished Property Master, working on more than 20 television and film projects in his career. He most currently served as property master on &#8220;The Mentalist.&#8221; Prior to that time, his television credits include &#8220;Ghost Whisperer,&#8221; &#8220;The District,&#8221; &#8220;Six Feet Under&#8221; and &#8220;The X-Files,&#8221; among others. Feature film credits include &#8220;Twister,&#8221; &#8220;Dante&#8217;s Peak&#8221; and &#8220;The X Files,&#8221; among others."
-      ],
-      "image": false
-    }
-  ],
-  "photos": [
-    {
-      "path": "1.jpg",
-      "caption": ""
-    },
-    {
-      "path": "2.jpg",
-      "caption": ""
-    },
-    {
-      "path": "3.jpg",
-      "caption": ""
-    },
-    {
-      "path": "4.jpg",
-      "caption": ""
-    },
-    {
-      "path": "5.jpg",
-      "caption": ""
-    },
-    {
-      "path": "6.jpg",
-      "caption": ""
-    },
-    {
-      "path": "7.jpg",
-      "caption": ""
-    },
-    {
-      "path": "8.jpg",
-      "caption": ""
-    },
-    {
-      "path": "9.jpg",
-      "caption": ""
-    },
-    {
-      "path": "10.jpg",
-      "caption": ""
-    },
-    {
-      "path": "11.jpg",
-      "caption": ""
-    },
-    {
-      "path": "12.jpg",
-      "caption": ""
-    },
-    {
-      "path": "13.jpg",
-      "caption": ""
-    },
-    {
-      "path": "14.jpg",
-      "caption": ""
-    },
-    {
-      "path": "15.jpg",
-      "caption": ""
-    },
-    {
-      "path": "16.jpg",
-      "caption": ""
-    },
-    {
-      "path": "17.jpg",
-      "caption": ""
-    },
-    {
-      "path": "18.jpg",
-      "caption": ""
-    },
-    {
-      "path": "19.jpg",
-      "caption": ""
-    },
-    {
-      "path": "20.jpg",
-      "caption": ""
-    }
-  ],
-  "videos": [
-    {
-      "name": "Opening Titles",
-      "desc": "A perfect way to begin the adventure. Watch the Outlander opening titles.",
-      "path": "http://www.starz.com/videos/embed/da6176d76bb04503a0125c17febdbde0",
-      "thumb": "openingtitles.jpg"
-    },
-    {
-      "name": "Opening Titles",
-      "desc": "A perfect way to begin the adventure. Watch the Outlander opening titles.",
-      "path": "http://www.starz.com/videos/embed/da6176d76bb04503a0125c17febdbde0",
-      "thumb": "openingtitles.jpg"
-    },
-    {
-      "name": "Opening Titles",
-      "desc": "A perfect way to begin the adventure. Watch the Outlander opening titles.",
-      "path": "http://www.starz.com/videos/embed/da6176d76bb04503a0125c17febdbde0",
-      "thumb": "openingtitles.jpg"
-    },
-    {
-      "name": "Opening Titles",
-      "desc": "A perfect way to begin the adventure. Watch the Outlander opening titles.",
-      "path": "http://www.starz.com/videos/embed/da6176d76bb04503a0125c17febdbde0",
-      "thumb": "openingtitles.jpg"
-    }
-  ],
-  "pdfs": [
-    {
-      "name": "Synopsis",
-      "path": "pdfs/blunttalk_synopsis.pdf"
-    },
-    {
-      "name": "Character Descriptions",
-      "path": "pdfs/blunttalk_characterdesc.pdf"
-    },
-    {
-      "name": "Cast Bios",
-      "path": "pdfs/blunttalk_castbios.pdf"
-    },
-    {
-      "name": "Production Bios",
-      "path": "pdfs/blunttalk_productionbios.pdf"
-    },
-    {
-      "name": "Cast Credits",
-      "path": "pdfs/blunttalk_castcredits.pdf"
-    },
-    {
-      "name": "Production Credits",
-      "path": "pdfs/blunttalk_productioncredits.pdf"
-    },
-    {
-      "name": "Production Notes",
-      "path": "pdfs/blunttalk_productionnotes.pdf"
-    },
-    {
-      "name": "Episode Synopses",
-      "path": "pdfs/blunttalk_episodesynopses.pdf"
-    }
-  ],
-  "contacts": [
-    {
-      "name": "Theano Apostolou",
-      "email": "theano@starz.com",
-      "phone": "(424) 204-4052",
-      "company": "STARZ Entertainment, LLC."
-    },
-    {
-      "name": "Shannon Buck",
-      "email": "shannon.buck@starz.com",
-      "phone": "(424) 204-4173",
-      "company": "STARZ Entertainment, LLC."
-    },
-    {
-      "name": "Danielle Dusky",
-      "email": "danielle.dusky@starz.com",
-      "phone": "(424) 204-4101",
-      "company": "STARZ Entertainment, LLC."
-    }
-  ]
+            "name": "Copy 2",
+            "width": 290,
+            "height": 240,
+            "left": 1091,
+            "top": 489,
+            "delay": 2.5,
+            "divs": [{
+                "background-image": "url(images/intro/intro2_copy2.png)",
+                "background-size": "cover"
+            }],
+            "set": {
+                "top": "+30%",
+                "opacity": 0
+            },
+            "animate": [{
+                "top": "0",
+                "opacity": 1,
+                "speed": 0.5
+            }]
+        },{
+            "name": "Trailer",
+            "width": 572,
+            "height": 584,
+            "left": 481,
+            "top": 300,
+            "delay": 0.5,
+            "divs": [{
+                "background-image": "url(images/intro/intro2_trailer.png)",
+                "background-size": "cover"
+            }],
+            "set": {
+                "top": "-50%",
+                "left": "+8%",
+                "scaleX": 0.6,
+                "scaleY": 0.6,
+                "transformOrigin": "bottom center"
+            },
+            "animate": [{
+                "top": "0",
+                "left": "0",
+                "speed": 2.2,
+                "scaleX":1,
+                "scaleY":1,
+                "delay":0.5
+            }]
+        },{
+            "name": "Car",
+            "width": 840,
+            "height": 431,
+            "left": 343,
+            "top": 571,
+            "delay": 0.5,
+            "divs": [{
+                "background-image": "url(images/intro/intro2_car.png)",
+                "background-size": "cover"
+            }],
+            "set": {
+                "top": "-60%",
+                "left": "+5%",
+                "scaleX": 0.8,
+                "scaleY": 0.8,
+                "transformOrigin": "bottom center"
+            },
+            "animate": [{
+                "top": "0",
+                "left": "0",
+                "speed": 1.5,
+                "scaleX":1,
+                "scaleY":1,
+                "delay":0.5
+            }]
+        }]
+    },{
+        "width": 1500,
+        "height": 1000,
+        "background": "url(images/intro/intro1_bg.jpg) #000 no-repeat center center",
+        "items": [{
+            "name": "Lady",
+            "width": 837,
+            "height": 650,
+            "left": 326,
+            "top": 6,
+            "delay": 1.8,
+            "divs": [{
+                "background-image": "url(images/intro/intro4_lady.png)",
+                "background-size": "cover"
+            }],
+            "set": {
+                "top":"+40%",
+                "left": "-5%",
+                "scaleX":0.8,
+                "scaleY":0.8,
+                "rotationX":60,
+                "transformOrigin": "bottom center"
+            },
+            "animate": [{
+                "top":"0",
+                "left": "0",
+                "scaleX":1,
+                "scaleY":1,
+                "rotationX":0,
+                "speed": 0.35,
+                "ease": "Rough"
+            }]
+        },{
+            "name": "Clothes 1",
+            "width": 635,
+            "height": 595,
+            "left": 116,
+            "top": 401,
+            "delay": 0.5,
+            "divs": [{
+                "background-image": "url(images/intro/intro4_clothes1.png)",
+                "background-size": "cover"
+            }],
+            "set": {
+                "rotationY":-90,
+                "scaleX":1.5,
+                "scaleY":1.5,
+                "transformOrigin": "center right"
+            },
+            "animate": [{
+                "speed": 1,
+                "scaleX":1,
+                "scaleY":1,
+                "rotationY":0
+            }]
+        },{
+            "name": "Clothes 2",
+            "width": 655,
+            "height": 592,
+            "left": 751,
+            "top": 392,
+            "delay": 0.5,
+            "divs": [{
+                "background-image": "url(images/intro/intro4_clothes2.png)",
+                "background-size": "cover"
+            }],
+            "set": {
+                "rotationY":90,
+                "scaleX":1.5,
+                "scaleY":1.5,
+                "transformOrigin": "center left"
+            },
+            "animate": [{
+                "speed": 1,
+                "scaleX":1,
+                "scaleY":1,
+                "rotationY":0
+            }]
+        },{
+            "name": "Copy",
+            "width": 253,
+            "height": 248,
+            "left": 1026,
+            "top": 689,
+            "delay": 2.5,
+            "divs": [{
+                "background-image": "url(images/intro/intro4_copy.png)",
+                "background-size": "cover"
+            }],
+            "set": {
+                "opacity":0,
+                "left":"-20%",
+                "transformOrigin": "center left"
+            },
+            "animate": [{
+                "opacity":1, 
+                "left":"0",
+                "speed": 1
+            }]
+        }]
+    }],
+    "cast": [{
+        "safename": "walter",
+        "name": "WALTER BLUNT",
+        "actor": "Patrick Stewart",
+        "icon": "camera.png",
+        "quote": "a fool's mission is still a mission.",
+        "desc": "Walter is a British ex-pat and Falklands War veteran, who currently finds himself riding the tumultuous waves of American cable news. Through his show &#8220;Blunt Talk,&#8221; he delivers hard-hitting truths to his American audience, while often struggling with his life behind the scenes."
+    }, {
+        "safename": "harry",
+        "name": "HARRY CHANDLER",
+        "actor": "Adrian Scarborough",
+        "icon": "sword.png",
+        "quote": "i don't hate myself but i don't like myself. i hover somewhere in the middle.",
+        "desc": "Harry is Walter's manservant, confidant, brother-in-arms, and best friend. He loves drinking and gambling, but neither of these match his unflinching loyalty to Walter."
+    }, {
+        "safename": "rosalie",
+        "name": "ROSALIE WINTER",
+        "actor": "JACKI WEAVER",
+        "icon": "onair.png",
+        "quote": "i'm sorry to be the only sane person here, but this has fuck-up written all over it.",
+        "desc": "Rosalie is Walter's executive producer. She oversees Walter and his eccentric staff with a mix of ferocity and tenderness. On the surface she is a bastion of strength, but underneath she's a vulnerable romantic who is becoming increasingly alarmed by the rapid changes in her home life."
+    }, {
+        "safename": "celia",
+        "name": "Celia Havemeyer",
+        "actor": "Dolly Wells",
+        "icon": "bra.png",
+        "quote": "I have sex too easily and I always go for the ones who disappear. Also alcoholics. That's my other specialty.",
+        "desc": "Celia is a senior producer of &#8220;Blunt Talk&#8221; keen on impressing Walter, whom she has admired for many years. However, to the detriment of her career, her impulsive spirit comes with a chaotic personal life."
+    }, {
+        "safename": "jim",
+        "name": "JIM STONE",
+        "actor": "TIMM SHARP",
+        "icon": "container.png",
+        "quote": "i was wildly addicted. but i'm better now. sort of.",
+        "desc": "Jim is a senior producer of &#8220;Blunt Talk.&#8221; He is an intellectual who does great work behind the camera, while hoping one day to be in front of it. As his dreams and desires emerge, so do a laundry list of neuroses that he must struggle to overcome."
+    }, {
+        "safename": "martin",
+        "name": "MARTIN BASSI",
+        "actor": "KARAN SONI",
+        "icon": "pills.png",
+        "quote": "i like pointy boobs. you know, the ones that look like MAGICAL elf shoes.",
+        "desc": "Martin, the runt of the litter, is a segment producer still struggling to fit in. As the daunting age of 28 looms over him, he seeks solace in the motherly embraces of Rosalie."
+    }, {
+        "safename": "shelly",
+        "name": "SHELLY FORBES",
+        "actor": "Mary Holland",
+        "icon": "shoe.png",
+        "quote": "we all have bathroom issues.",
+        "desc": "Despite only being a segment producer, Shelly is an eager firecracker, hell-bent on making her mark in the news world. She is aggressive in her professional life, constantly angling for an opportunity to move up the ladder, and equally aggressive in her sexually adventurous private life."
+    }, {
+        "safename": "weiss",
+        "name": "Dr. Weiss",
+        "actor": "RICHARD LEWIS",
+        "icon": "books.png",
+        "quote": "Would you like to talk? Or do a line?",
+        "desc": "Dr. Weiss is a therapist who purports to be a Freudian. He delves deep into the psyches of &#8220;Blunt Talk's&#8221; staff and is less than discreet with his findings."
+    }, {
+        "safename": "bob",
+        "name": "Bob Gardner",
+        "actor": "Romany malco",
+        "icon": "money.png",
+        "quote": "BOB GIVETH, BOB TAKETH.",
+        "desc": "Bob Gardner is Walter's boss and the current President of UBS Network. Although he's supportive of Walter, the only thing that matters to Gardner is ratings."
+    }],
+    "prod": [{
+        "safename": "jonathanames",
+        "name": "JONATHAN AMES",
+        "role": "Creator, Showrunner, Writer, Executive Producer",
+        "desc": [
+            "Ames is a novelist, essayist, and television show runner. He created the HBO original series &#8220;Bored to Death,&#8221; was a columnist for the NY Press, and is the author of nine works of fiction and non- fiction: &#8220;I Pass Like Night,&#8221; &#8220;The Extra Man,&#8221; &#8220;What&#8217;s Not to Love?,&#8221; &#8220;My Less Than Secret Life,&#8221; &#8220;Wake Up, Sir!&#8221; &#8220;I Love You More Than You Know,&#8221; &#8220;The Alcoholic&#8221; (a graphic-novel illustrated by Dean Haspiel), &#8220;The Double Life Is Twice as Good,&#8221; and &#8220;You Were Never Really Here.&#8221; His novel &#8220;The Extra Man&#8221; was adapted into a film starring Kevin Kline and Paul Dano and was released in 2010. His novella &#8220;You Were Never Really Here&#8221; is currently in development as a film. He adapted his memoir &#8220;What&#8217;s Not to Love?&#8221; into a television special for the Showtime network and played himself. His books have been widely translated and he is the winner of a Guggenheim Fellowship.",
+            "Ames also had a long career as a monologist, having staged a one- man show &#8220;Oedipussy&#8221; and performing frequently with the Moth. He has also acted in several films and television shows, including &#8220;Curb Your Enthusiasm&#8221; and &#8220;Bored to Death,&#8221; and was the lead in the IFC film &#8220;The Girl Beneath the Waves.&#8221; In addition to his involvement in the arts, he was in two boxing matches fighting as &#8216;The Herring Wonder.&#8221;"
+        ],
+        "image": true
+    }, {
+        "safename": "sethmacfarlane",
+        "name": "SETH MACFARLANE",
+        "role": "Executive Producer",
+        "desc": [
+            "MacFarlane is a true Renaissance man, possessing talents that encompass every aspect of the entertainment industry. He has created some of the most popular content on television and film today, while also expanding his career in the worlds of music, literature and philanthropy.",
+            "At 25, MacFarlane became the youngest showrunner in television history when his animated series &#8220;Family Guy&#8221; aired on FOX. Now in its 13th season, &#8220;Family Guy&#8221; has garnered MacFarlane Emmy Awards for Outstanding Voice-Over Performance and Outstanding Music and Lyrics. In addition to &#8220;Family Guy,&#8221; MacFarlane serves as co-creator, executive producer and voice actor on &#8220;American Dad!&#8221; He also executive produced the 21st century version of &#8220;Cosmos: A Spacetime Odyssey&#8221; that premiered last March on ten U.S. networks simultaneously across FOX and National Geographic latforms, making it the largest television premiere event of all time. The series has gone on to receive two Critics&#8217; Choice Television Awards, nominations for a Television Critics Association Award and 13 Primetime Emmy Awards, including Outstanding Documentary Or Nonfiction Series.",
+            "MacFarlane made his feature film directorial debut in 2012 with the highest-grossing R-rated film of all time, &#8220;Ted.&#8221; This buddy comedy starred Mark Wahlberg and MacFarlane as the voice of the lovable, foul-mouthed teddy bear, Ted. The film made over $545 million worldwide and was also co-written and produced by MacFarlane. Fresh off the success of &#8220;Ted,&#8221; MacFarlane hosted the 85th Academy Awards in 2013 and was nominated for the film that same year. He was nominated for Best Achievement in Music Written for Motion Pictures and Original Song for &#8220;Everybody Needs a Best Friend.&#8221; The sequel is currently in post-production and is set for release on June 26, 2015. In May 2014, Universal released MacFarlane&#8217;s western comedy, &#8220;A Million Ways to Die in the West.&#8221; The film, which MacFarlane wrote, produced, directed, and starred in, featured an ensemble cast that included Charlize Theron, Liam Neeson, Amanda Seyfried, and Neil Patrick Harris, among others.",
+            "MacFarlane&#8217;s debut album &#8220;Music is Better Than Words,&#8221; debuted at No. 1 on the iTunes jazz charts in 2011 and went on to receive two Grammy nominations, including Best Traditional Pop Vocal Album. Released by Universal Republic, the album celebrates the classic, sophisticated sound of the lush swing orchestras of the &#8216;40s and &#8216;50s with MacFarlane singing some of the hidden gems of that era. Norah Jones and Sara Bareilles collaborated with MacFarlane on two duets on the album. In 2014, MacFarlane released his first-ever Christmas album, &#8220;Holiday for Swing,&#8221; that debuted No. 1 on the iTunes holiday album charts. The album features timeless holiday songs accompanied by a 52-piece orchestra.",
+            "In August of 2014, MacFarlane performed with the world- renowned John Williams and the Los Angeles Philharmonic Orchestra at the Hollywood Bowl, lending his baritone voice to renditions of &#8220;Luck Be a Lady&#8221; and &#8220;You&#8217;re Sensational&#8221; to rave reviews. This past New Year&#8217;s Eve MacFarlane also paired with the San Francisco Symphony, led by conductor Edwin Outwater."
+        ],
+        "image": true
+    }, {
+        "safename": "stephainedavis",
+        "name": "STEPHANIE DAVIS",
+        "role": "Executive Producer",
+        "desc": [
+            "After graduation from New York University&#8217;s Tisch School of the Arts and going on to complete Cardoza School of Law, Davis was admitted to both the New York and California Bar Associations. She began her career working in the William Morris mailroom. She went on to work at Industry Entertainment (formerly Addis- Wechsler & Associates), Artist Management Group, 3 Arts Entertainment, and now runs her own management/production company called Wetdog Entertainment. Film and TV credits include: &#8220;The Extra Man&#8221; starring Kevin Kline, USA&#8217;s &#8221;The Starter Wife,&#8221; Lifetime&#8217;s &#8220;Maneater,&#8221; and three seasons of HBO&#8217;s &#8220;Bored to Death.&#8221; She lives in Los Angeles with her two children."
+        ],
+        "image": false
+    }, {
+        "safename": "tristramshapeero",
+        "name": "TRISTRAM SHAPEERO",
+        "role": "Director, Executive Producer",
+        "desc": [
+            "Shapeero was born in Bath, Somerset, England and in 1988 moved to London to pursue a career in television. He began his career at the British comedy production company Hat Trick Productions, which created several shows including &#8220;Whose Line Is It Anyway?&#8221; Shapeero left Hat Trick in 1992 to become an assistant director on &#8220;Men Behaving Badly,&#8221; &#8220;The Vicar of Dibley,&#8221; and &#8220;Thin Blue Line.&#8221; In 2000, he made his directorial debut on the BAFTA-nominated sketch comedy show &#8220;Smack the Pony,&#8221; and went on to direct an additional six episodes. With this momentum he went on to direct several innovative British comedies including &#8220;Peep Show,&#8221; &#8220;Green Wing,&#8221; &#8220;Pulling,&#8221; &#8220;I&#8217;m Alan Partridge,&#8221; &#8220;Absolute Power,&#8221; and &#8220;Brass Eye,&#8221; resulting in eight BAFTA nominations, three Royal Television Society nominations and a Rose d&#8217;Or nomination.",
+            "In 2009, Shapeero moved to the United States where he directed multiple episodes of several popular comedy series including &#8220;Workaholics,&#8221; &#8220;Veep,&#8221; &#8220;Parks and Recreation,&#8221; &#8220;New Girl,&#8221; &#8220;Brooklyn Nine-Nine,&#8221; and 24 episodes of &#8220;Community&#8221;. After directing three episodes of &#8220;Bored to Death,&#8221; he will continue his working relationship with Jonathan Ames as the executive producer and director of &#8220;Blunt Talk.&#8221;"
+        ],
+        "image": false
+    }, {
+        "safename": "duncanbirmingham",
+        "name": "DUNCAN BIRMINGHAM",
+        "role": "Co-Executive Producer",
+        "desc": [
+            "Birmingham is a writer/producer in film and television. He previously developed and executive produced the IFC half hour comedy &#8220;Maron&#8221; and remains a writer and consultant on the show. He has written projects for ABC, Sony, Universal and his script &#8220;Swingles&#8221; is currently in development at Paramount. He is the author of the humor book series, &#8220;Pets Who Want to Kill Themselves.&#8221; Birmingham has also had short films he&#8217;s written, directed or acted that have played at the Sundance Film Festival, AFI, SXSW, Gen Art and the New York TV Festival.",
+            "He recently wrote on David Fincher&#8217;s HBO project &#8220;Living on Video&#8221; and is currently developing a half hour project at AMC with producer Michael London."
+        ],
+        "image": false
+    }, {
+        "safename": "reedagnew",
+        "name": "REED AGNEW",
+        "role": "Co-Executive Producer",
+        "desc": [
+            "Hailing from Pittsburgh, Pa., Agnew most recently served as executive producer, co-showrunner and writer on FX&#8217;s &#8220;Wilfred.&#8221; A self-proclaimed &#8220;Monty Python&#8221; and &#8220;The Wire&#8221; fan, Agnew&#8216;s additional TV credits include serving as a writer on &#8220;The Andy Milonakis Show,&#8221; &#8220;Crank Yankers&#8221; and &#8220;Drawn Together.&#8221; An amateur ornithologist, Reed also enjoys playing basketball, drawing and loitering."
+        ],
+        "image": false
+    }, {
+        "safename": "elijorne",
+        "name": "ELI JORN&Eacute;",
+        "role": "Co-Executive Producer",
+        "desc": [
+            "Jorn&eacute; is a screenwriter who has been working in both film and television for the past nine years. Prior to &#8220;Blunt Talk,&#8221; he was the co-showrunner for the FX series &#8220;Wilfred,&#8221; and has developed many projects, both in film and television, for major studios and networks.",
+            "Jorn&eacute; grew up in Birmingham, Mich. and attended Dartmouth College. After obtaining his MS in Applied Physics from the California Institute of Technology (with a concentration in Plasma Physics), he shifted his focus to screenwriting and earned an MFA from the American Film Institute. His favorite pastimes include bridge and squash."
+        ],
+        "image": false
+    }, {
+        "safename": "leannemoore",
+        "name": "LEANNE MOORE",
+        "role": "Producer",
+        "desc": [
+            "Leanne Moore began her career as an accountant on feature films including &#8220;Children of a Lesser God&#8221; and the &#8220;Back to the Future&#8221; trilogy after graduating from the University of Texas at Austin. She then moved into production for Steven Spielberg&#8217;s company, Amblin Entertainment, and Turner Network Television, where she produced six television movies written by playwrights such as Horton Foote and Arthur Miller. While at TNT, Leanne also produced &#8220;The Heidi Chronicles&#8221; (starring Jamie Lee Curtis) and &#8220;Pirates of Silicon Valley&#8221; (starring Noah Wyle), both of which were nominated for Emmys. Most recently, she moved in to series production and co-produced &#8220;Side Order of Life&#8221; for Lifetime, &#8220;Zoey 101&#8221; for Nickelodeon, &#8220;Matador&#8221; for the El Rey Network, and produced the pilot of Aaron Sorkin&#8217;s &#8220;The Newsroom&#8221; for HBO."
+        ],
+        "image": false
+    }, {
+        "safename": "samsklaver",
+        "name": "SAM SKLAVER",
+        "role": "Producer",
+        "desc": [
+            "Sklaver is a television writer and producer. He previously worked with Jonathan Ames as a writer on the HBO series &#8220;Bored to Death.&#8221; He also served as writer and producer for FOX&#8217;s &#8220;Ben and Kate&#8221; and FX&#8217;s &#8220;Married.&#8221; Additional TV credits include &#8220;Children&#8217;s Hospital&#8221; and NBC&#8217;s &#8220;Whitney,&#8221; among others."
+        ],
+        "image": false
+    }, {
+        "safename": "jimmargolis",
+        "name": "JIM MARGOLIS",
+        "role": "Consulting Producer",
+        "desc": [
+            "Margolis won six Primetime Emmys as a Co-Executive Producer and Supervising Producer of &#8220;The Daily Show,&#8221; where he worked from 2001 until 2012. While at &#8220;The Daily Show&#8221; Margolis wrote, directed and produced some of the show&#8217;s most memorable segments with correspondents Steve Carell, Stephen Colbert, Rob Corddry, Ed Helms, Samantha Bee, and John Oliver among others.",
+            "Margolis left &#8220;The Daily Show&#8221; to join Rob Corddry in developing &#8220;Newsreaders,&#8221; a scripted comedy on Adult Swim. Margolis serves as Showrunner of &#8220;Newsreaders,&#8221; now in its second season.",
+            "Before working at &#8220;The Daily Show,&#8221; Margolis was a producer at CBS News&#8217; &#8220;60 Minutes,&#8221; working for correspondent Lesley Stahl. Prior to that, he worked as a documentary producer for PBS&#8217; &#8220;Frontiline&#8221; and the BBC among others. Margolis has also written pilots for ABC, Warner Brothers Television and BBC America . He grew up in Cleveland, Ohio and graduated from Wesleyan University."
+        ],
+        "image": false
+    }, {
+        "safename": "josephegallagher",
+        "name": "JOSEPH E. GALLAGHER",
+        "role": "Director of Photography",
+        "desc": [
+            "Gallagher was born in Greenwich Village and raised in Stuyvesant Town in the Lower East Side of New York City. After graduating from SUNY Cortland, his older brother hired him to work on a film as a PA, but he gravitated to the camera department instead. As a focus puller and camera operator, he learned from some of the all- time great cinematographers including Michael Chapman, Bruce Surtees, Ralf Bode, Caleb Deschanel, and James Glennon.",
+            "As a Director of Photography, Gallagher has collaborated with many of television&#8217;s top directors and designers to create the look, styles and sets of high-end marquis single-camera shows for network and cable, especially period dramas like &#8220;Playboy Club,&#8221; &#8220;Vegas,&#8221; and &#8220;Deadwood.&#8221; In 2007, Joseph was nominated for a Primetime Emmy for Outstanding Cinematography for a Single-Camera Series for his work on &#8220;Deadwood&#8221; and received the Kodak Vision Award. In 2013 he photographed the film &#8220;Ring of Fire&#8221; for director Alison Anders, who received an Emmy nomination for Outstanding Directing for a Miniseries, Movie or Dramatic Special.",
+            "Recently, Gallagher teamed up with writer/director Robert Rodriguez on the original series &#8220;Matador&#8221; for his new network, El Rey. After shooting the pilot with Rodriguez, Gallagher stayed on board as the Director of Photography as well as directing subsequent episodes."
+        ],
+        "image": false
+    }, {
+        "safename": "julewalker",
+        "name": "JULIE WALKER",
+        "role": "Production Designer",
+        "desc": [
+            "Growing up in Atlanta, Walker began her career in the entertainment industry working with such giants as TNT, TBS and CNN. While organizing events for the Goodwill Games, NBA and MLB All-Star Games, and the PGA Grand Slam, she discovered her passion for design and moved to New York to study interior design.",
+            "Eight years ago, Walker moved to Los Angeles to begin her career in design. She recently finished designing her first feature film, &#8220;Havenhurst.&#8221;",
+            "After 160 episodes of network television and 2,400 sets later, her experience includes art directing pilots for ABC, CBS and Warner Bros. She has designed numerous commercials, music videos and, most recently, served as the art director on Showtime&#8217;s &#8220;House of Lies&#8221; and the CBS show &#8220;The Mentalist.&#8221;"
+        ],
+        "image": false
+    }, {
+        "safename": "jeannemccarthy",
+        "name": "JEANNE MCCARTHY",
+        "role": "Casting Director",
+        "desc": [
+            "Jeanne McCarthy has been working in film and television for over 20 years. Since the mid-90&#8217;s she has been responsible for casting many notable series and features such as &#8220;The League,&#8221; &#8220;The Mindy Project,&#8221; &#8220;Eternal Sunshine of the Spotless Mind,&#8221; &#8220;Zoolander,&#8221; &#8220;Anchorman,&#8221; &#8220;Friends with Money,&#8221; &#8220;The Savages,&#8221; &#8220;Forgetting Sarah Marshall&#8221; and &#8220;21 Jump Street.&#8221; McCarthy received an Emmy nomination for the TNT movie &#8220;Door to Door,&#8221; a Gotham and Independent Spirit (The Robert Altman) Award for &#8220;Synecdoche, New York,&#8221; and again won The Robert Altman award in 2011 for &#8220;Please Give.&#8221; Most recently, her work can be seen in &#8220;22 Jump Street,&#8221; &#8220;Enough Said,&#8221; &#8220;Begin Again,&#8221; &#8220;Big Eyes,&#8221; &#8220;The Last Man on Earth,&#8221; &#8220;Togetherness,&#8221; and the Golden Globe nominated &#8220;Foxcatcher.&#8221;"
+        ],
+        "image": false
+    }, {
+        "safename": "nicoleabellera",
+        "name": "NICOLE ABELLERA",
+        "role": "Casting Director",
+        "desc": [
+            "Nicole Abellera has established herself as one of the premiere casting directors in Hollywood, mastering a wide range of genres in both film and TV. She has cast popular comedies such as &#8220;21 Jump Street,&#8221; &#8220;22 Jump Street,&#8221; &#8220;The League,&#8221; &#8220; The Mindy Project,&#8221; &#8220;Last Man On Earth,&#8221; and &#8220;Silicon Valley.&#8221; She has also made a name for herself with the Ed Harris western &#8220;Appaloosa&#8221; and the critically acclaimed indie &#8220;Big Eyes.&#8221; Her first solo casting project, &#8220;Johnny Flynton,&#8221; was nominated for an Academy Award®. Abellera has worked alongside directors like Ryan Murphy, Charlie Kaufman, Jay Roach, Nick Stoller, Miranda July and Ruben Fleischer. Additional credits include: &#8220;Bad Words,&#8221; &#8220;The Accountant,&#8221; &#8220;The Last Samurai,&#8221; &#8220;Ali&#8221; and &#8220;Friends with Money.&#8221;"
+        ],
+        "image": false
+    }, {
+        "safename": "kirstenkearse",
+        "name": "KIRSTEN KEARSE",
+        "role": "Staff Writer",
+        "desc": [
+            "Kirsten Kearse recently made the leap to staff writer following a reputable career as a script supervisor, most notably on Jonathan Ames&#8217; HBO series &#8220;Bored To Death.&#8221; She is also a MacDowell Colony Fellow and the director of the festival favorite &#8220;The Horsefingers Trilogy.&#8221;"
+        ],
+        "image": false
+    }, {
+        "safename": "chrisikarvonides",
+        "name": "CHRISI KARVONIDES",
+        "role": "Costume Designer",
+        "desc": [
+            "Karvonides-Dushenko has more than 25 years of experience as a professional costume designer in theater, film and television.",
+            "In 2003, she received an Emmy for her costume design work on NBC&#8217;s &#8220;American Dreams.&#8221; She also received Emmy nominations for FX&#8217;s &#8220;American Horror Story,&#8221; HBO&#8217;s &#8220;From the Earth to the Moon&#8221; (produced by Tom Hanks) and &#8220;Carnivàle.&#8221; She was nominated for four Costume Designers Guild Awards during five seasons of HBO&#8217;s &#8220;Big Love.&#8221; In addition, &#8220;Carnivàle,&#8221; &#8220;From the Earth to the Moon&#8221; and the pilot for ABC&#8217;s &#8220;Pan Am&#8221; were also nominated for CDG awards. Karvonides-Dushenko&#8217;s feature films include &#8220;The Glass House,&#8221; &#8220;Beautiful,&#8221; and &#8220;The Loss of a Teardrop Diamond,&#8221; which was based on an unproduced 1957 screenplay by Tennessee Williams. Last year she designed hundreds of ancient Egyptian costumes for the Fox pilot &#8220;Hieroglyph,&#8221; which filmed in New Mexico and Morocco.",
+            "Her theatrical designs have been featured in productions at the Old Globe Theater, Geffen Playhouse, South Coast Repertory, Seattle Repertory, Guthrie Theater, and the Kennedy Center. On Broadway, she designed the costumes for August Wilson&#8217;s production &#8220;Two Trains Running.&#8221; Last year she designed the costumes for Frank Zappa&#8217;s &#8220;200 Motels,&#8221; featuring the Los Angeles Philharmonic performed at the Walt Disney Concert Hall.",
+            "In addition, Karvonides-Dushenko is also the head professor of the M.F.A program for Costume Design at UCLA&#8221;s School of Theater, Film and Television. She also presents lectures and workshops on the art and craft of costume design as a designer at several international conferences on costume design processes around the world, and will be at the International Quadrennial Conference on Design for Theater, Film and TV in Prague this summer.",
+            "Professor Karvonides-Dushenko received her M.F.A. in Theater Design from the Yale School of Drama, has a B.F.A. from Emerson College and also attended the Fashion Institute of Technology in New York."
+        ],
+        "image": false
+    }, {
+        "safename": "triciasawyer",
+        "name": "TRICIA SAWYER",
+        "role": "Dept. Head Make-Up",
+        "desc": [
+            "Sawyer has been a makeup artist in the film and print industry for over 20 years and has worked extensively in the motion picture industry as a personal artist to Sharon Stone, Jessica Alba, Robin Wright, Kevin Spacey, Sylvester Stallone, Kate Beckinsale, and Scarlett Johansson. She has served on several films and television shows as department head, along with countless print campaigns, media, and award shows. Additional television credits include &#8220;House of Cards&#8221; (seasons 1-3) and &#8220;Mad Men,&#8221; among others. Feature film credits include &#8220;The Hunger Games,&#8221; &#8220;Casino,&#8221; &#8220;Little Fockers,&#8221; &#8220;Love Guru,&#8221; &#8220;Just Married,&#8221; &#8220;Get Carter,&#8221; &#8220;Clerks 2,&#8221; &#8220;The Long Kiss Goodnight&#8221; and &#8220;Don&#8217;t Say a Word.&#8221;",
+            "Sawyer became the spokesperson for Prescriptives Cosmetics in 1995, where she was responsible for the re-design of the existing color line up along with design of new products. After her four-year spokesperson run, she stayed on with Estee Lauder Companies as an independent development consultant.",
+            "She is a California native and currently resides in Los Angeles."
+        ],
+        "image": false
+    }, {
+        "safename": "jamesdunham",
+        "name": "JAMES DUNHAM",
+        "role": "Dept. Head Hair",
+        "desc": [
+            "Dunham started in the hair industry in 1994 as general manager and art director at Oxenrose Hair Salon in downtown San Francisco, overseeing 20 stylists and up to 35 staff members. In 2003, he joined the hair and makeup union, local 706, and worked on the TV show &#8220;Desperate Housewives&#8221; until its end in 2012. Since then, he has served as department head and worked on numerous shows including &#8220;Suburgatory,&#8221; &#8220;Guys with Kids,&#8221; &#8220;Matador,&#8221; &#8220;Scorpion,&#8221; &#8220;The Voice,&#8221; &#8220;The Brink&#8221; and &#8220;Shameless.&#8221; In 2013, Dunham served as department head on the feature film &#8220;Rudderless.&#8221;",
+            "Dunham has worked as a personal artist to Selena Gomez, Marcia Cross, Felicity Huffman, Vanessa Williams, William H. Macy, Laurence Fishburne, Kyle MacLachlan, Bob Newhart, and Larry Hagman among others."
+        ],
+        "image": false
+    }, {
+        "safename": "jillbrown",
+        "name": "JILL BROWN",
+        "role": "Stunt Coordinator",
+        "desc": [
+            "Born in Baltimore, Brown performed her first stunt when she climbed the ladder of the three-meter high dive (orange arm floaties and all) and jumped into the deep end when she was just two years old. She claimed she was bored in the shallow end.",
+            "Later in life, being an exceptional, competitive athlete, it seemed fitting that in 1993 Jill&#8217;s physical therapist would introduce her to his friend, local stuntman George Aguilar, urging her to strive for a career that could utilize her expansive, athletic skill set. Impressed by her athleticism and tenacity, Aguilar and his stunt team took Jill under their wing and trained her in all facets of stunt performance and eventually stunt coordinating.",
+            "Brown has worked on over 100 feature films and television programs. She has won two World Stunt Awards; one for her high work doubling Jennifer Lopez on &#8220;The Cell&#8221; and a few years later for her wire work on &#8220;Taxi.&#8221; She was also nominated for four Screen Actors Guild Awards in a stunt ensemble. In 1998, Brown performed the highest recorded wire descender drop out of a helicopter (250 feet) as well as a 450-foot drop off the roof of the PPG building in Pittsburgh for &#8220;Inspector Gadget.&#8221;",
+            "Due to her comedic sensibilities and knack for physical comedy, Tina Fey approached Brown while shooting an episode of &#8220;30 Rock.&#8221; Fey promoted her to stunt coordinate the remaining six seasons. Brown went on to coordinate Fey&#8217;s most recent show &#8220;Unbreakable Kimmy Schmidt.&#8221; Continuing in the comedy field, she also coordinates &#8220;Grace and Frankie&#8221; for Netflix and MTV&#8217;s &#8220;Faking It.&#8221; She has also coordinated &#8220;Confessions of a Shopaholic,&#8221; as well as the 2nd Unit (action unit) for &#8220;Zombieland&#8221; and &#8220;Premium Rush,&#8221; making her one of the only female stunt coordinators in the country."
+        ],
+        "image": false
+    }, {
+        "safename": "erikgrasteit",
+        "name": "ERIK GRASTEIT",
+        "role": "Property Master",
+        "desc": [
+            "Grasteit is an accomplished Property Master, working on more than 20 television and film projects in his career. He most currently served as property master on &#8220;The Mentalist.&#8221; Prior to that time, his television credits include &#8220;Ghost Whisperer,&#8221; &#8220;The District,&#8221; &#8220;Six Feet Under&#8221; and &#8220;The X-Files,&#8221; among others. Feature film credits include &#8220;Twister,&#8221; &#8220;Dante&#8217;s Peak&#8221; and &#8220;The X Files,&#8221; among others."
+        ],
+        "image": false
+    }],
+    "photos": [{
+        "path": "1.jpg",
+        "caption": ""
+    }, {
+        "path": "2.jpg",
+        "caption": ""
+    }, {
+        "path": "3.jpg",
+        "caption": ""
+    }, {
+        "path": "4.jpg",
+        "caption": ""
+    }, {
+        "path": "5.jpg",
+        "caption": ""
+    }, {
+        "path": "6.jpg",
+        "caption": ""
+    }, {
+        "path": "7.jpg",
+        "caption": ""
+    }, {
+        "path": "8.jpg",
+        "caption": ""
+    }, {
+        "path": "9.jpg",
+        "caption": ""
+    }, {
+        "path": "10.jpg",
+        "caption": ""
+    }, {
+        "path": "11.jpg",
+        "caption": ""
+    }, {
+        "path": "12.jpg",
+        "caption": ""
+    }, {
+        "path": "13.jpg",
+        "caption": ""
+    }, {
+        "path": "14.jpg",
+        "caption": ""
+    }, {
+        "path": "15.jpg",
+        "caption": ""
+    }, {
+        "path": "16.jpg",
+        "caption": ""
+    }, {
+        "path": "17.jpg",
+        "caption": ""
+    }, {
+        "path": "18.jpg",
+        "caption": ""
+    }, {
+        "path": "19.jpg",
+        "caption": ""
+    }, {
+        "path": "20.jpg",
+        "caption": ""
+    }],
+    "videos": [{
+        "name": "Opening Titles",
+        "desc": "A perfect way to begin the adventure. Watch the Outlander opening titles.",
+        "path": "http://www.starz.com/videos/embed/da6176d76bb04503a0125c17febdbde0",
+        "thumb": "openingtitles.jpg"
+    }, {
+        "name": "Opening Titles",
+        "desc": "A perfect way to begin the adventure. Watch the Outlander opening titles.",
+        "path": "http://www.starz.com/videos/embed/da6176d76bb04503a0125c17febdbde0",
+        "thumb": "openingtitles.jpg"
+    }, {
+        "name": "Opening Titles",
+        "desc": "A perfect way to begin the adventure. Watch the Outlander opening titles.",
+        "path": "http://www.starz.com/videos/embed/da6176d76bb04503a0125c17febdbde0",
+        "thumb": "openingtitles.jpg"
+    }, {
+        "name": "Opening Titles",
+        "desc": "A perfect way to begin the adventure. Watch the Outlander opening titles.",
+        "path": "http://www.starz.com/videos/embed/da6176d76bb04503a0125c17febdbde0",
+        "thumb": "openingtitles.jpg"
+    }],
+    "pdfs": [{
+        "name": "Synopsis",
+        "path": "pdfs/blunttalk_synopsis.pdf"
+    }, {
+        "name": "Character Descriptions",
+        "path": "pdfs/blunttalk_characterdesc.pdf"
+    }, {
+        "name": "Cast Bios",
+        "path": "pdfs/blunttalk_castbios.pdf"
+    }, {
+        "name": "Production Bios",
+        "path": "pdfs/blunttalk_productionbios.pdf"
+    }, {
+        "name": "Cast Credits",
+        "path": "pdfs/blunttalk_castcredits.pdf"
+    }, {
+        "name": "Production Credits",
+        "path": "pdfs/blunttalk_productioncredits.pdf"
+    }, {
+        "name": "Production Notes",
+        "path": "pdfs/blunttalk_productionnotes.pdf"
+    }, {
+        "name": "Episode Synopses",
+        "path": "pdfs/blunttalk_episodesynopses.pdf"
+    }],
+    "contacts": [{
+        "name": "Theano Apostolou",
+        "email": "theano@starz.com",
+        "phone": "(424) 204-4052",
+        "company": "STARZ Entertainment, LLC."
+    }, {
+        "name": "Shannon Buck",
+        "email": "shannon.buck@starz.com",
+        "phone": "(424) 204-4173",
+        "company": "STARZ Entertainment, LLC."
+    }, {
+        "name": "Danielle Dusky",
+        "email": "danielle.dusky@starz.com",
+        "phone": "(424) 204-4101",
+        "company": "STARZ Entertainment, LLC."
+    }]
 }
