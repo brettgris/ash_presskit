@@ -52,7 +52,7 @@
             }],
             "set": {
               "opacity": 0,
-              "top": "+50"
+              "top": "+20%"
             },
             "animate": [{
               "opacity": 1,
@@ -470,6 +470,189 @@
                 "opacity":1, 
                 "left":"0",
                 "speed": 1
+            }]
+        }]
+    },{
+        "width": 1500,
+        "height": 1000,
+        "background": "url(images/intro/intro5_bg.jpg) #000 no-repeat center center",
+        "items": [{
+            "name": "Ash",
+            "width": 267,
+            "height": 619,
+            "left": 776,
+            "top": 357,
+            "delay": 0.5,
+            "divs": [{
+                "background-image": "url(images/intro/intro5_ash.png)",
+                "background-size": "cover"
+            }],
+            "set": {
+              "top": "-10%",
+              "transformOrigin": "bottom left",
+              "rotationX":20,
+              "scaleX":0.90,
+              "scaleY":0.90
+            },
+            "animate": [{
+              "top": "0",
+              "rotationX":0,
+              "speed":1,
+              "scaleX":1,
+              "scaleY":1,
+              "delay":0.2
+            }]
+        },{
+            "name": "Blood",
+            "width": 467,
+            "height": 301,
+            "left": 1061,
+            "top": 490,
+            "delay": 0.5,
+            "divs": [{
+                "background-image": "url(images/intro/intro5_sideblood.png)",
+                "background-size": "cover"
+            }],
+            "set": {
+              "transformOrigin": "center left",
+              "rotation":0,
+              "left":"-10%",
+              "rotationY":90,
+              "top":"-10%"
+            },
+            "animate": [{
+              "speed":0.5,
+              "rotation":15,
+              "delay":0.5,
+              "left":"0",
+              "rotationY":0,
+              "top":"0"
+            }]
+        },{
+            "name": "Blood1",
+            "width": 447,
+            "height": 510,
+            "left": 1000,
+            "top": 570,
+            "delay": 0.5,
+            "divs": [{
+                "background-image": "url(images/intro/intro5_sideblood2.png)",
+                "background-size": "cover"
+            }],
+            "set": {
+              "transformOrigin": "center left",
+              "rotation":0,
+              "scaleX":0,
+              "top":"-20%"
+            },
+            "animate": [{
+              "speed":0.2,
+              "rotation":15,
+              "scaleX":1,
+              "delay":0.5,
+              "top":"0"
+            }]
+        },{
+            "name": "Copy",
+            "width": 283,
+            "height": 103,
+            "left": 237,
+            "top": 736,
+            "delay": 1.8,
+            "divs": [{
+                "background-image": "url(images/intro/intro5_copy.png)",
+                "background-size": "cover"
+            }],
+            "set": {
+              "top":"+40%",
+              "opacity":0
+            },
+            "animate": [{
+              "top":"0",
+              "opacity":1,
+              "speed":1
+            }]
+        },{
+            "name": "Hand",
+            "width": 332,
+            "height": 380,
+            "left": 946,
+            "top": 333,
+            "delay": 0.5,
+            "divs": [{
+                "background-image": "url(images/intro/intro5_hand.png)",
+                "background-size": "cover"
+            }],
+            "set": {
+              "top": "-25%",
+              "transformOrigin": "80% left",
+              "rotationX":45,
+              "rotation": -45,
+              "left": "-25%",
+              "scaleX":0.85,
+              "scaleY":0.85
+            },
+            "animate": [{
+              "top": "0",
+              "speed":0.8,
+              "rotationX":0,
+              "rotation":0,
+              "left":"+20%",
+              "scaleX":1,
+              "scaleY":1,
+              "delay":0.2
+            }]
+        },{
+            "name": "Chainsaw",
+            "width": 283,
+            "height": 542,
+            "left": 543,
+            "top": 351,
+            "delay": 0.5,
+            "divs": [{
+                "background-image": "url(images/intro/intro5_chainsaw.png)",
+                "background-size": "cover"
+            }],
+            "set": {
+              "transformOrigin": "bottom right",
+              "top":"-5%",
+              "left":"+5%",
+              "rotationX":0,
+              "rotationY":60
+            },
+            "animate": [{
+              "speed":1,
+              "top":"0",
+              "rotationX":0,
+              "rotationY":0,
+              "left":"0",
+              "delay":0.3
+            }]
+        },{
+            "name": "Shoe",
+            "width": 257,
+            "height": 581,
+            "left": 886,
+            "top": 500,
+            "delay": 0.5,
+            "divs": [{
+                "background-image": "url(images/intro/intro5_shoe.png)",
+                "background-size": "cover"
+            }],
+            "set": {
+              "top": "-50%",
+              "transformOrigin": "bottom left",
+              "rotationX":20,
+              "scaleX":0.85,
+              "scaleY":0.85
+            },
+            "animate": [{
+              "top": "0",
+              "speed":0.8,
+              "rotationX":0,
+              "scaleX":1,
+              "scaleY":1,
+              "delay":0.2
             }]
         }]
     }],

@@ -338,7 +338,7 @@
     },{
         "width": 1500,
         "height": 1000,
-        "background": "#000 no-repeat center center",
+        "background": "url(images/intro/intro1_bg.jpg) #000 no-repeat center center",
         "items": [{
             "name": "Lady",
             "width": 837,

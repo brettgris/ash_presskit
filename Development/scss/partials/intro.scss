@@ -6,6 +6,7 @@ $intro-arrow-width: $intro-width + $intro-arrow-space*2 + $arrow-width*2;
 	width: 100%;
 	z-index: 5;
 	padding-top: 0px !important;
+	overflow:hidden;
 
 	.intro-container{
 		height: 500px;
@@ -18,7 +19,7 @@ $intro-arrow-width: $intro-width + $intro-arrow-space*2 + $arrow-width*2;
 			left:50%;
 			display: none;
 			margin-left: -50%;
-			overflow: hidden;
+			height:1000px;
 
 			&:first-child{
 				display: block;
