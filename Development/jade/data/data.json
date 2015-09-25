@@ -82,6 +82,7 @@
             "left": 1086,
             "top": 238,
             "delay": 4,
+            "multiple": true,
             "divs": [{
                 "background-image": "url(images/intro/intro1_page10.jpg)",
                 "background-size": "cover"
@@ -91,7 +92,8 @@
             }],
             "set": {
                 "rotationY": 0,
-                "transformOrigin": "left bottom"
+                "transformOrigin": "left bottom",
+                "hide":0
             },
             "animate": [{
                 "rotationY": "-180",
@@ -107,6 +109,7 @@
             "left": 1086,
             "top": 238,
             "delay": 3.75,
+            "multiple": true,
             "divs": [{
                 "background-image": "url(images/intro/intro1_page8.jpg)",
                 "background-size": "cover"
@@ -116,7 +119,8 @@
             }],
             "set": {
                 "rotationY": 0,
-                "transformOrigin": "left bottom"
+                "transformOrigin": "left bottom",
+                "hide":0
             },
             "animate": [{
                 "rotationY": "-180",
@@ -132,6 +136,7 @@
             "left": 1086,
             "top": 238,
             "delay": 3.5,
+            "multiple": true,
             "divs": [{
                 "background-image": "url(images/intro/intro1_page6.jpg)",
                 "background-size": "cover"
@@ -141,7 +146,8 @@
             }],
             "set": {
                 "rotationY": 0,
-                "transformOrigin": "left bottom"
+                "transformOrigin": "left bottom",
+                "hide":0
             },
             "animate": [{
                 "rotationY": "-180",
@@ -157,6 +163,7 @@
             "left": 1086,
             "top": 238,
             "delay": 3.25,
+            "multiple": true,
             "divs": [{
                 "background-image": "url(images/intro/intro1_page4.jpg)",
                 "background-size": "cover"
@@ -166,7 +173,8 @@
             }],
             "set": {
                 "rotationY": 0,
-                "transformOrigin": "left bottom"
+                "transformOrigin": "left bottom",
+                "hide":0
             },
             "animate": [{
                 "rotationY": "-180",
@@ -182,6 +190,7 @@
             "left": 1086,
             "top": 238,
             "delay": 3,
+            "multiple": true,
             "divs": [{
                 "background-image": "url(images/intro/intro1_page2.jpg)",
                 "background-size": "cover"
@@ -191,7 +200,8 @@
             }],
             "set": {
                 "rotationY": 0,
-                "transformOrigin": "left bottom"
+                "transformOrigin": "left bottom",
+                "hide":0
             },
             "animate": [{
                 "rotationY": "-180",
@@ -207,6 +217,7 @@
             "left": 1086,
             "top": 238,
             "delay": 1.5,
+            "multiple": true,
             "divs": [{
                 "background-image": "url(images/intro/intro1_page0.jpg)",
                 "background-size": "cover"
@@ -217,7 +228,8 @@
             "set": {
                 "rotationX": -90,
                 "rotationY": 0,
-                "transformOrigin": "left top"
+                "transformOrigin": "left top",
+                "hide":0
             },
             "animate": [{
                 "rotationX": 0,
@@ -232,7 +244,7 @@
     },{
         "width": 1500,
         "height": 1000,
-        "background": "url(images/intro/intro2_bg.jpg) no-repeat center center",
+        "background": "url(images/intro/intro2_bg.jpg) #000 no-repeat center center",
         "items": [{
             "name": "Tree",
             "width": 518,
@@ -370,6 +382,152 @@
                 "scaleX":1,
                 "scaleY":1,
                 "delay":0.5
+            }]
+        }]
+    },{
+        "width": 1500,
+        "height": 1000,
+        "background": "url(images/intro/intro3_bg.jpg) #000 no-repeat center center",
+        "items": [{
+            "name": "Trees",
+            "width": 878,
+            "height": 567,
+            "left": 331,
+            "top": -125,
+            "delay": 0.5,
+            "divs": [{
+                "background-image": "url(images/intro/intro3_trees.png)",
+                "background-size": "cover"
+            }],
+            "set": {
+              "transformOrigin":"bottom left",
+              "rotationX": -90
+            },
+            "animate": [{
+              "speed":1,
+              "rotationX":0,
+              "delay":0
+            }]
+        },{
+            "name": "Pablo",
+            "width": 166,
+            "height": 452,
+            "left": 136,
+            "top": 76,
+            "delay": 0.8,
+            "divs": [{
+                "background-image": "url(images/intro/intro3_pablo.png)",
+                "background-size": "cover"
+            }],
+            "set": {
+              "transformOrigin":"bottom left",
+              "rotationX": -95
+            },
+            "animate": [{
+              "speed":1,
+              "rotationX":0,
+              "delay":0
+            }]
+        },{
+            "name": "Kelly",
+            "width": 144,
+            "height": 532,
+            "left": 1176,
+            "top": 47,
+            "delay": 1,
+            "divs": [{
+                "background-image": "url(images/intro/intro3_Kelly.png)",
+                "background-size": "cover"
+            }],
+            "set": {
+              "transformOrigin":"bottom left",
+              "rotationX": -95
+            },
+            "animate": [{
+              "speed":1,
+              "rotationX":0,
+              "delay":0
+            }]
+        },{
+            "name": "Copy1",
+            "width": 288,
+            "height": 173,
+            "left": 221,
+            "top": 652,
+            "delay": 2.8,
+            "divs": [{
+                "background-image": "url(images/intro/intro3_copy1.png)",
+                "background-size": "cover"
+            }],
+            "set": {
+                "opacity":0,
+                "top": "+30%"
+            },
+            "animate": [{
+                "speed":1,
+                "opacity":1,
+                "top":"0"
+            }]
+        },{
+            "name": "Copy2",
+            "width": 238,
+            "height": 199,
+            "left": 1043,
+            "top": 652,
+            "delay": 3.3,
+            "divs": [{
+                "background-image": "url(images/intro/intro3_copy2.png)",
+                "background-size": "cover"
+            }],
+            "set": {
+                "opacity":0,
+                "top": "+30%"
+            },
+            "animate": [{
+                "speed":1,
+                "opacity":1,
+                "top":"0"
+            }]
+        },{
+            "name": "Ash",
+            "width": 299,
+            "height": 750,
+            "left": 621,
+            "top": 270,
+            "delay": 1.4,
+            "multiple": true,
+            "divs": [{
+                "background-image": "url(images/intro/intro3_Ash.png)",
+                "background-size": "cover"
+            },{
+                "background-image": "url(images/intro/intro3_chainsaw.png)",
+                "background-size": "cover",
+                "width":"129.4%",
+                "height":"16%",
+                "top":"28%",
+                "left":"-100%"
+            }],
+            "set": {
+              "transformOrigin":"bottom left",
+              "rotationX":-90
+            },
+            "animate": [{
+                "element":1,
+                "rotationY": -45,
+                "transformOrigin":"right bottom",
+                "left":"-110%",
+                "zIndex":5,
+                "rotation":20
+            },{
+                "speed":1,
+                "delay":0,
+                "rotationX":0
+            },{
+                "element":1,
+                "speed": 0.5,
+                "rotationY":0,
+                "rotation":0,
+                "left":"-100%"
             }]
         }]
     },{

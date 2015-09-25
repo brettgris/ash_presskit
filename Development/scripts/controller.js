@@ -31,7 +31,7 @@ $(function() {
   startAnimator = function() {
     return $('.intro').AshAnimator({
       perspective: 900,
-      delay: 5000,
+      delay: 10000,
       ease: Power2.easeOut,
       current: 0
     });

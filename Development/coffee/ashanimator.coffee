@@ -21,10 +21,10 @@
 			@options = $.extend({},@defaults,options)
 			@$el = $(el)
 			@timeout
+			@tls = []
 			@items = @$el.find(@options.item)
 			@current = @options.current
 			@visible = false
-			@isAnimating = false
 			@threed = Modernizr.csstransforms3d
 			
 			#methods
@@ -39,17 +39,25 @@
 			@animate()
 
 		stopAnimate: =>
+			@resetTweens()
 			@visible = false
 			@items.eq(@current).hide()
 			clearTimeout( @timeout )
 
 		arrowClick: (evt) =>
-			if @isAnimating == false
-				t = $(evt.target)
-				if t.hasClass('next')
-					@nextItem()
-				else if t.hasClass('prev')
-					@prevItem()
+			@resetTweens()
+			t = $(evt.target)
+			if t.hasClass('next')
+			 	@nextItem()
+			else if t.hasClass('prev')
+			 	@prevItem()
+
+		resetTweens: =>
+			for arr in @tls
+				for tl in arr
+					tl.restart()
+					tl.stop()
+			@tls = []
 
 		nextItem: =>
 			clearTimeout( @timeout )
@@ -70,22 +78,32 @@
 			)
 			@count = 0
 			@length = @items.eq(@current).find(@options.animate).length
-			@isAnimating = true;
-			@items.eq(@current).find(@options.animate).each @animateEachItem
+			tls = []
+			@items.eq(@current).find(@options.animate).each (i,v) =>
+				tls.push @animateEachItem(i,v)
+			@tls.push tls
 
 		animateEachItem: (i,v) =>
 			t = $(v).hide()
-			target = t.find('div')
+			if t.attr('multi')=='true'
+				target = t.find('.intro-multiple')
+			else
+				target = t.find('div')
 			animateArr = JSON.parse(t.attr(@options.animateattr))
 			setObj = JSON.parse(t.attr(@options.setattr))
+			if setObj['hide']!=undefined
+				hide = setObj['hide']
+				delete setObj['hide']
 
 			TweenMax.set(t,{perspective:@options.perspective, transformStyle:"preserve-3d"})
 			tl = new TimelineLite({delay:t.attr(@options.delayattr)})
-			tl.set(target, setObj)
-
-			tl.call( =>
+			
+			tl.call ( =>
 				t.show()
+				target.find('div').show()
+				target.find('div').eq(hide).hide()
 			)
+			tl.set(target, setObj)
 			for obj in animateArr
 				s = obj['speed']
 				delete obj['speed']
@@ -95,24 +113,35 @@
 				else
 					obj.ease = @options.ease
 				if obj['hide'] != undefined
-					target.eq(0).hide()
-					target.eq(1).show()
+					#tl.call ( =>
+					target.find('div').eq(0).hide()
+					target.find('div').eq(1).show()
+					#)
 					obj.onUpdate = (t,d) =>
-						y = t.target.eq(0).prop('_gsTransform').rotationY
-						if y <= -90 && target.eq(0).css('display')=="none"
-							target.eq(0).show()
-							target.eq(1).hide()
+					 	y = t.target.eq(0).prop('_gsTransform').rotationY
+					 	divs = t.target.find('div')
+					 	if y <= -90 && divs.eq(0).css('display')=="none"
+					 		divs.eq(0).show()
+					 		divs.eq(1).hide()
 					obj.onUpdateParams = ["{self}",target]
 					delete obj['hide']
 				if obj['zIndex']
-					obj.onStart = (t,z) =>
-						TweenMax.set(t,{"zIndex":z})
-					obj.onStartParams = [t,obj['zIndex']]
-					delete obj['zIndex']
-				tl.to(target,s,obj)
+				 	obj.onStart = (t,z) =>
+				 		TweenMax.set(t,{"zIndex":z})
+				 	obj.onStartParams = [t,obj['zIndex']]
+				 	delete obj['zIndex']
+				if obj['element'] != undefined
+				 	old = target
+				 	target = target.find('div').eq(Number(obj['element']))
+				 	delete obj['element']
+			 	tl.to(target,s,obj)
+				if old
+					target = old
+					old = undefined
 			tl.call( =>
 				@itemDone( t.parent() )
 			)
+			tl
 
 		changeTo: (next) =>
 			@items.eq(@current).hide()
@@ -126,8 +155,8 @@
 			if ( Number(container.attr(@options.idattr))==@current) 
 				@count++
 				if @count==@length && @visible
-					@isAnimating = false
 					@timeout = setTimeout(=>
+						@resetTweens()
 						@nextItem()
 					,@options.delay)
 

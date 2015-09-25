@@ -12,12 +12,18 @@ div#intro.intro.section
 					- var it = intro[i].items[a].top/sh*100
 					- var ia = JSON.stringify(intro[i].items[a].animate)
 					- var is = JSON.stringify(intro[i].items[a].set)
-					div.intro-animate(style="width:#{iw}%;height:#{ih}%;left:#{il}%;top:#{it}%;" set="#{is}" animate="#{ia}" delay="#{intro[i].items[a].delay}")
+					div.intro-animate(style="width:#{iw}%;height:#{ih}%;left:#{il}%;top:#{it}%;" set="#{is}" animate="#{ia}" delay="#{intro[i].items[a].delay}" multi="#{intro[i].items[a].multiple}")
 						- for (b in intro[i].items[a].divs)
 							- var s = ""
-							- for (c in intro[i].items[a].divs[b])
-								- s += c+":"+intro[i].items[a].divs[b][c]+";"
-							div(style="#{s}")
+							if intro[i].items[a].multiple != true
+								- for (c in intro[i].items[a].divs[b])
+									- s += c+":"+intro[i].items[a].divs[b][c]+";"
+								div(style="#{s}")
+							else
+								div.intro-multiple
+									- for (c in intro[i].items[a].divs[b])
+										- s += c+":"+intro[i].items[a].divs[b][c]+";"
+									div(style="#{s}")
 		div.intro-arrows
 			a.next(href="javascript:void(0);")
 			a.prev(href="javascript:void(0);")
