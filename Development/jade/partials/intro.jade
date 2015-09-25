@@ -15,15 +15,22 @@ div#intro.intro.section
 					div.intro-animate(style="width:#{iw}%;height:#{ih}%;left:#{il}%;top:#{it}%;" set="#{is}" animate="#{ia}" delay="#{intro[i].items[a].delay}" multi="#{intro[i].items[a].multiple}")
 						- for (b in intro[i].items[a].divs)
 							- var s = ""
+							- var bi = ""
 							if intro[i].items[a].multiple != true
 								- for (c in intro[i].items[a].divs[b])
-									- s += c+":"+intro[i].items[a].divs[b][c]+";"
-								div(style="#{s}")
+									if c == "background-image"
+										- bi = intro[i].items[a].divs[b][c]
+									else
+										- s += c+":"+intro[i].items[a].divs[b][c]+";"
+								div(style="#{s}" data-src="#{bi}" class="imgLoad")
 							else
 								div.intro-multiple
 									- for (c in intro[i].items[a].divs[b])
-										- s += c+":"+intro[i].items[a].divs[b][c]+";"
-									div(style="#{s}")
+										if c == "background-image"
+											- bi = intro[i].items[a].divs[b][c]
+										else 
+											- s += c+":"+intro[i].items[a].divs[b][c]+";"
+									div(style="#{s}" data-src="#{bi}" class="imgLoad")
 		div.intro-arrows
 			a.next(href="javascript:void(0);")
 			a.prev(href="javascript:void(0);")

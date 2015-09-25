@@ -47,7 +47,7 @@
             "top": 232,
             "delay": 0.5,
             "divs": [{
-                "background-image": "url(images/intro/intro1_quote.png)",
+                "background-image": "images/intro/intro1_quote.png",
                 "background-size": "cover"
             }],
             "set": {
@@ -67,7 +67,7 @@
             "top": 238,
             "delay": 4.25,
             "divs": [{
-                "background-image": "url(images/intro/intro1_page11.jpg)",
+                "background-image": "images/intro/intro1_page11.jpg",
                 "background-size": "cover"
             }],
             "set": {
@@ -84,10 +84,10 @@
             "delay": 4,
             "multiple": true,
             "divs": [{
-                "background-image": "url(images/intro/intro1_page10.jpg)",
+                "background-image": "images/intro/intro1_page10.jpg",
                 "background-size": "cover"
             }, {
-                "background-image": "url(images/intro/intro1_page9.jpg)",
+                "background-image": "images/intro/intro1_page9.jpg",
                 "background-size": "cover"
             }],
             "set": {
@@ -111,10 +111,10 @@
             "delay": 3.75,
             "multiple": true,
             "divs": [{
-                "background-image": "url(images/intro/intro1_page8.jpg)",
+                "background-image": "images/intro/intro1_page8.jpg",
                 "background-size": "cover"
             }, {
-                "background-image": "url(images/intro/intro1_page7.jpg)",
+                "background-image": "images/intro/intro1_page7.jpg",
                 "background-size": "cover"
             }],
             "set": {
@@ -138,10 +138,10 @@
             "delay": 3.5,
             "multiple": true,
             "divs": [{
-                "background-image": "url(images/intro/intro1_page6.jpg)",
+                "background-image": "images/intro/intro1_page6.jpg",
                 "background-size": "cover"
             }, {
-                "background-image": "url(images/intro/intro1_page5.jpg)",
+                "background-image": "images/intro/intro1_page5.jpg",
                 "background-size": "cover"
             }],
             "set": {
@@ -165,10 +165,10 @@
             "delay": 3.25,
             "multiple": true,
             "divs": [{
-                "background-image": "url(images/intro/intro1_page4.jpg)",
+                "background-image": "images/intro/intro1_page4.jpg",
                 "background-size": "cover"
             }, {
-                "background-image": "url(images/intro/intro1_page3.jpg)",
+                "background-image": "images/intro/intro1_page3.jpg",
                 "background-size": "cover"
             }],
             "set": {
@@ -192,10 +192,10 @@
             "delay": 3,
             "multiple": true,
             "divs": [{
-                "background-image": "url(images/intro/intro1_page2.jpg)",
+                "background-image": "images/intro/intro1_page2.jpg",
                 "background-size": "cover"
             }, {
-                "background-image": "url(images/intro/intro1_page1.jpg)",
+                "background-image": "images/intro/intro1_page1.jpg",
                 "background-size": "cover"
             }],
             "set": {
@@ -219,10 +219,10 @@
             "delay": 1.5,
             "multiple": true,
             "divs": [{
-                "background-image": "url(images/intro/intro1_page0.jpg)",
+                "background-image": "images/intro/intro1_page0.jpg",
                 "background-size": "cover"
             }, {
-                "background-image": "url(images/intro/intro1_cover.jpg)",
+                "background-image": "images/intro/intro1_cover.jpg",
                 "background-size": "cover"
             }],
             "set": {
@@ -253,7 +253,7 @@
             "top": 0,
             "delay": 0.5,
             "divs": [{
-                "background-image": "url(images/intro/intro2_tree.png)",
+                "background-image": "images/intro/intro2_tree.png",
                 "background-size": "cover"
             }],
             "set": {
@@ -278,7 +278,7 @@
             "top": 118,
             "delay": 0.5,
             "divs": [{
-                "background-image": "url(images/intro/intro2_store.png)",
+                "background-image": "images/intro/intro2_store.png",
                 "background-size": "cover"
             }],
             "set": {
@@ -299,7 +299,7 @@
             "top": 490,
             "delay": 2,
             "divs": [{
-                "background-image": "url(images/intro/intro2_copy1.png)",
+                "background-image": "images/intro/intro2_copy1.png",
                 "background-size": "cover"
             }],
             "set": {
@@ -319,7 +319,7 @@
             "top": 489,
             "delay": 2.5,
             "divs": [{
-                "background-image": "url(images/intro/intro2_copy2.png)",
+                "background-image": "images/intro/intro2_copy2.png",
                 "background-size": "cover"
             }],
             "set": {
@@ -339,7 +339,7 @@
             "top": 300,
             "delay": 0.5,
             "divs": [{
-                "background-image": "url(images/intro/intro2_trailer.png)",
+                "background-image": "images/intro/intro2_trailer.png",
                 "background-size": "cover"
             }],
             "set": {
@@ -365,7 +365,7 @@
             "top": 571,
             "delay": 0.5,
             "divs": [{
-                "background-image": "url(images/intro/intro2_car.png)",
+                "background-image": "images/intro/intro2_car.png",
                 "background-size": "cover"
             }],
             "set": {
@@ -396,7 +396,7 @@
             "top": -125,
             "delay": 0.5,
             "divs": [{
-                "background-image": "url(images/intro/intro3_trees.png)",
+                "background-image": "images/intro/intro3_trees.png",
                 "background-size": "cover"
             }],
             "set": {
@@ -416,7 +416,7 @@
             "top": 76,
             "delay": 0.8,
             "divs": [{
-                "background-image": "url(images/intro/intro3_pablo.png)",
+                "background-image": "images/intro/intro3_pablo.png",
                 "background-size": "cover"
             }],
             "set": {
@@ -436,7 +436,7 @@
             "top": 47,
             "delay": 1,
             "divs": [{
-                "background-image": "url(images/intro/intro3_Kelly.png)",
+                "background-image": "images/intro/intro3_Kelly.png",
                 "background-size": "cover"
             }],
             "set": {
@@ -456,7 +456,7 @@
             "top": 652,
             "delay": 2.8,
             "divs": [{
-                "background-image": "url(images/intro/intro3_copy1.png)",
+                "background-image": "images/intro/intro3_copy1.png",
                 "background-size": "cover"
             }],
             "set": {
@@ -476,7 +476,7 @@
             "top": 652,
             "delay": 3.3,
             "divs": [{
-                "background-image": "url(images/intro/intro3_copy2.png)",
+                "background-image": "images/intro/intro3_copy2.png",
                 "background-size": "cover"
             }],
             "set": {
@@ -497,10 +497,10 @@
             "delay": 1.4,
             "multiple": true,
             "divs": [{
-                "background-image": "url(images/intro/intro3_Ash.png)",
+                "background-image": "images/intro/intro3_Ash.png",
                 "background-size": "cover"
             },{
-                "background-image": "url(images/intro/intro3_chainsaw.png)",
+                "background-image": "images/intro/intro3_chainsaw.png",
                 "background-size": "cover",
                 "width":"129.4%",
                 "height":"16%",
@@ -542,7 +542,7 @@
             "top": 6,
             "delay": 1.8,
             "divs": [{
-                "background-image": "url(images/intro/intro4_lady.png)",
+                "background-image": "images/intro/intro4_lady.png",
                 "background-size": "cover"
             }],
             "set": {
@@ -570,7 +570,7 @@
             "top": 401,
             "delay": 0.5,
             "divs": [{
-                "background-image": "url(images/intro/intro4_clothes1.png)",
+                "background-image": "images/intro/intro4_clothes1.png",
                 "background-size": "cover"
             }],
             "set": {
@@ -593,7 +593,7 @@
             "top": 392,
             "delay": 0.5,
             "divs": [{
-                "background-image": "url(images/intro/intro4_clothes2.png)",
+                "background-image": "images/intro/intro4_clothes2.png",
                 "background-size": "cover"
             }],
             "set": {
@@ -616,7 +616,7 @@
             "top": 689,
             "delay": 2.5,
             "divs": [{
-                "background-image": "url(images/intro/intro4_copy.png)",
+                "background-image": "images/intro/intro4_copy.png",
                 "background-size": "cover"
             }],
             "set": {
@@ -642,7 +642,7 @@
             "top": 357,
             "delay": 0.5,
             "divs": [{
-                "background-image": "url(images/intro/intro5_ash.png)",
+                "background-image": "images/intro/intro5_ash.png",
                 "background-size": "cover"
             }],
             "set": {
@@ -668,7 +668,7 @@
             "top": 490,
             "delay": 0.5,
             "divs": [{
-                "background-image": "url(images/intro/intro5_sideblood.png)",
+                "background-image": "images/intro/intro5_sideblood.png",
                 "background-size": "cover"
             }],
             "set": {
@@ -694,7 +694,7 @@
             "top": 570,
             "delay": 0.5,
             "divs": [{
-                "background-image": "url(images/intro/intro5_sideblood2.png)",
+                "background-image": "images/intro/intro5_sideblood2.png",
                 "background-size": "cover"
             }],
             "set": {
@@ -718,7 +718,7 @@
             "top": 736,
             "delay": 1.8,
             "divs": [{
-                "background-image": "url(images/intro/intro5_copy.png)",
+                "background-image": "images/intro/intro5_copy.png",
                 "background-size": "cover"
             }],
             "set": {
@@ -738,7 +738,7 @@
             "top": 333,
             "delay": 0.5,
             "divs": [{
-                "background-image": "url(images/intro/intro5_hand.png)",
+                "background-image": "images/intro/intro5_hand.png",
                 "background-size": "cover"
             }],
             "set": {
@@ -768,7 +768,7 @@
             "top": 351,
             "delay": 0.5,
             "divs": [{
-                "background-image": "url(images/intro/intro5_chainsaw.png)",
+                "background-image": "images/intro/intro5_chainsaw.png",
                 "background-size": "cover"
             }],
             "set": {
@@ -794,7 +794,7 @@
             "top": 500,
             "delay": 0.5,
             "divs": [{
-                "background-image": "url(images/intro/intro5_shoe.png)",
+                "background-image": "images/intro/intro5_shoe.png",
                 "background-size": "cover"
             }],
             "set": {

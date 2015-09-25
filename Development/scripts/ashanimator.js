@@ -32,6 +32,7 @@ var bind = function(fn, me){ return function(){ return fn.apply(me, arguments); 
       this.arrowClick = bind(this.arrowClick, this);
       this.stopAnimate = bind(this.stopAnimate, this);
       this.startAnimate = bind(this.startAnimate, this);
+      this.loadImages = bind(this.loadImages, this);
       this.options = $.extend({}, this.defaults, options);
       this.$el = $(el);
       this.timeout;
@@ -40,6 +41,8 @@ var bind = function(fn, me){ return function(){ return fn.apply(me, arguments); 
       this.current = this.options.current;
       this.visible = false;
       this.threed = Modernizr.csstransforms3d;
+      this.load = 0;
+      this.loadImages();
       this.resize();
       $(window).resize((function(_this) {
         return function() {
@@ -48,6 +51,21 @@ var bind = function(fn, me){ return function(){ return fn.apply(me, arguments); 
       })(this));
       $(this.options.arrows).find('a').click(this.arrowClick);
     }
+
+    AshAnimator.prototype.loadImages = function() {
+      return this.items.eq(this.load).imageloader({
+        selector: '.imgLoad',
+        background: true,
+        callback: (function(_this) {
+          return function(elm) {
+            _this.load = _this.load + 1;
+            if (_this.load < _this.items.length) {
+              return _this.loadImages();
+            }
+          };
+        })(this)
+      });
+    };
 
     AshAnimator.prototype.startAnimate = function() {
       this.visible = true;

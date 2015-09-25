@@ -26,12 +26,23 @@
 			@current = @options.current
 			@visible = false
 			@threed = Modernizr.csstransforms3d
+			@load = 0
 			
 			#methods
+			@loadImages()
 			@resize()
 			$(window).resize =>
 				@resize()
 			$(@options.arrows).find('a').click( @arrowClick )
+
+		loadImages: =>
+			@items.eq(@load).imageloader
+				selector: '.imgLoad'
+				background:true,
+				callback: (elm) =>
+					@load = @load+1
+					if @load<@items.length
+						@loadImages()
 			
 		startAnimate: =>
 			@visible = true
