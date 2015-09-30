@@ -26,6 +26,7 @@
 			@current = @options.current
 			@visible = false
 			@threed = Modernizr.csstransforms3d
+			@threed = false
 			@load = 0
 			
 			#methods
@@ -124,16 +125,23 @@
 				else
 					obj.ease = @options.ease
 				if obj['hide'] != undefined
+					if !@threed then obj.rotationY = 0
 					#tl.call ( =>
 					target.find('div').eq(0).hide()
 					target.find('div').eq(1).show()
 					#)
 					obj.onUpdate = (t,d) =>
-					 	y = t.target.eq(0).prop('_gsTransform').rotationY
-					 	divs = t.target.find('div')
-					 	if y <= -90 && divs.eq(0).css('display')=="none"
-					 		divs.eq(0).show()
-					 		divs.eq(1).hide()
+						divs = t.target.find('div')
+						if @threed
+							y = t.target.eq(0).prop('_gsTransform').rotationY
+							if y <= -90 && divs.eq(0).css('display')=="none"
+					 			divs.eq(0).show()
+					 			divs.eq(1).hide()
+						else
+							if t.time() >= t.totalDuration()/2 && divs.eq(0).css('display')=="none"
+								t.target.css('left', '-100%')
+								divs.eq(0).show()
+								divs.eq(1).hide()
 					obj.onUpdateParams = ["{self}",target]
 					delete obj['hide']
 				if obj['zIndex']
@@ -158,6 +166,9 @@
 			@items.eq(@current).hide()
 			@items.eq(@current).find(@options.animate).each (i,v) =>
 				TweenMax.set( $(v), {'zIndex':0} )
+				$(v).find('div').each (i,v) =>
+					if $(v).css('left')=='-100%'
+						$(v).css('left','0px')
 			@current = next
 			@items.eq(@current).show()
 			@animate()
