@@ -26,7 +26,6 @@
 			@current = @options.current
 			@visible = false
 			@threed = Modernizr.csstransforms3d
-			@threed = false
 			@load = 0
 			
 			#methods
