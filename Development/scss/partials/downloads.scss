@@ -1,8 +1,8 @@
 $downloads-width: 1100px;
 
 $downloads-item-background: transparent;
-$downloads-item-hover: $light-grey;
-$downloads-item-border: 2px solid $light-grey;
+$downloads-item-hover: $overlay-color;
+$downloads-item-border: 2px solid rgba(223,148,107,.3);
 $downloads-item-height: 75px;
 $downloads-item-spacing: 10px;
 
@@ -31,6 +31,7 @@ $downloads-break3: 600px;
 	h3{
 		margin-top: 20px;
 		margin-left: 25px;
+		color: $light-grey;
 	}
 	
 	.downloads-section{
@@ -56,7 +57,6 @@ $downloads-break3: 600px;
 	
 	.downloads-largefont{
 		font-size:16px;
-		
 	}
 	
 	.downloads-list{

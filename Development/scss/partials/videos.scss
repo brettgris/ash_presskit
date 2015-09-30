@@ -2,11 +2,9 @@ $video-width:640px;
 $video-ratio:percentage( 360/640 );
 $video-padding:20px;
 
-
-
 $video-item-background: transparent;
-$video-item-hover: $light-grey;
-$video-item-border: 2px solid $light-grey;
+$video-item-hover: $overlay-color;
+$video-item-border: 2px solid rgba(223,148,107,.3);
 $video-item-height: 118px;
 $video-item-spacing: 15px;
 

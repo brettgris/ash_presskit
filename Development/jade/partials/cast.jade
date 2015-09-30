@@ -15,9 +15,7 @@ div#cast.cast.section
 			div.character(id="#{cast[i].safename}")
 				div.character-image(style="background-image:url(images/cast/#{cast[i].safename}_l.jpg")
 				div.character-copy
-					div.character-icon(style="background-image:url(images/cast/#{cast[i].icon}")
-					div.character-quote &#8220;#{cast[i].quote}&#8221;
-					div.character-name #{cast[i].name}
-					div.actor-name #{cast[i].actor}
+					div.character-name !{cast[i].name}
+					div.actor-name !{cast[i].actor}
 					div.character-desc !{cast[i].desc}
 

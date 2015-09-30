@@ -10,7 +10,7 @@ $prod-list-width:235px;
 $prod-zindex:5;
 
 $prod-background:$cast-overlay;
-$prod-border:1px solid transparent;
+$prod-border:1px solid $border-color;
 $prod-border-light:1px solid transparent;
 
 $prod-thumb-height:32px;
@@ -113,7 +113,7 @@ $prod-arrow-break: 745px;
 				width:50%;
 				margin-left: auto;
 				margin-right: auto;
-				color:$black;
+				color:$light-grey;
 				margin-top: 10px;
 				
 				@media screen and (max-width: $break-mobile) {
@@ -158,7 +158,7 @@ $prod-arrow-break: 745px;
 				border-top:1px solid transparent;
 				border-bottom:1px solid transparent;
 				margin-bottom: 1px;
-				color: rgba(115,139,156,1);
+				color: $med-grey;
 				
 				&:first-child{
 					margin-top: 10px;
@@ -166,8 +166,8 @@ $prod-arrow-break: 745px;
 				
 				&:hover, &.selected{
 					background: $prod-thumb-hover;
-					border-top:1px solid rgba(115,139,156,.4);
-					border-bottom:1px solid rgba(115,139,156,.4);
+					border-top:1px solid $border-color;
+					border-bottom:1px solid $border-color;
 					color:white;
 				}
 			}

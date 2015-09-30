@@ -174,11 +174,11 @@ $mm-link-mobile-size: 30px;
 }
 
 $mm-width: 300px;
-$mm-background: $cast-overlay;
+$mm-background: $menu-bg;
 $mm-hover-background: $black;
 $mm-item-height: 45px;
-$mm-item-background: $cast-overlay;
-$mm-item-border: rgba(115,139,156,.4);
+$mm-item-background: $menu-bg;
+$mm-item-border: $border-color;
 $mm-border-height: 1px;
 
 .mobile-menu{
@@ -190,7 +190,7 @@ $mm-border-height: 1px;
 	left:0px;
 	overflow: hidden;
 	display: none;
-	border-right: 1px solid rgba(115,139,156,.4);
+	border-right: 1px solid $mm-item-border;
 	
 	@media screen and (max-width: $break-mobile){
 		width:100%;

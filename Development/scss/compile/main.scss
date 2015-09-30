@@ -13,34 +13,37 @@ $light-orange: #efd4d1;
 $light-grey: #ddd;
 $med-grey: #666;
 $dark-grey:#404040;
+$orange-trans: rgba(67,34,27,.65);
+
 /**********************  END SHOW COLORS  **********************/
 
 /**********************  END COLOR ELEMENTS **********************/
 $background-color: $black;
 $font-color: $black;
 
-$border-color: rgba(239,212,209,.3);
-$border-interactive:rgba(239,212,209,.75);
+$border-color: rgba(239,212,209,.15);
+$border-interactive:rgba(239,212,209,.5);
 $border-hover:$white;
 
 $menu-color: $black;
 $footer-background: $black;
 $footer-color: $med-grey;
 
-$overlay-color: rgba(256,256,256,.9);
-$cast-overlay: rgba(0,0,0,.9);
+$overlay-color: $orange-trans;
+$cast-overlay: $orange-trans;
+$menu-bg: rgba(67,34,27,.9);
 
 $btn-color:yellow;
 $btn-hover:#000000;
 
 $item-background: $black;
 $item-title: $orange;
-$item-text: $dark-grey;
+$item-text: $med-grey;
 
 $link-color:$light-grey;
 $link-hover:$white;
 
-$inpagelink-color: $dark-grey;
+$inpagelink-color: $med-grey;
 $inpagelink-hover: $light-orange;
 $link-highlight:$orange;
 $highlight: $orange;
