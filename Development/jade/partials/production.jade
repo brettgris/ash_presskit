@@ -14,7 +14,7 @@ div#production.production.section
 			- for (i in prod)
 				div.prod(id="#{prod[i].safename}" image="#{prod[i].image}")
 					if (prod[i].image)
-						div.prod-image(style="background-image:url(/images/prod/#{prod[i].safename}_l_bw.jpg)")
+						div.prod-image(style="background-image:url(images/prod/#{prod[i].safename}_l.jpg)")
 					div.prod-copy
 						div.prod-name !{prod[i].name}
 						div.prod-position #{prod[i].role}

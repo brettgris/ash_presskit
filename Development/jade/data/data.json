@@ -789,10 +789,8 @@
         }]
     }],
     "synopsis": [
-        "&#8220;Ash vs Evil Dead,&#8221; a 10-episode half-hour series, is the long-awaited follow-up to the classic horror film <em>The Evil Dead</em>.  The series is executive produced by Sam Raimi, Rob Tapert, and Bruce Campbell, the original filmmakers, and Craig DiGregorio who serves as executive producer and showrunner.",
-        "Campbell will be reprising his role as Ash, the stock boy, aging lothario and chainsaw-handed monster hunter who has spent the last 30 years avoiding responsibility, maturity and the terrors of the Evil Dead.  When a Deadite plague threatens to destroy all of mankind, Ash is finally forced to face his demons &#8211;personal and literal.  Destiny, it turns out, has no plans to release the unlikely hero from its &#8220;Evil&#8221; grip.",
-        "The cast is led by Bruce Campbell in the role of Ash Williams, Lucy Lawless as Ruby a mysterious figure who believes Ash is the cause of the Evil outbreaks, Ray Santiago as Pablo Simon Bolivar, an idealistic immigrant who becomes Ash&#8217;s loyal sidekick, Dana DeLorenzo as Kelly Maxwell, a moody wild child trying to outrun her past and Jill Marie Jones as Amanda Fisher, a disgraced Michigan State Trooper set to find our anti-hero Ash and prove his responsibility in the grisly murder of her partner.",
-        "Raimi directed the first episode of &#8220;Ash vs Evil Dead&#8221; that he wrote with Ivan Raimi, and Tom Spezialy. Raimi also serves as executive producer, with Rob Tapert and Bruce Campbell along with Craig DiGregorio who serves as executive producer/showrunner. Ivan Raimi co-executive produces and Aaron Lam and Chloe Smith serve as producers."
+        "&#8220;Ash vs Evil Dead&#8221; is the long-awaited follow-up to the classic horror film series The Evil Dead from original filmmakers Sam Raimi, Rob Tapert, and Bruce Campbell and Craig DiGregorio.",
+        "Campbell reprises his role as Ash, the stock boy, aging lothario and chainsaw-handed monster hunter who has spent the last 30 years avoiding responsibility, maturity and the terrors of the Evil Dead. When a Deadite plague threatens to destroy all of mankind, Ash is finally forced to face his demons -personal and literal.  Destiny, it turns out, has no plans to release the unlikely hero from &#8220;Evil’s&#8221; grip."
     ],
     "cast": [{
         "safename": "ash",
@@ -835,7 +833,7 @@
             "Raimi continued his collaboration with Tapert in his production company Ghost House Pictures, which produced such films as <em>The Grudge</em>, <em>Boogeyman</em>, <em>30 Days of Night</em>, <em>The Messengers</em> and <em>The Possession</em>.",
             "Raimi&#8217;s work has been a favorite on the film festival circuit, with the filmmaker winning a Best Director honor for <em>Darkman</em> at the 1990 Sitges-Catalonian Festival in Spain; the Critics Award for <em>Army of Darkness</em> at the 1992 Fantasporto Festival in Portugal; the Golden Raven, also for <em>Army of Darkness</em>, at the 1992 Brussels International Festival; and a Grand Prize nomination for the same title at the Avoriaz Fantastic Film Festival in France. Raimi himself has also won the Saturn Award twice (<em>Spider-Man 2</em>, along with a George Pal Memorial Award) from the Academy of Science Fiction, Horror and Fantasy."
         ],
-        "image": false
+        "image": true
     },{
         "safename": "robtapert",
         "name": "ROB TAPERT",
@@ -845,7 +843,7 @@
             "Tapert executive produced the long running worldwide sensation TV series &#8220;Hercules: The Legendary Journeys&#8221; and &#8220;Xena: Warrior Princess&#8221;, and later &#8220;Legend of the Seeker&#8221; and the STARZ breakout hit &#8220;Spartacus.&#8221; &#8220;Spartacus&#8221; and &#8220;Legend of the Seeker&#8221; both played in over 150 markets worldwide.", 
             "In 2002, Tapert and Raimi formed Ghost House Pictures with Mandate Pictures. Ghost House was conceived to produce feature films that would deliver great scares and offer horror fans a thrill ride experience. Tapert has since produced a string of #1 box office hits that started with <em>The Grudge</em>, that grossed $187 million worldwide, and continued with <em>Boogeyman</em>, <em>The Messengers</em>, <em>30 Days of Night</em>, <em>The Possession</em> and the remake of <em>Evil Dead</em>. In 2009, Tapert produced Raimi's first directorial effort under Ghost House: the critically acclaimed <em>Drag Me To Hell</em>."
         ],
-        "image": false
+        "image": true
     },{
         "safename": "brucecampbell",
         "name": "BRUCE CAMPBELL",
@@ -861,7 +859,7 @@
             "In 2013, Bruce co-produced the hit remake of <em>Evil Dead</em>, joined his filmmaking pal Sam Raimi on <em>Oz, The Great and Powerful</em>, and completed an impressive seven-year run on spy show &#8220;Burn Notice,&#8221; USA&#8217;s #1 series on cable.",
             "Campbell continues to share his acting and filmmaking experiences by lecturing at universities, including Northwestern, Carnegie Mellon and Stanford. He currently resides with his wife, Ida Gearon, in Oregon."
         ],
-        "image": false
+        "image": true
     },{
         "safename": "craigdigregorio",
         "name": "CRAIG DiGREGORIO",
@@ -869,7 +867,7 @@
         "desc": [
             "Craig DiGregorio is a producer and writer, with a background in both genre and comedy, including: &#8220;Workaholics,&#8221; a Comedy Central sitcom starring Blake Anderson, Adam De Vine and Anders Holm; &#8220;Chuck,&#8221; an action-comedy/spy drama NBC series starring Zachary Levi and Yvonne Strahovski: &#8220;Da Ali G Show,&#8221; an HBO variety show starring Sacha Baron Cohen; and &#8220;Reaper,&#8221; that focuses on Sam Oliver (Bret Harrison), a &#8220;reaper&#8221; who works for the Devil by retrieving souls that have escaped from Hell."
         ],
-        "image": false
+        "image": true
     },{
         "safename": "ivanraimi",
         "name": "IVAN RAIMI",
@@ -1006,9 +1004,6 @@
         "path": "5.jpg",
         "caption": "Bruce Campbell (as Ash)"
     }, {
-        "path": "6.jpg",
-        "caption": "Bruce Campbell (as Ash)"
-    }, {
         "path": "7.jpg",
         "caption": "Bruce Campbell (as Ash)"
     }, {
@@ -1020,9 +1015,6 @@
     }, {
         "path": "10.jpg",
         "caption": "Bruce Campbell (as Ash), Ray Santiago (as Pablo), Dana DeLorenzo (as Kelly)"
-    }, {
-        "path": "11.jpg",
-        "caption": "Bruce Campbell (as Ash)"
     }, {
         "path": "12.jpg",
         "caption": "BTS Shot of Bruce Campbell (as Ash) , Sam Raimi (Director & Executive Producer)"
@@ -1036,17 +1028,11 @@
         "path": "15.jpg",
         "caption": "BTS Shot of Ray Santiago (as Pablo), Sam Raimi (Director, Executive Producer), Dana DeLorenzo (as Kelly)"
     }, {
-        "path": "16.jpg",
-        "caption": "Craig DiGregorio ( Showrunner & Executive Producer)"
-    }, {
         "path": "17.jpg",
         "caption": "Dana DeLorenzo (as Kelly)"
     }, {
         "path": "18.jpg",
         "caption": "Dana DeLorenzo (as Kelly), Bruce Campbell (as Ash), Ray Santiago ( as Pablo)"
-    }, {
-        "path": "19.jpg",
-        "caption": "Dana DeLorenzo (as Kelly)"
     }, {
         "path": "20.jpg",
         "caption": "Jill Marie Jones (as Amanda)"
@@ -1057,9 +1043,6 @@
         "path": "22.jpg",
         "caption": "Jill Marie Jones (as Amanda), Kelson Henderson (as Lionel Hawkins)"
     }, {
-        "path": "23.jpg",
-        "caption": "Jill Marie Jones (as Amanda)"
-    }, {
         "path": "24.jpg",
         "caption": "Lucy Lawless (as Ruby)"
     }, {
@@ -1068,9 +1051,6 @@
     }, {
         "path": "26.jpg",
         "caption": "Lucy Lawless (as Ruby), Kelson Henderson (as Lionel Hawkins)"
-    }, {
-        "path": "27.jpg",
-        "caption": "Lucy Lawless (as Ruby)"
     }, {
         "path": "28.jpg",
         "caption": "Marissa Stott (as Lucy)"
@@ -1093,17 +1073,8 @@
         "path": "34.jpg",
         "caption": "Ray Santiago (as Pablo), Dana DeLorenzo (as Kelly)"
     }, {
-        "path": "35.jpg",
-        "caption": "Ray Santiago (as Pablo)"
-    }, {
         "path": "36.jpg",
         "caption": "Robert Tapert (Executive Producer), Bruce Campbell ( Executive Producer and Ash), Sam Raimi (Director & Executive Producer)"
-    }, {
-        "path": "37.jpg",
-        "caption": "Robert Tapert (Executive Producer)"
-    }, {
-        "path": "38.jpg",
-        "caption": "Sam Raimi (Director & Executive Producer)"
     }, {
         "path": "39.jpg",
         "caption": "Sian Davis (as Mrs. Johnson)"
@@ -1126,11 +1097,6 @@
         "desc": "",
         "path": "http://www.starz.com/videos/embed/d024f7ef4d4540cd979bb2e66aca8612",
         "thumb": "insidelook.jpg"
-    }, {
-        "name": "The World of Ash Vs Evil Dead",
-        "desc": "",
-        "path": "http://www.starz.com/videos/embed/da6176d76bb04503a0125c17febdbde0",
-        "thumb": "video.jpg"
     }],
     "pdfs": [{
         "name": "Synopsis",

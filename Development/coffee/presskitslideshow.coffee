@@ -22,6 +22,7 @@
 			@thumbs = @$el.find(@options.thumbs)
 			
 			@thumbs.eq( @current ).addClass(@options.selected)
+			@options.onSwitch.call(undefined, @items.eq(@current))
 			@addClickEvents()
 
 		addClickEvents: =>
@@ -68,7 +69,11 @@
 				'left': s
 				onComplete: =>
 					@items.eq(@current).attr("style","").hide()
+					@thumbs.eq( @current ).removeClass(@options.selected)
+					@current = num
+					@thumbs.eq( @current ).addClass(@options.selected)
 					@options.onSwitch.call(undefined, @items.eq(@current))
+
 					TweenLite.from( @items.eq(@current), @options.speed, {
 						'left':e
 						onComplete: =>
@@ -78,9 +83,7 @@
 					@items.eq(@current).show()
 			})
 
-			@thumbs.eq( @current ).removeClass(@options.selected)
-			@current = num
-			@thumbs.eq( @current ).addClass(@options.selected)
+			
 
 	$.fn.extend PressKitSlideShow: (options) ->
 		@each ->
