@@ -1,11 +1,11 @@
 $key-width:950px;
 $key-height-break:800px;
 
-$key-logo-width:400px;
-$key-logo-ratio: 45/294;
+$key-logo-width:350;
+$key-logo-ratio: 232/478 *100%;
 
 $key-tunein-width: 350px;
-$key-tunein-ratio: 26/227;
+$key-tunein-ratio: 43/383;
 
 .keyart{
 	background:$black;
@@ -78,11 +78,15 @@ $key-tunein-ratio: 26/227;
 		margin: auto;
 		padding-bottom: 100px;
 		position: relative;
-		top:-15%;
+		top:-25%;
 		
 		@media screen and (max-width: $key-width) {
 			width:100%;	
 			padding-bottom: 30px;
+		}
+
+		@media screen and (max-width: $break-small) {
+			top:-10%;
 		}
 		
 		@media screen and (min-width:$key-width) and (max-height:$key-height-break){
@@ -109,28 +113,29 @@ $key-tunein-ratio: 26/227;
 		}
 		
 		.key-logo{
-			width:$key-logo-width;
-			height:$key-logo-ratio*$key-logo-width;
-			background: url(#{$imgPath}ta.svg) center top no-repeat;
-			margin: 0 auto 30px auto;
+			width:$key-logo-width+px;
+			width:100%*.4;
+			padding-top:$key-logo-ratio*.4;
+			background: url(#{$imgPath}ta_large.png) center top no-repeat;
+			background-size: 100% 100%;
+			margin: 0 auto 15px auto;
 			
 			@media screen and (max-width: $key-width) {
 				margin-top:20px;
 				margin-bottom:10px;
-				width:60%;
 			}
 				
 			@media screen and (min-width:$key-width) and (max-height:$key-height-break){
 				margin-top:20px;
 				margin-bottom:10px;
-				width:60%;
 			}
 		}
 		
 		.key-tunein{
 			width:$key-tunein-width;
 			height:$key-tunein-ratio*$key-tunein-width;
-			background: url(#{$imgPath}tunein.svg) center bottom no-repeat;;
+			background: url(#{$imgPath}tunein.png) center bottom no-repeat;
+			background-size: contain;
 			margin: 30px auto 0 auto;
 			
 			@media screen and (max-width: $key-width) {

@@ -33,9 +33,15 @@
 
 		addClickEvents: =>
 			@thumbs.click( (evt) =>
+				console.log $(evt.target)
 				n = Number( $(evt.target).attr(@options.attr) )
 				@showViewer( n )	
 			)
+
+			@thumbs.children().click (evt) =>
+				evt.stopPropagation()
+				n = Number( $(evt.target).closest(@options.thumbs).attr(@options.attr) )
+				@showViewer( n )
 			
 			@$el.find(@options.next).click( =>
 				n = @current
@@ -99,6 +105,8 @@
 			source = @options.source
 
 			source = @findandreplace(source, @thumbs.eq(@current))
+			console.log @current, @thumbs.eq(@current), source
+
 			@viewer.html(source)
 			
 			caption = @findandreplace(@options.captionsource, @thumbs.eq(@current) )

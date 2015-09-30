@@ -4,12 +4,10 @@ div#keyart.keyart.section
 		div.bottom-gradient
 		div.left-gradient
 		div.right-gradient
-		img(src="images/bg/group.jpg")
+		img(src="images/bg/keyart.jpg")
 	div.copy-container
 		div.key-logo
 		div.synposis
-			p "Blunt Talk," a 10-episode half-hour series, set in Los Angeles, follows Walter Blunt, played by Patrick Stewart, a British import intent on conquering the world of American cable news. Through the platform of his nightly news show, Blunt is on a mission to impart his wisdom and guidance on how Americans should live, think and behave.
-			p Besieged by network bosses, a dysfunctional news staff, numerous ex-wives, children of all ages, and his own well-intentioned, but sometimes misguided decisions, Blunt's only support is in the form of the heavy-drinking, devoted manservant he transplanted from the U.K.
-			p The cast is led by Patrick Stewart in the role of Walter Blunt, Jacki Weaver as Rosalie, Blunt's tough and motherly producer-manager and Adrian Scarborough as Harry, Blunt's manservant. Dolly Wells who plays Celia, Blunt's senior producer and head writer and Timm Sharp who plays Jim, Blunt's head writer, round out the cast.
-			p The series from MRC is executive produced by Seth MacFarlane, Jonathan Ames (Creator and Showrunner), Stephanie Davis and Tristram Shapeero.
+			- for (i in synopsis)
+				p !{synopsis[i]}
 		div.key-tunein
