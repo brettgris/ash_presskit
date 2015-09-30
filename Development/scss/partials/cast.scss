@@ -1,7 +1,7 @@
 $character-count: 5;
 
 //THUMBS
-$thumb-background:$cast-overlay;
+$thumb-background: url(#{$imgPath}bg/pattern.jpg) #000 center center no-repeat;
 $thumb-border:1px solid $border-color;
 $thumb-padding: 10px;
 $thumb-zindex: 6;

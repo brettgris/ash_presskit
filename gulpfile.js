@@ -28,7 +28,7 @@ gulp.task('jade', function() {
                 this.emit('end');
         }}))
         .pipe(jade({
-            pretty: true
+            pretty: false
         }))
         .pipe(gulp.dest("Production/"));
 });

@@ -115,7 +115,7 @@ $overlay-border: 1px solid $border-color;
 OVERLAY
 ***************/
 .page-overlay{
-	background: $overlay-background;
+	background: url(#{$imgPath}bg/pattern.jpg) #000 center center no-repeat;;
 	border:$overlay-border;
 }
 

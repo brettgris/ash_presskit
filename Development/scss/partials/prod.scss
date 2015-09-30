@@ -128,7 +128,7 @@ $prod-arrow-break: 745px;
 		}
 		
 		.prod-list{
-			background: $prod-background;
+			background: url(#{$imgPath}bg/pattern.jpg) #000 center center no-repeat;;
 			border-right:$prod-border;
 			border-left:$prod-border;
 			width:$prod-list-width;
