@@ -33,7 +33,6 @@
 
 		addClickEvents: =>
 			@thumbs.click( (evt) =>
-				console.log $(evt.target)
 				n = Number( $(evt.target).attr(@options.attr) )
 				@showViewer( n )	
 			)
@@ -52,10 +51,10 @@
 			)
 			
 			@$el.find(@options.prev).click( =>
-				n = data.current
+				n = @current
 				n--
 				if n<0
-					n=data.thumbs.length-1
+					n=@thumbs.length-1
 				@changeTo( n )
 			)
 			
@@ -105,7 +104,6 @@
 			source = @options.source
 
 			source = @findandreplace(source, @thumbs.eq(@current))
-			console.log @current, @thumbs.eq(@current), source
 
 			@viewer.html(source)
 			
