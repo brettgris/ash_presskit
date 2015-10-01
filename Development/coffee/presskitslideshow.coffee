@@ -29,7 +29,7 @@
 			@thumbs.click( (evt) =>
 				n = Number( $(evt.target).attr(@options.attr) )
 				if n!=@current
-					d = n>@current ? 1:0
+					if n>@current then d=1 else d=-1
 					@changeTo(n,d)
 			)
 

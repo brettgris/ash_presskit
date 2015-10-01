@@ -214,14 +214,14 @@ $cast-icon-height:106px;
 		@media screen and (max-width: $break-cast-medium) {
 			width: $character-width;
 			margin-left: -1*$character-width/2;
-			top: $character-photo-height + $thumb-item-height + $character-name-height;
+			top: $thumb-item-height + $thumb-item-spacing*2 + 34 + $character-photo-height;
 		}
 		
 		@media screen and (max-width: $break-cast-small) {
 			width:90%;
 			margin-left:-45%;
-			top: $character-photo-height*.5 + $thumb-item-height;
-				
+			//top: $character-photo-height*.5 + $thumb-item-height;
+			top: $character-photo-height*.5 + 20;
 		}
 
 		.cast-prev{

@@ -86,6 +86,10 @@ $prod-arrow-break: 745px;
 				background-repeat: no-repeat;
 				margin-bottom: 20px;
 				background-size: cover;
+
+				@media screen and (max-width: $prod-container-width) {
+					width: 80%;
+				}
 				
 				@media screen and (max-width: $prod-image-break) {
 					width:100%;
@@ -182,14 +186,16 @@ $prod-arrow-break: 745px;
 			
 			@media screen and (max-width: $prod-container-width) {
 				left:$prod-offcenter;
-				margin-left: -1*$prod-arrows-width/2;	
+				margin-left: -1*$prod-arrows-width/2;
+				width: 68%;
+				margin-left: -34%;	
 			}
 			
 			@media screen and (max-width: $prod-arrow-break) {
 				width:90%;
 				left:50%;
 				margin-left: -45%;
-				top:30px
+				top:40px
 			}
 			
 			&.withimage{
@@ -198,6 +204,10 @@ $prod-arrow-break: 745px;
 				@media screen and (max-width: $prod-arrow-break) {
 					//top:$prod-arrows-top2*.5;
 					top:60px;
+				}
+
+				@media screen and (max-width: $break-cast-small) {
+					top: $prod-image-height*.5 +40;
 				}
 			}
 			

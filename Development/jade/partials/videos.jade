@@ -12,7 +12,7 @@ div#video.videos.section
 		//VIDEO ITEMS
 		div.video-items
 			- for (i in videos)
-				a.video-item(href="javascipt:void(0);" style="background-image:url(images/video/#{videos[i].thumb}" path="#{videos[i].path}" n="#{i}" name="#{videos[i].name}" desc="#{videos[i].desc}")
+				a.video-item(href="javascript:void(0);" style="background-image:url(images/video/#{videos[i].thumb})" path="#{videos[i].path}" n="#{i}" name="#{videos[i].name}" desc="#{videos[i].desc}")
 					div.video-copy
 						div.video-name #{videos[i].name}
 						div.video-desc #{videos[i].desc}

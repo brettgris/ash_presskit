@@ -4,7 +4,7 @@ div#cast.cast.section
 	div.thumb-container
 		div.thumb-list
 			- for (i in cast)
-				a.t-cast(href="javascript:void(0);" style="background-image:url(images/cast/#{cast[i].safename}_t.jpg" n="#{i}")
+				a.t-cast(href="javascript:void(0);" style="background-image:url(images/cast/#{cast[i].safename}_t.jpg)" n="#{i}")
 	//ARROWS
 	div.cast-arrows
 		a.cast-next(href="javascript:void(0);")
@@ -13,7 +13,7 @@ div#cast.cast.section
 	div.character-content
 		- for (i in cast)
 			div.character(id="#{cast[i].safename}")
-				div.character-image(style="background-image:url(images/cast/#{cast[i].safename}_l.jpg")
+				div.character-image(style="background-image:url(images/cast/#{cast[i].safename}_l.jpg)")
 				div.character-copy
 					div.character-name !{cast[i].name}
 					div.actor-name !{cast[i].actor}

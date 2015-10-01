@@ -191,7 +191,7 @@ $image-width2: 320px;
 			}
 			
 			@media screen and (max-width: $gallery-break2) {
-				top:(($image-width2/$gallery-view-width)*$gallery-view-height) +40;
+				top:(($image-width2/$gallery-view-width)*$gallery-view-height) +60;
 			}
 			
 			.g-next{
