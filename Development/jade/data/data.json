@@ -790,7 +790,7 @@
     }],
     "synopsis": [
         "&#8220;Ash vs Evil Dead&#8221; is the long-awaited follow-up to the classic horror film series The Evil Dead from original filmmakers Sam Raimi, Rob Tapert, and Bruce Campbell and Craig DiGregorio.",
-        "Campbell reprises his role as Ash, the stock boy, aging lothario and chainsaw-handed monster hunter who has spent the last 30 years avoiding responsibility, maturity and the terrors of the Evil Dead. When a Deadite plague threatens to destroy all of mankind, Ash is finally forced to face his demons -personal and literal.  Destiny, it turns out, has no plans to release the unlikely hero from &#8220;Evil’s&#8221; grip."
+        "Campbell reprises his role as Ash, the stock boy, aging lothario and chainsaw-handed monster hunter who has spent the last 30 years avoiding responsibility, maturity and the terrors of the Evil Dead. When a Deadite plague threatens to destroy all of mankind, Ash is finally forced to face his demons -personal and literal.  Destiny, it turns out, has no plans to release the unlikely hero from &#8220;Evil&#8217;s&#8221; grip."
     ],
     "cast": [{
         "safename": "ash",
@@ -811,12 +811,12 @@
         "safename": "kelly",
         "name": "KELLY MAXWELL",
         "actor": "Dana DeLorenzo",
-        "desc": "Amanda is a respected Michigan State Police Detective. She finds her career on the line following the bizarre and grisly murder of her partner for which she is blamed. She knows that whoever or whatever killed him must be stopped. Her investigations lead to Ash as the likely suspect. To clear her name, she must find Ash and quickly bring him to justice even if it means killing him."
+        "desc": "Kelly was once a sweet girl, but has become hardened and cynical by the cards life has dealt her. Now she only desires payback for what the Deadites have done to those close to her. Unwilling to let go of her rage she won&#8217;t let others get too close. With her family destroyed, she turns to Ash and Pablo, the only ones who have ever stood by her. She will not stop until the last evil Deadite is destroyed. "
     }, {
         "safename": "amanda",
         "name": "AMANDA FISHER",
         "actor": "Jill Marie Jones",
-        "desc": "Jim is a senior producer of &#8220;Blunt Talk.&#8221; He is an intellectual who does great work behind the camera, while hoping one day to be in front of it. As his dreams and desires emerge, so do a laundry list of neuroses that he must struggle to overcome."
+        "desc": "Amanda is a respected Michigan State Police Detective. She finds her career on the line following the bizarre and grisly murder of her partner for which she is blamed. She knows that whoever or whatever killed him must be stopped. Her investigations lead to Ash as the likely suspect. To clear her name, she must find Ash and quickly bring him to justice even if it means killing him."
     }],
     "prod": [{
         "safename": "samraimi",
