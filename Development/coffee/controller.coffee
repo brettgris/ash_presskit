@@ -15,7 +15,7 @@ $ ->
 			mobilecontainer: '.mobile-menu'
 			logo: '.logo'
 			backgrounds: true
-			current: 'intro'
+			current: 'videos'
 			onChange: (t) ->
 				if t=="intro"
 					$('.intro').data('AshAnimator').startAnimate()

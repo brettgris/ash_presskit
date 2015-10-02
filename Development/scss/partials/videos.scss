@@ -1,6 +1,7 @@
+$video-container-width: 750px;
 $video-width:640px;
 $video-ratio:percentage( 360/640 );
-$video-padding:20px;
+$video-padding:85px;
 
 $video-item-background: $orange-trans-light;
 $video-item-hover: $overlay-color;
@@ -8,13 +9,13 @@ $video-item-border: 2px solid rgba(223,148,107,.3);
 $video-item-height: 118px;
 $video-item-spacing: 15px;
 
-$video-break1: $video-width + 2*$video-padding+20;
+$video-break1: $video-container-width + 2*$video-padding+20;
 
 .video-list{
 	@extend .page-overlay;
-	width: $video-width + 2*$video-padding;
+	width: $video-container-width + 2*$video-padding;
 	margin:0px auto 80px auto;
-	padding: 20px 0;
+	padding: $video-padding 0;
 	
 	@media screen and (max-width: $video-break1) {
 		width:90%;
@@ -73,11 +74,11 @@ $video-break1: $video-width + 2*$video-padding+20;
 	}
 	
 	.video-items{
-		width: $video-width;
+		width: $video-container-width;
 		margin: auto;
 		
 		@media screen and (max-width: $video-break1) {
-			width:94%;	
+			width:85%;	
 		}
 		
 		.video-item{

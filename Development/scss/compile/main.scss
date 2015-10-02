@@ -1,98 +1,20 @@
 @import "compass/css3";
 
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700,100,300,900,400italic);
-
-/************************  SHOW COLORS  ************************/
-
-//ASH COLORS
-$white:#fff;
-$black:#000;
-$red:#ed1e2e;
-$orange: #df946b;
-$light-orange: #efd4d1;
-$light-grey: #ddd;
-$med-grey: #666;
-$dark-grey:#404040;
-$orange-trans-light: rgba(67,34,27,.3);
-$orange-trans: rgba(67,34,27,.65);
-
-/**********************  END SHOW COLORS  **********************/
-
-/**********************  END COLOR ELEMENTS **********************/
-$background-color: $black;
-$font-color: $black;
-
-$border-color: rgba(239,212,209,.25);
-$border-interactive:rgba(239,212,209,.5);
-$border-hover:$white;
-
-$menu-color: $black;
-$footer-background: $black;
-$footer-color: $med-grey;
-
-$overlay-color: $orange-trans;
-$cast-overlay: $orange-trans;
-$menu-bg: rgba(67,34,27,.9);
-
-$btn-color:yellow;
-$btn-hover:#000000;
-
-$item-background: $black;
-$item-title: $orange;
-$item-text: $med-grey;
-
-$link-color:$light-grey;
-$link-hover:$white;
-
-$inpagelink-color: $med-grey;
-$inpagelink-hover: $light-orange;
-$link-highlight:$orange;
-$highlight: $orange;
-/**********************  END COLOR ELEMENTS **********************/
-
-//FONTS
-$font-family: "Lato", Helvetica, Arial, sans-serif;
-$font-size: 15px;
-
-$line-height:20px;
-$mobile-font-size:13px;
-$mobile-line-height:16px;
-
-//BREAKPOINTS
-$break-large:1280px;
-$break-medium:1020px;
-$break-small:750px;
-$break-mobile:500px;
-
-//IMAGE PATH
 $imgPath:"../images/";
 
-/************************  HEADER  ************************/
+/************************  VARIABLES  ************************/
+@import '../partials/_colors.scss';
+@import '../partials/_fonts.scss';
+@import '../partials/_breakpoints.scss';
+
+/************************  SECTIONS  ************************/
 @import '../partials/header.scss';
-
-/***********************  GLOBALS  **********************/
 @import '../partials/globals.scss';
-
-/***********************  INTRO  *************************/
 @import '../partials/intro.scss';
-
-/***********************  KEYART  *************************/
 @import '../partials/keyart.scss';
-
-/***********************  CAST  *************************/
 @import '../partials/cast.scss';
-
-/********************  PRODUCTION  **********************/
 @import '../partials/prod.scss';
-
-/*********************  GALLERY  ************************/
 @import '../partials/gallery.scss';
-
-/*********************  VIDEOS  *************************/
 @import '../partials/videos.scss';
-
-/********************  DOWNLOADS  ***********************/
 @import '../partials/downloads.scss';
-
-/*********************  FOOTER  *************************/
 @import '../partials/footer.scss';
