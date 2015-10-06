@@ -1,4 +1,4 @@
-(($,window,document) ->
+(($,ga, window,document) ->
 	class PageSwitcher
 		defaults:
 			links: '.plink'
@@ -24,6 +24,7 @@
 			@current = @options.current
 			@setupPages()
 			@addClicks()
+			if ga then ga('send', 'event', 'pageview', @current)
 
 		setupPages: =>
 			@pages.hide()
@@ -56,6 +57,7 @@
 					n = $('.'+t).fadeIn(@options.speed)
 					@options.onChange.call(@,  $('.'+t).attr('id') )
 					@current = t
+					if ga then ga('send', 'event', 'pageview', @current)
 					if @options.backgrounds
 						@target.css('background', $('.l'+@current).attr(@options.bgattr))
 						@target.css('background-size', @options.bgsize)
@@ -66,4 +68,4 @@
 		new PageSwitcher(options)
 
 			
-) jQuery, window, document
+) jQuery, ga, window, document
