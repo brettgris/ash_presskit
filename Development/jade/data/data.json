@@ -410,7 +410,7 @@
             "top": 47,
             "delay": 1,
             "divs": [{
-                "background-image": "images/intro/intro3_Kelly.png",
+                "background-image": "images/intro/intro3_kelly.png",
                 "background-size": "cover"
             }],
             "set": {
@@ -471,7 +471,7 @@
             "delay": 1.4,
             "multiple": true,
             "divs": [{
-                "background-image": "images/intro/intro3_Ash.png",
+                "background-image": "images/intro/intro3_ash.png",
                 "background-size": "cover"
             }, {
                 "background-image": "images/intro/intro3_chainsaw.png",
@@ -1085,18 +1085,23 @@
     "videos": [{
         "name": "Hero Trailer",
         "desc": "",
-        "path": "http://www.starz.com/videos/embed/b7dd910d48664026947c90098d88cc44",
+        "path": "https://www.starz.com/videos/embed/b50c0f20720d4d89bf7b1c200fcfa214",
         "thumb": "herotrailer.jpg"
     }, {
         "name": "The Reluctant Hero And His Crew",
         "desc": "",
-        "path": "http://www.starz.com/videos/embed/ecb170db2cef4f06a09374251716b3ea",
+        "path": "https://www.starz.com/videos/embed/13cbd00afdeb40d9a2e77dcd9c9b3133",
         "thumb": "reluctanthero.jpg"
     }, {
-        "name": "An Inside Look",
+        "name": "The World of Ash vs Evil Dead",
         "desc": "",
-        "path": "http://www.starz.com/videos/embed/d024f7ef4d4540cd979bb2e66aca8612",
+        "path": "https://www.starz.com/videos/embed/dec37aac463e416a94ec2e5b700f49dd",
         "thumb": "insidelook.jpg"
+    }, {
+        "name": "Bringing the Dead to Life",
+        "desc": "",
+        "path": "https://www.starz.com/videos/embed/65b551708fc842fa8790131efcf1bb48",
+        "thumb": "deadtolife.jpg"
     }],
     "pdfs": [{
         "name": "Synopsis",
