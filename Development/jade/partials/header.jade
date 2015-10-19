@@ -8,7 +8,7 @@ div.header
 		div.menu
 			- for (i in links)
 				if links[i].external
-					a.mlink.mhighlight(href="#{links[i].path}" target="_blank") #{links[i].name}
+					a.mlink(href="#{links[i].path}" target="_blank" class=links[i].highlight==true ? "mhighlight" : "") #{links[i].name}
 				else
 
 					a.mlink.plink(class="l#{links[i].path}" href="javascript:void(0);" path="#{links[i].path}" bg="#{links[i].background}") #{links[i].name}
@@ -26,6 +26,6 @@ div.mobile-menu
 	ul.menu-list
 		- for (i in links)
 			if links[i].external
-				a.mmlink.mhighlight(href="#{links[i].path}" target="_blank") #{links[i].name}
+				a.mmlink(href="#{links[i].path}" target="_blank"  class=links[i].highlight==true ? "mhighlight" : "") #{links[i].name}
 			else
 				a.mmlink.mplink(href="javascript:void(0);" path="#{links[i].path}" bg="#{links[i].background}") #{links[i].name}

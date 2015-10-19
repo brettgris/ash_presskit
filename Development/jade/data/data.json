@@ -16,8 +16,8 @@
         "background": "black no-repeat center top"
     }, {
         "name": "Gallery",
-        "path": "gallery",
-        "external": false,
+        "path": "http://starz.mediaroom.com/index.php?s=64&cat=81",
+        "external": true,
         "background": "black no-repeat center top"
     }, {
         "name": "Videos",
@@ -28,6 +28,7 @@
         "name": "Screening Room",
         "path": "https://microsites.starz.com/ScreeningRoom/Account/Login",
         "external": true,
+        "highlight": true,
         "background": ""
     }, {
         "name": "Press Materials",
@@ -895,7 +896,7 @@
             "His New Zealand feature film credits include <em>Perfect Creature</em>, <em>Samoan Wedding</em>, <em>Naming Number Two</em> and <em>Under the Mountain</em>.",
             "Alongside his film work, Bassett designs major commercial installations for SPUR, creating bespoke design and build projects like the famous Telecom Tree."
         ],
-        "image": false
+        "image": true
     },{
         "safename": "barbaradarragh",
         "name": "BARBARA DARRAGH",
@@ -916,7 +917,7 @@
             "Murray and his wife Felicity Letcher established Main Reactor in 2002. Recent productions featuring Main Reactor&#8217;s work include <em>Crouching Tiger, Hidden Dragon: The Green Destiny</em>, the TNT pilot &#8220;Lumen,&#8221; the MTV series &#8220;The Shannara Chronicles,&#8221; Emperor, Andrew Adamson&#8217;s <em>Mr. Pip</em> and the Maori martial arts movie <em>The Dead Lands</em>.",
             "Other credits include <em>The Warrior&#8217;s Way</em>, <em>The Chronicles of Narnia: The Lion, the Witch and the Wardrobe and Prince Caspian</em>, <em>Mee-Shee: The Water Giant</em>; <em>Aliens in the Attic</em> and <em>The Almighty Johnsons</em>."
         ],
-        "image": false
+        "image": true
     },{
         "safename": "marneymckenna",
         "name": "MARNEY McKENNA",
@@ -928,7 +929,7 @@
             "Her television productions include the acclaimed ABC series &#8220;The Slap&#8221; and the upcoming &#8220;Glitch,&#8221; as well as the high-rating Network 10 comedy/drama &#8220;Offspring&#8221; and Playmaker Media&#8217;s drama &#8220;House Husbands.&#8221;",
             "She has also written and directed a short film, Knockers, and worked as Production Designer on two short films: <em>To Choose in the Darkness</em> and <em>Land of Returns</em>."
         ],
-        "image": false
+        "image": true
     },{
         "safename": "denisekim",
         "name": "DENISE KUM",
@@ -941,7 +942,7 @@
             "While she was studying Sculpture at The Elam School Of Fine Arts in Auckland, New Zealand, she became enamored with and co-opted into the filmmaking process. Since that time, she has been continually working as both Artist and Makeup Artist. She moved to London in 1999, where she completed a Master of Fine Arts at the prestigious Goldsmiths College.",
             "Her artwork is included in public collections such as The Museum of New Zealand, Te Papa Tongarewa, The Financial Times London, Saatchi and Saatchi and The Chartwell Collection, Auckland."
         ],
-        "image": false
+        "image": true
     },{
         "safename": "janeokane",
         "name": "JANE O&#8217;KANE",
@@ -986,7 +987,7 @@
             "His most recent film is <em>Mechanic: Resurrection</em>, starring Jason Statham. Before that, he did <em>Jupiter Ascending</em> for the Wachowskis. He was member of the team nominated for the SAG Stunt Ensemble award for the recent critically acclaimed David Ayer/Brad Pitt war actioner <em>Fury</em>. He also worked in Morocco on the Paul Greengrass feature <em>Green Zone</em>, starring Matt Damon.",
             "Also interested in developing the New Zealand industry, he served as president of Stunt Guild of New Zealand 2004-2010."
         ],
-        "image": false
+        "image": true
     }],
     "photos": [{
         "path": "1.jpg",
@@ -1083,7 +1084,7 @@
         "caption": "Sian Davis (as Mrs. Johnson)"
     }],
     "videos": [{
-        "name": "Hero Trailer",
+        "name": "Trailer",
         "desc": "",
         "path": "https://www.starz.com/videos/embed/b50c0f20720d4d89bf7b1c200fcfa214",
         "thumb": "herotrailer.jpg"
